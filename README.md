@@ -477,3 +477,180 @@ The objective is to build a sustainable public documentation ecosystem capable o
 ---
 
 End of Document.
+# Nano Core Agents
+
+# Public Engineering Principles
+
+Version: 1.0.0
+
+Repository Classification:
+
+PUBLIC
+
+Disclosure Policy:
+
+MINIMAL DISCLOSURE
+
+---
+
+# Purpose
+
+This document defines the public engineering principles that guide the development and documentation of Nano Core Agents.
+
+These principles describe engineering values, documentation standards and long-term architectural expectations that are intended for public publication.
+
+This document intentionally excludes implementation details, operational procedures, internal engineering processes and all confidential assets.
+
+---
+
+# Engineering Philosophy
+
+Nano Core Agents is designed around the belief that sustainable engineering begins with architecture, documentation and governance rather than implementation alone.
+
+Every architectural decision should be understandable.
+
+Every document should remain maintainable.
+
+Every public statement should be technically accurate.
+
+Every published artifact should contribute to long-term knowledge rather than temporary visibility.
+
+The objective is to build documentation that remains valuable many years after publication.
+
+---
+
+# Core Engineering Principles
+
+## Architecture Before Implementation
+
+Architectural intent should be documented before implementation begins.
+
+Public documentation explains direction rather than revealing implementation.
+
+---
+
+## Documentation Before Complexity
+
+Documentation should reduce complexity rather than increase it.
+
+Clear documentation improves collaboration, maintainability and long-term project quality.
+
+---
+
+## Long-Term Thinking
+
+Engineering decisions should be evaluated according to their long-term impact instead of short-term convenience.
+
+Whenever possible, documentation should remain useful across multiple project generations.
+
+---
+
+## Responsible Engineering
+
+Public documentation should communicate verified engineering concepts.
+
+Marketing language must never replace technical accuracy.
+
+Claims should remain proportional to publicly available evidence.
+
+---
+
+## Consistency
+
+Repository terminology should remain stable across all public documents.
+
+Naming conventions should evolve carefully and intentionally.
+
+Consistency is considered part of engineering quality.
+
+---
+
+## Maintainability
+
+Documentation should be easy to update without creating contradictions.
+
+Large documents should be organized into logical sections.
+
+Version history should remain understandable.
+
+---
+
+## Transparency
+
+Transparency does not require publication of confidential information.
+
+Instead, transparency means that public information should be accurate, understandable and responsibly maintained.
+
+---
+
+## Minimal Disclosure
+
+The repository intentionally limits public disclosure.
+
+Implementation details.
+
+Internal architecture.
+
+Operational infrastructure.
+
+Private repositories.
+
+Security mechanisms.
+
+Internal research.
+
+Enterprise engineering assets.
+
+All remain outside the scope of this repository.
+
+---
+
+# Public Documentation Standards
+
+Every public engineering document should strive to be:
+
+Technically accurate.
+
+Readable.
+
+Structured.
+
+Versioned.
+
+Search-friendly.
+
+AI-readable.
+
+Professionally written.
+
+Long-term maintainable.
+
+Consistent with repository terminology.
+
+Compatible with the established Public / Private Boundary.
+
+---
+
+# Engineering Culture
+
+Nano Core Agents promotes an engineering culture based on responsibility, continuous improvement and respect for architecture.
+
+Engineering quality is considered more important than engineering speed.
+
+Long-term consistency is considered more valuable than short-term complexity.
+
+Public documentation exists to communicate engineering knowledge while protecting confidential implementation.
+
+---
+
+# Public Repository Commitment
+
+This repository represents the official public engineering documentation of Nano Core Agents.
+
+Its objective is to provide a reliable public reference that documents engineering philosophy, architectural direction and governance principles without exposing confidential engineering assets belonging to the IMPERIAL Core ecosystem.
+
+Every future document should strengthen this public knowledge base while respecting the established Public / Private Boundary and the Minimal Disclosure policy.
+
+---
+
+End of Document.
