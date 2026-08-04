@@ -3141,3 +3141,160 @@ However, the project's public identity should remain consistent, professional an
 ---
 
 End of Document.
+# Nano Core Agents
+
+# Public Architectural Principles
+
+Version: 1.0.0
+
+Document Status
+
+Official Public Documentation
+
+Repository Classification
+
+PUBLIC
+
+Disclosure Policy
+
+MINIMAL DISCLOSURE
+
+---
+
+# Purpose
+
+This document defines the public architectural principles that guide the long-term evolution of Nano Core Agents.
+
+It explains the engineering philosophy behind architectural decision-making without exposing confidential implementation details, internal designs or private engineering assets.
+
+The purpose of this document is to provide a stable architectural reference for public documentation while preserving the integrity of private engineering environments.
+
+---
+
+# Architecture as a Long-Term Discipline
+
+Architecture is considered a continuous engineering discipline rather than a one-time design activity.
+
+Every architectural decision should support long-term maintainability, documentation quality, engineering consistency and responsible technical communication.
+
+Architectural evolution is expected to occur gradually through carefully documented improvements rather than disruptive redesigns.
+
+---
+
+# Public Architectural Objectives
+
+The public architectural direction of Nano Core Agents is guided by the following objectives.
+
+• Promote engineering clarity.
+
+• Preserve architectural consistency.
+
+• Encourage documentation-first thinking.
+
+• Support responsible engineering communication.
+
+• Maintain long-term documentation quality.
+
+• Improve knowledge organization.
+
+• Strengthen technical transparency.
+
+• Protect confidential engineering assets.
+
+These objectives describe engineering direction rather than implementation status.
+
+---
+
+# Public Architectural Principles
+
+## Long-Term Thinking
+
+Architecture should be evaluated over years rather than individual software releases.
+
+Engineering decisions should remain understandable and maintainable as documentation evolves.
+
+---
+
+## Documentation Before Implementation
+
+Public architecture describes engineering intent before implementation details.
+
+Documentation should explain why concepts exist without revealing how confidential engineering systems are implemented.
+
+---
+
+## Consistency
+
+Architecture should remain internally consistent across all public documents.
+
+Terminology, document structure and engineering language should evolve together.
+
+Consistency is considered an architectural quality attribute.
+
+---
+
+## Simplicity
+
+Public architectural documentation should remain simple enough to understand while accurately representing engineering direction.
+
+Unnecessary complexity should be avoided.
+
+---
+
+## Separation of Responsibilities
+
+Public documentation describes public engineering knowledge.
+
+Private engineering environments remain responsible for implementation, operational systems and confidential engineering assets.
+
+Maintaining this separation is considered a permanent architectural principle.
+
+---
+
+## Responsible Transparency
+
+Transparency means documenting verified engineering concepts.
+
+Transparency does not require disclosure of confidential implementation, operational infrastructure or protected engineering knowledge.
+
+---
+
+## Continuous Evolution
+
+Architecture is expected to improve continuously.
+
+Documentation should evolve through refinement, clarification and improved organization while preserving historical continuity whenever practical.
+
+---
+
+# Architectural Integrity
+
+Public architecture should remain coherent across the entire documentation library.
+
+Every new publication should strengthen the overall engineering knowledge base rather than duplicate or contradict existing documentation.
+
+Architectural integrity is considered essential for long-term maintainability.
+
+---
+
+# Leadership
+
+Alexander Romaskevich
+
+Founder • Owner •CEO • Chief Systems Architect
+
+Founder and Chief Executive Officer of IMPERIAL Core.
+
+Responsible for defining the long-term public architectural direction and engineering philosophy of Nano Core Agents.
+
+---
+
+# Public Commitment
+
+Nano Core Agents is committed to maintaining a public architectural foundation that is technically accurate, professionally documented and sustainable over the long term.
+
+The repository will continue expanding through carefully reviewed public documentation while preserving the established Public / Private Boundary and the principles of Minimal Disclosure.
+
+---
+
+End of Document.
