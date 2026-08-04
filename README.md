@@ -3634,3 +3634,156 @@ The objective is to maintain a professional architectural reference suitable for
 ---
 
 End of Document.
+# Nano Core Agents
+
+# Public Ecosystem Overview
+
+Version: 1.0.0
+
+Document Status
+
+Official Public Documentation
+
+Repository Classification
+
+PUBLIC
+
+Disclosure Policy
+
+MINIMAL DISCLOSURE
+
+---
+
+# Purpose
+
+This document presents the public ecosystem context of Nano Core Agents.
+
+Its objective is to explain how the project is positioned within the publicly documented IMPERIAL Core ecosystem while intentionally excluding confidential engineering implementation, internal orchestration mechanisms and protected operational assets.
+
+This document describes only publicly approved relationships.
+
+---
+
+# Public Engineering Context
+
+Nano Core Agents is not presented as an isolated project.
+
+It is a public engineering initiative developed within the IMPERIAL Core ecosystem and documented according to the principles of responsible engineering communication, long-term architectural thinking and Minimal Disclosure.
+
+The repository represents only the public engineering perspective.
+
+---
+
+# Public Ecosystem
+
+The public engineering relationship is documented as follows.
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+↓
+
+IMPERIAL Core
+
+Long-term engineering ecosystem.
+
+↓
+
+HANTER
+
+Public executive orchestration layer responsible for coordinating the public engineering direction of Nano Core Agents.
+
+↓
+
+Nano Core Agents
+
+AI-native engineering initiative documented within this repository.
+
+The diagram above describes only public engineering relationships.
+
+It should not be interpreted as an implementation diagram or runtime architecture.
+
+---
+
+# Public Responsibilities
+
+## IMPERIAL Core
+
+Provides the long-term engineering ecosystem in which Nano Core Agents is developed.
+
+---
+
+## HANTER
+
+Acts as the publicly documented executive orchestration component associated with Nano Core Agents.
+
+This repository intentionally documents only its public architectural role.
+
+Internal implementation, runtime behaviour, orchestration logic and operational capabilities remain outside the scope of this repository.
+
+---
+
+## Nano Core Agents
+
+Documents public engineering concepts, architectural direction, governance principles and engineering knowledge intended for unrestricted publication.
+
+---
+
+# Public Documentation Boundary
+
+This repository intentionally documents:
+
+• engineering philosophy;
+
+• architectural direction;
+
+• governance;
+
+• terminology;
+
+• documentation standards;
+
+• ecosystem relationships;
+
+• public engineering knowledge.
+
+The repository intentionally excludes:
+
+• implementation details;
+
+• orchestration implementation;
+
+• runtime architecture;
+
+• operational infrastructure;
+
+• confidential engineering assets;
+
+• private repositories;
+
+• security-sensitive information.
+
+---
+
+# Leadership
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+Founder and Chief Executive Officer of IMPERIAL Core.
+
+Responsible for the long-term architectural vision and engineering direction of the IMPERIAL Core ecosystem, including the public documentation of HANTER and Nano Core Agents.
+
+---
+
+# Long-Term Commitment
+
+The public ecosystem documentation will continue to evolve as additional public documentation becomes available.
+
+Future publications will strengthen the public understanding of the IMPERIAL Core ecosystem while preserving the established Public / Private Boundary and respecting the principles of Minimal Disclosure.
+
+---
+
+End of Document.
