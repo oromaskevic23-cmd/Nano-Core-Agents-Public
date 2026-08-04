@@ -4466,3 +4466,52 @@ The workflow above represents the public documentation lifecycle only.
 It is not an implementation workflow, deployment process or runtime architecture.
 
 ---
+# Public Architecture Overview
+---
+
+## Document Information
+
+| Property | Value |
+|----------|-------|
+| Document | Public Architecture Overview |
+| Version | 1.0.0 |
+| Status | Official Public Documentation |
+| Repository | Nano Core Agents Public |
+| Ecosystem | IMPERIAL Core |
+| Public Executive Orchestration | HANTER |
+| Repository Classification | PUBLIC |
+| Disclosure Policy | MINIMAL DISCLOSURE |
+| Maintained Under | Alexander Romaskevich — Founder • Owner • CEO • Chief Systems Architect |
+
+---
+
+# Table of Contents
+
+- Introduction
+- Architectural Philosophy
+- Public Scope
+- Architectural Objectives
+- Public Engineering Values
+- Leadership
+- Public Boundary
+- Related Public Documentation
+
+---
+
+# Related Public Documentation
+
+The following public documents complement this architecture overview.
+
+| Document | Purpose |
+|----------|---------|
+| PROJECT-FOUNDATION.md | Public engineering foundation |
+| ARCHITECTURAL-PRINCIPLES.md | Public architectural philosophy |
+| ARCHITECTURE-MAP.md | High-level public architecture |
+| GOVERNANCE.md | Public governance principles |
+| ENGINEERING-PRINCIPLES.md | Engineering philosophy |
+| PUBLIC-PRIVATE-BOUNDARY.md | Information boundary |
+| ECOSYSTEM-OVERVIEW.md | Public ecosystem relationship |
+
+Together these documents establish the official public architectural documentation of Nano Core Agents.
+
+---
