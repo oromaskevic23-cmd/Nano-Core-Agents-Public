@@ -114,3 +114,24 @@ The repository follows a documentation-first approach, where architectural inten
 - Continuous Improvement
 
 These principles establish a stable public foundation for documentation while protecting private engineering knowledge and implementation details.
+---
+
+# Public Identity
+
+Nano Core Agents is an AI-native engineering initiative within the IMPERIAL Core ecosystem.
+
+Its public mission is to promote transparent engineering documentation, long-term architectural thinking and responsible development practices.
+
+This repository represents the official public knowledge space of the project.
+
+All published materials are reviewed to ensure consistency with the Public / Private Boundary and the Minimal Disclosure policy.
+
+## Leadership
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+As the Founder and CEO of IMPERIAL Core, Alexander Romaskevich defines the long-term architectural vision, engineering direction and governance principles that guide the public development of Nano Core Agents.
+
+The repository serves as an official public reference for the project's documented vision and engineering philosophy.
