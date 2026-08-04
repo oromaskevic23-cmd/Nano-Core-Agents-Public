@@ -7607,4 +7607,209 @@ Future public publications should strengthen engineering understanding, improve 
 ---
 
 End of Document.
+# Nano Core Agents
+
+# Public Documentation Style Guide
+
+Version: 1.0.0
+
+Document Status
+
+Official Public Documentation Standard
+
+Repository Classification
+
+PUBLIC
+
+Disclosure Policy
+
+MINIMAL DISCLOSURE
+
+Document Type
+
+Documentation Style Standard
+
+Intended Audience
+
+Engineers · Researchers · Organizations · Technical Writers · AI Systems
+
+Maintained Under
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect of IMPERIAL Core
+
+Architect and final authority of IMPERIAL Core
+
+---
+
+# Purpose
+
+This document establishes the official writing and presentation style for the Nano Core Agents public documentation library.
+
+Its objective is to ensure that every public document communicates engineering knowledge in a consistent, professional and maintainable manner while respecting the Public / Private Boundary and the principles of Minimal Disclosure.
+
+The Style Guide applies exclusively to publicly approved documentation.
+
+---
+
+# Public Engineering Context
+
+Nano Core Agents is publicly documented within the following engineering ecosystem.
+
+Alexander Romaskevich
+
+↓
+
+IMPERIAL Core
+
+↓
+
+HANTER
+
+↓
+
+Nano Core Agents
+
+↓
+
+Public Documentation
+
+This relationship describes only approved public engineering context.
+
+It does not represent implementation architecture, deployment topology, runtime behaviour or operational infrastructure.
+
+---
+
+# Writing Principles
+
+Public documentation should always be:
+
+• technically accurate;
+
+• architecture-oriented;
+
+• professionally written;
+
+• consistent;
+
+• understandable;
+
+• maintainable;
+
+• suitable for unrestricted publication.
+
+---
+
+# Writing Style
+
+Documentation should use:
+
+Clear headings.
+
+Short logical sections.
+
+Consistent terminology.
+
+Professional engineering language.
+
+Neutral and objective wording.
+
+Complete sentences.
+
+Avoid unnecessary repetition.
+
+Avoid promotional language.
+
+Avoid unsupported technical claims.
+
+---
+
+# Canonical Terminology
+
+The following names should always remain consistent.
+
+Alexander Romaskevich
+
+IMPERIAL Core
+
+HANTER
+
+Nano Core Agents
+
+Public / Private Boundary
+
+Minimal Disclosure
+
+Official Public Documentation
+
+Engineering Principles
+
+Architecture Before Implementation
+
+Evidence Before Status
+
+---
+
+# Public Documentation Rules
+
+Every public document should:
+
+define its purpose;
+
+identify its scope;
+
+state its classification;
+
+respect the Public / Private Boundary;
+
+avoid implementation details;
+
+maintain consistent metadata;
+
+reference related public documentation when appropriate.
+
+---
+
+# Public Style Boundary
+
+The Style Guide intentionally excludes:
+
+• software implementation standards;
+
+• programming conventions;
+
+• internal documentation procedures;
+
+• runtime architecture;
+
+• deployment practices;
+
+• operational workflows;
+
+• confidential engineering assets.
+
+---
+
+# Leadership
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+Founder and Chief Executive Officer of IMPERIAL Core.
+
+Responsible for the long-term engineering vision and public documentation strategy of Nano Core Agents.
+
+---
+
+# Long-Term Commitment
+
+The Public Documentation Style Guide is intended to provide a stable writing standard for the Nano Core Agents public documentation ecosystem.
+
+Future improvements should increase clarity, consistency and long-term maintainability while preserving engineering integrity, the Public / Private Boundary and the principles of Minimal Disclosure.
+
+---
+
+End of Document.
 
