@@ -4358,3 +4358,52 @@ Future improvements will strengthen navigation, documentation quality, engineeri
 ---
 
 End of Document.
+---
+
+# Documentation Portal
+
+The Nano Core Agents public repository is organized as a structured engineering documentation portal.
+
+The documentation is divided into dedicated engineering domains in order to improve long-term maintainability, navigation and professional communication.
+
+## Documentation Library
+
+| Category | Primary Documents |
+|----------|-------------------|
+| Foundation | PROJECT-FOUNDATION.md · PROJECT-IDENTITY.md |
+| Architecture | ARCHITECTURE-OVERVIEW.md · ARCHITECTURE-MAP.md · ARCHITECTURAL-PRINCIPLES.md |
+| Engineering | ENGINEERING-PRINCIPLES.md · ENGINEERING-VALUES.md · DESIGN-PHILOSOPHY.md · PUBLIC-ENGINEERING-MANIFESTO.md |
+| Governance | GOVERNANCE.md · PUBLIC-PRIVATE-BOUNDARY.md · SECURITY.md · CONTRIBUTING.md |
+| Documentation | DOCUMENTATION-STANDARDS.md · DOCUMENTATION-INDEX.md · NAVIGATION.md · AI-READABILITY.md |
+| Reference | ROADMAP.md · TERMINOLOGY.md · FAQ.md · ECOSYSTEM-OVERVIEW.md |
+
+The Documentation Library is intended to evolve into a comprehensive public engineering knowledge base that remains valuable for engineers, researchers, organizations and AI systems.
+
+Every document contributes to a unified engineering documentation ecosystem while respecting the established Public / Private Boundary and the principles of Minimal Disclosure.
+
+---
+
+# Public Engineering Ecosystem
+
+The following relationship describes the public engineering ecosystem documented within this repository.
+
+```text
+Alexander Romaskevich
+Founder • Owner • CEO • Chief Systems Architect
+                    │
+                    ▼
+             IMPERIAL Core
+                    │
+                    ▼
+                 HANTER
+                    │
+                    ▼
+          Nano Core Agents
+                    │
+                    ▼
+      Public Documentation Portal
+```
+
+This diagram illustrates only the publicly documented engineering relationship.
+
+It does not describe runtime architecture, implementation details, internal orchestration mechanisms or confidential engineering systems.
