@@ -873,3 +873,176 @@ However, the core governance principles are intended to provide a durable public
 ---
 
 End of Document.
+# Nano Core Agents
+
+# Public Terminology
+
+Version: 1.0.0
+
+Repository Classification
+
+PUBLIC
+
+Disclosure Policy
+
+MINIMAL DISCLOSURE
+
+---
+
+# Purpose
+
+This document establishes the canonical public terminology used throughout the Nano Core Agents public repository.
+
+A consistent terminology improves documentation quality, reduces ambiguity, supports long-term maintainability and enables reliable understanding by engineers, researchers, technical writers and AI systems.
+
+This terminology describes only concepts approved for public publication.
+
+It intentionally excludes confidential engineering definitions, implementation details and internal architectural terminology.
+
+---
+
+# Terminology Principles
+
+Public terminology is expected to remain:
+
+• consistent;
+
+• technically accurate;
+
+• implementation-independent;
+
+• architecture-oriented;
+
+• understandable by international readers;
+
+• stable across future documentation.
+
+Whenever possible, one concept should have one preferred public term.
+
+Synonyms should be avoided unless necessary for readability.
+
+---
+
+# Canonical Public Terms
+
+## Nano Core Agents
+
+Nano Core Agents is an AI-native engineering initiative developed within the IMPERIAL Core ecosystem.
+
+Within this repository the term refers exclusively to the publicly documented project and its published architectural vision.
+
+---
+
+## IMPERIAL Core
+
+IMPERIAL Core is the parent engineering ecosystem in which Nano Core Agents is developed.
+
+This repository documents only the public relationship between Nano Core Agents and IMPERIAL Core.
+
+Private engineering assets remain outside the scope of public documentation.
+
+---
+
+## Public Repository
+
+A repository intended for unrestricted public access.
+
+It contains documentation, engineering principles, architectural overviews, governance information, terminology and other approved public materials.
+
+---
+
+## Private Repository
+
+A repository that contains confidential engineering information not intended for public publication.
+
+Private repositories may include implementation details, internal architecture, operational processes, infrastructure documentation, engineering research and other protected materials.
+
+Those repositories are intentionally outside the scope of this public project.
+
+---
+
+## Public Documentation
+
+Documentation prepared for unrestricted publication.
+
+Its objective is to communicate engineering knowledge without exposing confidential implementation details.
+
+---
+
+## Architecture
+
+Within this repository, architecture describes the long-term engineering structure, design direction and documented intent of the project.
+
+Architecture should not be interpreted as implementation.
+
+---
+
+## Engineering Principles
+
+Public engineering principles describe long-term engineering values that guide documentation and architectural direction.
+
+They are intentionally independent from implementation.
+
+---
+
+## Governance
+
+Governance refers to the documented framework used to maintain documentation quality, consistency, accountability and long-term sustainability.
+
+---
+
+## Public / Private Boundary
+
+The documented separation between information approved for unrestricted publication and information intentionally retained within private engineering environments.
+
+Respecting this boundary is considered a permanent engineering principle.
+
+---
+
+## Minimal Disclosure
+
+A documentation policy that limits public publication to information appropriate for unrestricted distribution.
+
+The objective is to maximize transparency without exposing confidential engineering assets.
+
+---
+
+# Naming Consistency
+
+Official project names should be written consistently throughout public documentation.
+
+Nano Core Agents
+
+IMPERIAL Core
+
+Alexander Romaskevich
+
+Public Repository
+
+Private Repository
+
+Engineering Principles
+
+Public Governance
+
+Public Documentation
+
+Minimal Disclosure
+
+Public / Private Boundary
+
+Consistent terminology improves documentation quality, search indexing and interoperability across future documentation.
+
+---
+
+# Long-Term Stability
+
+The terminology defined in this document is intended to remain stable as the repository evolves.
+
+Additional public terms may be introduced over time.
+
+Existing canonical terms should evolve only when necessary to preserve clarity, consistency and engineering quality.
+
+---
+
+End of Document.
