@@ -7040,3 +7040,185 @@ The long-term objective is to maintain a professional engineering documentation 
 ---
 
 End of Document.
+# Nano Core Agents
+
+# Public Engineering Decision Principles
+
+Version: 1.0.0
+
+Document Status
+
+Official Public Documentation
+
+Repository Classification
+
+PUBLIC
+
+Disclosure Policy
+
+MINIMAL DISCLOSURE
+
+Document Type
+
+Engineering Governance Standard
+
+Intended Audience
+
+Engineers · Researchers · Organizations · Technical Writers · AI Systems
+
+Maintained Under
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect of IMPERIAL Core
+
+Architect and final authority of IMPERIAL Core
+
+---
+
+# Purpose
+
+This document defines the public engineering principles that guide architectural and documentation decisions within the Nano Core Agents public repository.
+
+The objective is to explain the engineering philosophy behind public decision-making while intentionally excluding confidential implementation processes, internal governance mechanisms and protected engineering assets.
+
+---
+
+# Public Engineering Context
+
+Nano Core Agents is publicly documented within the following engineering ecosystem.
+
+Alexander Romaskevich
+
+↓
+
+IMPERIAL Core
+
+↓
+
+HANTER
+
+↓
+
+Nano Core Agents
+
+↓
+
+Public Engineering Documentation
+
+This relationship describes only publicly approved engineering context.
+
+It does not describe implementation architecture, operational infrastructure, runtime behaviour or internal decision workflows.
+
+---
+
+# Engineering Decision Principles
+
+Public engineering decisions should follow the principles below.
+
+## Architecture Before Implementation
+
+Public architectural direction should be documented before implementation details.
+
+---
+
+## Evidence Before Status
+
+Public statements should accurately reflect documented engineering knowledge.
+
+Implementation status should never be overstated.
+
+---
+
+## Long-Term Thinking
+
+Engineering decisions should prioritize long-term maintainability over short-term convenience.
+
+---
+
+## Documentation First
+
+Important engineering concepts should be documented before they become difficult to understand.
+
+---
+
+## Consistency
+
+Public terminology, document structure and engineering language should remain consistent throughout the repository.
+
+---
+
+## Responsible Transparency
+
+Engineering documentation should maximize public understanding while respecting the established Public / Private Boundary.
+
+---
+
+## Minimal Disclosure
+
+Only information approved for unrestricted publication should appear within the public repository.
+
+---
+
+# Decision Evaluation
+
+Every major public engineering decision should improve one or more of the following.
+
+• documentation quality;
+
+• engineering consistency;
+
+• repository organization;
+
+• architectural clarity;
+
+• governance transparency;
+
+• public understanding;
+
+• long-term maintainability.
+
+---
+
+# Public Decision Boundaries
+
+This document intentionally excludes:
+
+• implementation algorithms;
+
+• internal engineering processes;
+
+• runtime decision logic;
+
+• deployment procedures;
+
+• operational workflows;
+
+• confidential engineering assets;
+
+• security-sensitive information.
+
+---
+
+# Leadership
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+Founder and Chief Executive Officer of IMPERIAL Core.
+
+Responsible for the long-term engineering philosophy, architectural vision and public documentation strategy of Nano Core Agents.
+
+---
+
+# Long-Term Commitment
+
+Engineering decisions documented within the public repository should remain technically accurate, professionally communicated and aligned with the principles of Architecture Before Implementation, Evidence Before Status and Minimal Disclosure.
+
+Future public documentation should strengthen engineering understanding while preserving the Public / Private Boundary and protecting confidential implementation details.
+
+---
+
+End of Document.
+
