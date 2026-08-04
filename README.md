@@ -3988,3 +3988,170 @@ The long-term objective is to maintain a professional engineering knowledge libr
 ---
 
 End of Document.
+# Nano Core Agents
+
+# Public Engineering Manifesto
+
+Version: 1.0.0
+
+Document Status
+
+Official Public Documentation
+
+Repository Classification
+
+PUBLIC
+
+Disclosure Policy
+
+MINIMAL DISCLOSURE
+
+---
+
+# Executive Statement
+
+Nano Core Agents is a long-term AI-native engineering initiative developed within the IMPERIAL Core ecosystem.
+
+This repository exists to communicate public engineering knowledge through professional documentation while protecting confidential engineering implementation, operational infrastructure and private engineering assets.
+
+Public engineering documentation is considered a strategic asset that contributes to transparency, continuity and long-term architectural understanding.
+
+---
+
+# Why This Repository Exists
+
+The purpose of this repository is not simply to publish documents.
+
+Its objective is to build a durable engineering knowledge base capable of remaining useful throughout the long-term evolution of Nano Core Agents.
+
+Every public publication should strengthen engineering understanding instead of increasing complexity.
+
+Every document should become part of a coherent engineering documentation ecosystem.
+
+---
+
+# Public Engineering Commitments
+
+Nano Core Agents publicly commits to the following engineering principles.
+
+## Engineering Before Marketing
+
+Engineering accuracy always has priority over promotional language.
+
+Public statements should remain proportional to publicly documented evidence.
+
+---
+
+## Architecture Before Implementation
+
+Architecture provides engineering direction.
+
+Implementation may evolve independently inside private engineering environments.
+
+The public repository intentionally documents architectural thinking rather than confidential implementation.
+
+---
+
+## Documentation as Engineering
+
+Documentation is considered an engineering discipline.
+
+Every publication should improve repository quality, preserve engineering knowledge and strengthen long-term maintainability.
+
+---
+
+## Long-Term Responsibility
+
+Engineering documentation should remain valuable for many years.
+
+Short-term trends should never compromise architectural consistency or documentation quality.
+
+---
+
+## Responsible Transparency
+
+Public engineering communication should maximize clarity while protecting confidential engineering assets.
+
+Transparency and confidentiality are complementary engineering responsibilities.
+
+---
+
+## Continuous Improvement
+
+Every revision should improve the repository.
+
+Quality grows through refinement rather than unnecessary complexity.
+
+---
+
+# Public Engineering Culture
+
+Nano Core Agents promotes a professional engineering culture based on:
+
+• responsibility;
+
+• architectural thinking;
+
+• documentation excellence;
+
+• engineering discipline;
+
+• professional communication;
+
+• continuous improvement;
+
+• long-term sustainability;
+
+• respect for engineering knowledge.
+
+These values define the public character of the repository.
+
+---
+
+# Public Ecosystem
+
+Nano Core Agents is publicly documented within the following engineering context.
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+↓
+
+IMPERIAL Core
+
+↓
+
+HANTER
+
+↓
+
+Nano Core Agents
+
+This relationship describes only the publicly documented engineering structure.
+
+It does not represent implementation architecture, runtime behaviour or operational infrastructure.
+
+---
+
+# Leadership
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+Founder and Chief Executive Officer of IMPERIAL Core.
+
+Responsible for the long-term engineering philosophy, architectural vision and public documentation strategy of the IMPERIAL Core ecosystem.
+
+---
+
+# Public Commitment
+
+The Nano Core Agents public repository is committed to maintaining engineering documentation that is technically accurate, professionally written and suitable for unrestricted publication.
+
+Future documentation will continue expanding this public engineering knowledge base while preserving the established Public / Private Boundary, respecting the principles of Minimal Disclosure and protecting confidential engineering assets.
+
+---
+
+End of Document.
