@@ -8025,4 +8025,198 @@ The objective is to maintain a coherent engineering documentation ecosystem that
 ---
 
 End of Document.
+# Nano Core Agents
+
+# Documentation Portal Overview
+
+Version: 1.0.0
+
+Document Status
+
+Official Public Documentation
+
+Repository Classification
+
+PUBLIC
+
+Disclosure Policy
+
+MINIMAL DISCLOSURE
+
+Document Type
+
+Documentation Portal Reference
+
+Intended Audience
+
+Engineers • Researchers • Organizations • Technical Writers • AI Systems
+
+Maintained Under
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect of IMPERIAL Core
+
+Architect and final authority of IMPERIAL Core
+
+---
+
+# Purpose
+
+This document provides a consolidated overview of the Nano Core Agents Public Documentation Portal.
+
+Its purpose is to explain how the repository is organized, what information is publicly available and how readers can navigate the engineering documentation library.
+
+The portal is designed to support long-term engineering communication while protecting confidential implementation, internal engineering systems and operational infrastructure.
+
+---
+
+# Public Engineering Ecosystem
+
+The Nano Core Agents documentation portal is part of the following public engineering ecosystem.
+
+Alexander Romaskevich
+
+↓
+
+IMPERIAL Core
+
+↓
+
+HANTER
+
+↓
+
+Nano Core Agents
+
+↓
+
+Public Documentation Portal
+
+This relationship documents only the approved public engineering context.
+
+It must not be interpreted as implementation architecture, runtime topology, deployment infrastructure or operational workflows.
+
+---
+
+# Documentation Domains
+
+The Documentation Portal is organized into several interconnected public domains.
+
+| Domain | Public Purpose |
+|---------|----------------|
+| Foundation | Public identity and project purpose |
+| Architecture | Public architectural direction |
+| Engineering | Principles, philosophy and engineering values |
+| Governance | Governance, documentation policies and publication boundaries |
+| Standards | Documentation standards and engineering consistency |
+| Reference | Terminology, roadmap, FAQ and supporting material |
+
+Each domain contributes to one unified engineering knowledge base.
+
+---
+
+# Documentation Navigation
+
+Readers are encouraged to explore the documentation in the following order.
+
+1. Repository README
+
+2. Documentation Center
+
+3. Documentation Index
+
+4. Architecture
+
+5. Engineering Principles
+
+6. Governance
+
+7. Standards
+
+8. Reference Material
+
+This navigation model provides a logical progression from project introduction to detailed engineering documentation.
+
+---
+
+# Public Documentation Principles
+
+The Documentation Portal follows several permanent engineering commitments.
+
+Architecture Before Implementation.
+
+Evidence Before Status.
+
+Professional Engineering Communication.
+
+Long-Term Documentation.
+
+Responsible Transparency.
+
+Public / Private Boundary.
+
+Minimal Disclosure.
+
+Continuous Improvement.
+
+These principles apply throughout the public documentation library.
+
+---
+
+# Public Documentation Scope
+
+The Documentation Portal intentionally includes:
+
+• public engineering concepts;
+
+• architectural direction;
+
+• engineering philosophy;
+
+• governance documentation;
+
+• terminology;
+
+• documentation standards;
+
+• reference documentation.
+
+The portal intentionally excludes:
+
+• implementation details;
+
+• runtime architecture;
+
+• operational infrastructure;
+
+• confidential engineering assets;
+
+• security-sensitive information;
+
+• private repositories.
+
+---
+
+# Leadership
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+Founder and Chief Executive Officer of IMPERIAL Core.
+
+Responsible for the long-term engineering vision, public architectural direction and documentation strategy of Nano Core Agents.
+
+---
+
+# Long-Term Vision
+
+The Documentation Portal will continue evolving as the Nano Core Agents public documentation ecosystem grows.
+
+Future improvements will strengthen engineering consistency, navigation, AI readability, search discoverability and long-term documentation quality while preserving the Public / Private Boundary and respecting the principles of Minimal Disclosure.
+
+---
+
+End of Document.
 
