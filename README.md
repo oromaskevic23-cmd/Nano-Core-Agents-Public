@@ -62,3 +62,32 @@ Private implementation, internal systems, orchestration logic, operational infra
 This repository exists to provide transparent public documentation while protecting the integrity of private engineering work.
 
 The project is developed under the leadership of Alexander Romaskevich, Founder, Owner, CEO and Chief Systems Architect of IMPERIAL Core.
+---
+
+# Project Status
+
+Repository Type:
+
+**Public Repository**
+
+Development Status:
+
+Active
+
+Documentation Status:
+
+Continuously Updated
+
+Information Classification:
+
+PUBLIC ONLY
+
+Disclosure Policy:
+
+MINIMAL DISCLOSURE
+
+This repository intentionally publishes only information approved for public release.
+
+Private engineering documentation, implementation details, internal infrastructure, operational processes, enterprise tooling, confidential research and security-sensitive information are intentionally excluded from this public repository.
+
+The objective of this repository is to provide a transparent public view of Nano Core Agents while protecting private engineering assets of the IMPERIAL Core ecosystem.
