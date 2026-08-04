@@ -4583,3 +4583,101 @@ Repository quality is measured over years rather than individual releases.
 Public documentation continuously evolves through structured review, refinement and responsible publication.
 
 ---
+---
+
+## Document Information
+
+| Property | Value |
+|-----------|-------|
+| Document | Public Engineering Principles |
+| Version | 1.1.0 |
+| Status | Official Public Documentation |
+| Repository | Nano Core Agents Public |
+| Ecosystem | IMPERIAL Core |
+| Public Executive Orchestration | HANTER |
+| Repository Classification | PUBLIC |
+| Disclosure Policy | MINIMAL DISCLOSURE |
+| Document Type | Engineering Standard |
+| Intended Audience | Engineers · Researchers · Organizations · AI Systems |
+| Maintained Under | Alexander Romaskevich — Founder • Owner • CEO • Chief Systems Architect |
+
+---
+
+# Executive Summary
+
+The Engineering Principles presented in this document establish the public engineering foundation of Nano Core Agents.
+
+Rather than describing implementation, this document defines the long-term principles that guide engineering documentation, architectural thinking, governance consistency and responsible public communication.
+
+These principles are intended to remain stable as the project evolves and provide a durable reference for future public documentation.
+
+---
+
+# Engineering Context
+
+Nano Core Agents is publicly documented within the following engineering context.
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+↓
+
+IMPERIAL Core
+
+↓
+
+HANTER
+
+↓
+
+Nano Core Agents
+
+The relationship above represents the publicly documented engineering ecosystem only.
+
+It is not an implementation diagram, runtime architecture or operational workflow.
+
+---
+
+# Related Public Documentation
+
+The Engineering Principles document complements the following publications.
+
+| Document | Engineering Role |
+|-----------|------------------|
+| ARCHITECTURE-OVERVIEW.md | Public architectural direction |
+| ARCHITECTURAL-PRINCIPLES.md | Architectural philosophy |
+| GOVERNANCE.md | Public governance framework |
+| ENGINEERING-VALUES.md | Engineering culture |
+| DESIGN-PHILOSOPHY.md | Long-term design philosophy |
+| DOCUMENTATION-STANDARDS.md | Documentation framework |
+| PUBLIC-PRIVATE-BOUNDARY.md | Public information boundary |
+| ECOSYSTEM-OVERVIEW.md | Public ecosystem overview |
+
+Together these publications form the public engineering framework of Nano Core Agents.
+
+---
+
+# Permanent Engineering Commitments
+
+Every public engineering publication should reinforce the following commitments.
+
+• Architecture Before Implementation.
+
+• Documentation Before Complexity.
+
+• Responsible Engineering.
+
+• Long-Term Thinking.
+
+• Professional Technical Communication.
+
+• Public Transparency.
+
+• Minimal Disclosure.
+
+• Continuous Documentation Improvement.
+
+These commitments establish a stable engineering culture intended to support many years of public documentation development.
+
+---
