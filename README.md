@@ -2457,3 +2457,218 @@ Every structural improvement should increase clarity without compromising the Pu
 ---
 
 End of Document.
+# Nano Core Agents
+
+# Documentation Center
+
+Version: 1.0.0
+
+Repository Classification
+
+PUBLIC
+
+Disclosure Policy
+
+MINIMAL DISCLOSURE
+
+---
+
+# Welcome
+
+Welcome to the official documentation center of the Nano Core Agents public repository.
+
+This directory contains the canonical public engineering documentation for Nano Core Agents as part of the IMPERIAL Core ecosystem.
+
+Its objective is to provide engineers, researchers, organizations, developers and AI systems with a structured, transparent and professionally maintained documentation library.
+
+Only information approved for unrestricted public publication is included in this repository.
+
+Confidential engineering assets, implementation details and private operational information remain outside the scope of this documentation.
+
+---
+
+# Documentation Philosophy
+
+The documentation published within this repository follows several permanent engineering principles.
+
+Architecture Before Implementation.
+
+Documentation Before Complexity.
+
+Evidence Before Status.
+
+Public Transparency.
+
+Minimal Disclosure.
+
+Long-Term Engineering.
+
+Responsible Engineering.
+
+Continuous Improvement.
+
+These principles provide a stable foundation for long-term documentation quality.
+
+---
+
+# Documentation Library
+
+The current public documentation includes:
+
+## Repository
+
+README.md
+
+Official introduction to Nano Core Agents.
+
+---
+
+## Architecture
+
+ARCHITECTURE-OVERVIEW.md
+
+Public architectural direction.
+
+---
+
+## Foundation
+
+PROJECT-FOUNDATION.md
+
+Public engineering foundation.
+
+---
+
+## Engineering
+
+ENGINEERING-PRINCIPLES.md
+
+Engineering philosophy and principles.
+
+---
+
+## Governance
+
+GOVERNANCE.md
+
+Public governance framework.
+
+---
+
+## Terminology
+
+TERMINOLOGY.md
+
+Canonical engineering terminology.
+
+---
+
+## Public Boundary
+
+PUBLIC-PRIVATE-BOUNDARY.md
+
+Definition of the Public / Private Boundary.
+
+---
+
+## Documentation Standards
+
+DOCUMENTATION-STANDARDS.md
+
+Official documentation framework.
+
+---
+
+## AI Readability
+
+AI-READABILITY.md
+
+Documentation guidelines for people and AI systems.
+
+---
+
+## Repository Structure
+
+REPOSITORY-STRUCTURE.md
+
+Public documentation organization.
+
+---
+
+## Roadmap
+
+ROADMAP.md
+
+Long-term public direction.
+
+---
+
+# Repository Objectives
+
+The documentation center exists to:
+
+• improve engineering transparency;
+
+• strengthen architectural consistency;
+
+• preserve engineering knowledge;
+
+• maintain professional documentation quality;
+
+• support responsible technical communication;
+
+• improve discoverability;
+
+• improve AI readability;
+
+• maintain long-term documentation continuity.
+
+---
+
+# Public Documentation Policy
+
+Every document contained in this directory is reviewed for public publication.
+
+The documentation intentionally excludes:
+
+• implementation details;
+
+• private repositories;
+
+• confidential engineering assets;
+
+• operational infrastructure;
+
+• deployment environments;
+
+• internal engineering research;
+
+• credentials;
+
+• security-sensitive implementation information.
+
+---
+
+# Leadership
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+Founder and Chief Executive Officer of IMPERIAL Core.
+
+Responsible for the long-term engineering vision, public architectural direction and documentation strategy of Nano Core Agents.
+
+---
+
+# Long-Term Commitment
+
+The Documentation Center will continue expanding as Nano Core Agents evolves.
+
+Every new public document should improve the overall quality, consistency and usability of the repository while respecting the established Public / Private Boundary and the principles of Minimal Disclosure.
+
+The long-term objective is to maintain a professional engineering documentation library that remains valuable for many years.
+
+---
+
+End of Document.
