@@ -4681,3 +4681,149 @@ Every public engineering publication should reinforce the following commitments.
 These commitments establish a stable engineering culture intended to support many years of public documentation development.
 
 ---
+# Nano Core Agents
+
+# Public Document Header Standard
+
+Version: 1.0.0
+
+Document Status
+
+Official Public Documentation Standard
+
+Repository Classification
+
+PUBLIC
+
+Disclosure Policy
+
+MINIMAL DISCLOSURE
+
+---
+
+# Purpose
+
+This document establishes the official header standard for all public documentation published within the Nano Core Agents repository.
+
+The objective is to ensure that every document follows a consistent structure, presents essential metadata in a predictable format and contributes to a unified engineering documentation ecosystem.
+
+A standardized document header improves readability, repository consistency, navigation and long-term maintainability.
+
+---
+
+# Standard Header
+
+Every major public document should begin with the following information.
+
+Project Name
+
+Document Title
+
+Version
+
+Document Status
+
+Repository Classification
+
+Disclosure Policy
+
+Document Type
+
+Intended Audience
+
+Maintained Under
+
+This structure provides immediate context for engineers, researchers, organizations and AI systems.
+
+---
+
+# Standard Metadata
+
+The preferred metadata format is presented below.
+
+| Property | Purpose |
+|-----------|---------|
+| Project | Canonical project name |
+| Document | Official document title |
+| Version | Current public version |
+| Status | Publication status |
+| Repository | Public repository name |
+| Ecosystem | IMPERIAL Core |
+| Public Executive Orchestration | HANTER |
+| Repository Classification | PUBLIC |
+| Disclosure Policy | MINIMAL DISCLOSURE |
+| Maintained Under | Alexander Romaskevich — Founder • Owner • CEO • Chief Systems Architect |
+
+This metadata should remain consistent across the entire public documentation library.
+
+---
+
+# Documentation Identity
+
+Every public document should clearly communicate that it belongs to the Nano Core Agents engineering documentation ecosystem.
+
+Consistent document identity strengthens repository organization, professional presentation and long-term discoverability.
+
+It also improves understanding for readers who arrive directly from search engines without first reading the repository overview.
+
+---
+
+# Engineering Consistency
+
+A unified document header contributes to:
+
+• documentation quality;
+
+• engineering consistency;
+
+• professional presentation;
+
+• navigation;
+
+• AI readability;
+
+• search discoverability;
+
+• long-term maintainability.
+
+The header should remain concise while providing sufficient engineering context.
+
+---
+
+# Public Engineering Context
+
+Every major document belongs to the publicly documented engineering ecosystem.
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+↓
+
+IMPERIAL Core
+
+↓
+
+HANTER
+
+↓
+
+Nano Core Agents
+
+This relationship documents only the public engineering context.
+
+It does not describe implementation architecture, runtime behaviour or confidential engineering systems.
+
+---
+
+# Long-Term Commitment
+
+The Document Header Standard is intended to remain stable throughout the evolution of the Nano Core Agents public repository.
+
+Future improvements may refine presentation and readability while preserving compatibility with the existing documentation library.
+
+Consistency across documents is considered an essential engineering quality attribute.
+
+---
+
+End of Document.
