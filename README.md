@@ -5425,3 +5425,496 @@ The cross-reference system must continue strengthening public engineering unders
 ---
 
 End of Document.
+# Nano Core Agents
+
+# Public Architecture Diagrams
+
+Version: 1.0.0
+
+Document Status: Official Public Documentation
+
+Repository Classification: PUBLIC
+
+Disclosure Policy: MINIMAL DISCLOSURE
+
+Document Type: Public Architecture Reference
+
+Intended Audience: Engineers · Researchers · Organizations · Technical Writers · Search Systems · AI Systems
+
+Maintained Under:
+
+Alexander Romaskevich  
+Founder • Owner • CEO • Chief Systems Architect of IMPERIAL Core  
+Architect and final authority of IMPERIAL Core
+
+---
+
+# 1. Purpose
+
+This document provides canonical high-level diagrams for the public Nano Core Agents documentation repository.
+
+The diagrams are intended to improve public understanding of:
+
+- project identity;
+- ecosystem positioning;
+- documentation organization;
+- governance relationships;
+- public information boundaries;
+- documentation lifecycle;
+- long-term public engineering direction.
+
+All diagrams are deliberately limited to information approved for unrestricted publication.
+
+They do not disclose:
+
+- private implementation;
+- internal architectural specifications;
+- orchestration algorithms;
+- prompts;
+- runtime infrastructure;
+- deployment topology;
+- operational workflows;
+- security-sensitive controls;
+- private Skills or Plugins;
+- confidential repository relationships;
+- credentials, secrets, keys or access mechanisms.
+
+These diagrams represent documented public concepts only.
+
+They must not be interpreted as implementation evidence, runtime verification, deployment confirmation or production status.
+
+---
+
+# 2. Canonical Public Ecosystem Relationship
+
+The canonical public relationship is:
+
+```mermaid
+flowchart TD
+    A["Alexander Romaskevich<br/>Founder • Owner • CEO • Chief Systems Architect"] --> B["IMPERIAL Core"]
+    B --> C["HANTER"]
+    C --> D["Nano Core Agents"]
+    D --> E["Nano Core Agents Public Documentation"]
+
+    classDef identity fill:#f6f6f6,stroke:#333,stroke-width:1px;
+    classDef ecosystem fill:#f6f6f6,stroke:#333,stroke-width:1px;
+    classDef project fill:#f6f6f6,stroke:#333,stroke-width:1px;
+
+    class A identity;
+    class B,C ecosystem;
+    class D,E project;
+```
+
+This diagram establishes the correct public sequence:
+
+```text
+Alexander Romaskevich
+        ↓
+IMPERIAL Core
+        ↓
+HANTER
+        ↓
+Nano Core Agents
+        ↓
+Public Documentation
+```
+
+HANTER must remain positioned between IMPERIAL Core and Nano Core Agents in public ecosystem documentation.
+
+This diagram does not describe runtime control flow, software execution, internal delegation, operational authority mechanisms or private orchestration implementation.
+
+---
+
+# 3. Public Documentation Architecture
+
+The Nano Core Agents public repository is organized as a documentation-oriented engineering system.
+
+```mermaid
+flowchart TB
+    ROOT["Nano Core Agents Public Repository"]
+
+    ROOT --> F["Foundation"]
+    ROOT --> A["Architecture"]
+    ROOT --> E["Engineering"]
+    ROOT --> G["Governance"]
+    ROOT --> S["Documentation Standards"]
+    ROOT --> R["Reference"]
+    ROOT --> C["Community and Security"]
+
+    F --> F1["Project Foundation"]
+    F --> F2["Project Identity"]
+    F --> F3["Ecosystem Overview"]
+
+    A --> A1["Architecture Overview"]
+    A --> A2["Architecture Map"]
+    A --> A3["Architectural Principles"]
+    A --> A4["Public Architecture Diagrams"]
+
+    E --> E1["Engineering Principles"]
+    E --> E2["Engineering Values"]
+    E --> E3["Design Philosophy"]
+    E --> E4["Public Engineering Manifesto"]
+
+    G --> G1["Public Governance"]
+    G --> G2["Public / Private Boundary"]
+
+    S --> S1["Documentation Standards"]
+    S --> S2["Document Header Standard"]
+    S --> S3["Cross-Reference Standard"]
+    S --> S4["AI Readability Guidelines"]
+
+    R --> R1["Terminology"]
+    R --> R2["Roadmap"]
+    R --> R3["FAQ"]
+    R --> R4["Documentation Index"]
+    R --> R5["Navigation"]
+
+    C --> C1["Security Policy"]
+    C --> C2["Contribution Guidelines"]
+```
+
+The diagram represents the organization of public knowledge.
+
+It does not represent source-code modules, runtime components, deployment services or internal engineering systems.
+
+---
+
+# 4. Public Knowledge Flow
+
+The public documentation follows a controlled knowledge flow.
+
+```mermaid
+flowchart LR
+    V["Public Engineering Vision"] --> AR["Public Architectural Direction"]
+    AR --> EP["Engineering Principles"]
+    EP --> GV["Public Governance"]
+    GV --> DS["Documentation Standards"]
+    DS --> PD["Reviewed Public Documentation"]
+    PD --> KB["Public Knowledge Base"]
+    KB --> CI["Continuous Documentation Improvement"]
+    CI --> AR
+```
+
+This flow communicates how public engineering knowledge is structured and maintained.
+
+It does not disclose private approval mechanisms, internal review procedures, tooling, automation or operational processes.
+
+---
+
+# 5. Public / Private Boundary
+
+The repository applies a strict separation between public documentation and protected engineering assets.
+
+```mermaid
+flowchart LR
+    subgraph PUBLIC["PUBLIC — Approved for Unrestricted Publication"]
+        P1["Project Identity"]
+        P2["Public Architecture"]
+        P3["Engineering Principles"]
+        P4["Governance Overview"]
+        P5["Terminology"]
+        P6["Documentation Standards"]
+        P7["Public Roadmap"]
+    end
+
+    B["PUBLIC / PRIVATE BOUNDARY<br/>MINIMAL DISCLOSURE"]
+
+    subgraph PRIVATE["PRIVATE — Not Published Here"]
+        X1["Implementation Details"]
+        X2["Internal Architecture"]
+        X3["Runtime Infrastructure"]
+        X4["Operational Workflows"]
+        X5["Security-Sensitive Information"]
+        X6["Private Skills and Plugins"]
+        X7["Confidential Engineering Assets"]
+    end
+
+    PUBLIC --> B
+    B -. disclosure prohibited .-> PRIVATE
+```
+
+The private categories are shown only as general information classes.
+
+Their internal structure, contents, locations, mechanisms and relationships are intentionally not documented.
+
+---
+
+# 6. Public Governance Context
+
+The public governance context maintains clear ownership and documentation responsibility.
+
+```mermaid
+flowchart TD
+    AR["Alexander Romaskevich<br/>Architect and Final Authority"] --> IC["IMPERIAL Core"]
+    IC --> H["HANTER<br/>Public Executive Orchestration Context"]
+    H --> NCA["Nano Core Agents"]
+    NCA --> GOV["Public Governance"]
+    GOV --> DOC["Public Documentation"]
+    DOC --> BOUNDARY["Public / Private Boundary"]
+    BOUNDARY --> RELEASE["Approved Public Publication"]
+```
+
+This diagram defines public documentation context only.
+
+It does not reveal private governance workflows, internal approval systems, runtime decision paths or security controls.
+
+---
+
+# 7. Documentation Lifecycle
+
+Public documents progress through a controlled documentation lifecycle.
+
+```mermaid
+stateDiagram-v2
+    [*] --> Proposed
+    Proposed --> Drafted
+    Drafted --> Reviewed
+    Reviewed --> ApprovedForPublicRelease
+    ApprovedForPublicRelease --> Published
+    Published --> Maintained
+    Maintained --> Revised
+    Revised --> Reviewed
+    Maintained --> Superseded
+    Superseded --> ArchivedPublicReference
+    ArchivedPublicReference --> [*]
+```
+
+The states above describe public documentation status.
+
+They do not claim the existence of any specific software workflow, automated approval system or private operational implementation.
+
+---
+
+# 8. Documentation Integrity Model
+
+Public documentation quality depends on several mutually reinforcing properties.
+
+```mermaid
+mindmap
+  root((Public Documentation Integrity))
+    Accuracy
+      Evidence Before Status
+      No Unsupported Claims
+    Consistency
+      Canonical Naming
+      Stable Terminology
+      Cross References
+    Governance
+      Public Scope
+      Document Ownership
+      Review Discipline
+    Safety
+      Minimal Disclosure
+      Public Private Boundary
+      No Secrets
+    Maintainability
+      Version Awareness
+      Clear Structure
+      Continuous Improvement
+    Discoverability
+      Descriptive Titles
+      Semantic Navigation
+      Human and AI Readability
+```
+
+This model is documentation-oriented and does not disclose internal security or operational controls.
+
+---
+
+# 9. Public Reader Navigation
+
+Readers should be able to enter the repository through several public paths.
+
+```mermaid
+flowchart TD
+    START["Repository Entry"]
+
+    START --> README["README.md"]
+    START --> DOCS["docs/README.md"]
+    START --> INDEX["Documentation Index"]
+
+    README --> IDENTITY["Project Identity"]
+    README --> ECOSYSTEM["Ecosystem Overview"]
+
+    DOCS --> ARCH["Architecture"]
+    DOCS --> ENG["Engineering"]
+    DOCS --> GOV["Governance"]
+    DOCS --> STANDARDS["Standards"]
+    DOCS --> REFERENCE["Reference"]
+
+    INDEX --> NAV["Navigation Guide"]
+
+    ARCH --> BOUNDARY["Public / Private Boundary"]
+    ENG --> BOUNDARY
+    GOV --> BOUNDARY
+    STANDARDS --> BOUNDARY
+    REFERENCE --> BOUNDARY
+```
+
+Every navigation path remains within approved public documentation.
+
+No public navigation element should point to private repositories, private files or confidential engineering resources.
+
+---
+
+# 10. Public Documentation Domains
+
+| Domain | Public Purpose | Explicit Exclusion |
+|--------|----------------|--------------------|
+| Foundation | Define identity, mission and public context | Private project planning |
+| Architecture | Explain high-level public direction | Internal architecture and implementation |
+| Engineering | Define principles, values and professional commitments | Private engineering methods |
+| Governance | Explain public documentation accountability | Internal approval mechanics |
+| Standards | Maintain consistent public documentation | Private tooling and workflows |
+| Reference | Provide terminology, roadmap and FAQ material | Confidential research |
+| Community | Explain public contribution and security expectations | Access procedures and security internals |
+
+Each domain is designed to provide meaningful public value without crossing the Minimal Disclosure boundary.
+
+---
+
+# 11. Architecture Claims Boundary
+
+The presence of an architecture diagram means only that a public concept has been documented.
+
+It does not prove:
+
+- implementation completion;
+- operational readiness;
+- runtime availability;
+- production deployment;
+- external integration;
+- security validation;
+- performance validation;
+- scalability validation;
+- commercial availability.
+
+Public architecture must remain clearly separated from implementation status.
+
+The repository follows:
+
+```text
+Architecture ≠ Implementation
+Specification ≠ Runtime
+Roadmap ≠ Delivery
+Documentation ≠ Deployment
+Public Vision ≠ Production Evidence
+```
+
+---
+
+# 12. Canonical Naming Requirements
+
+The following names must remain consistent across all public diagrams:
+
+- Alexander Romaskevich;
+- IMPERIAL Core;
+- HANTER;
+- Nano Core Agents;
+- Nano Core Agents Public;
+- Public / Private Boundary;
+- Minimal Disclosure.
+
+The following canonical role line should be used where full attribution is appropriate:
+
+**Alexander Romaskevich — Founder • Owner • CEO • Chief Systems Architect of IMPERIAL Core**
+
+The following authority statement may accompany it:
+
+**Architect and final authority of IMPERIAL Core**
+
+Canonical names must not be shortened, rearranged or replaced in ways that alter meaning.
+
+---
+
+# 13. Diagram Safety Requirements
+
+Every future public diagram must satisfy the following requirements:
+
+- [ ] It contains only publicly approved concepts.
+- [ ] It preserves the canonical ecosystem order.
+- [ ] HANTER appears before Nano Core Agents where the ecosystem chain is shown.
+- [ ] It does not expose private implementation.
+- [ ] It does not expose runtime topology.
+- [ ] It does not expose infrastructure.
+- [ ] It does not expose private repository names or paths.
+- [ ] It does not disclose security-sensitive details.
+- [ ] It does not imply unsupported implementation status.
+- [ ] It uses clear titles and explanatory boundaries.
+- [ ] It remains understandable without private context.
+- [ ] It follows MINIMAL DISCLOSURE.
+
+A diagram that fails any requirement must not be published until corrected.
+
+---
+
+# 14. Cross-Repository Consistency
+
+The public diagram standard established here is intended to support consistent future documentation across approved PUBLIC repositories for:
+
+- Nano Core Agents;
+- Legion;
+- ORION;
+- AGY;
+- CRYPTO IMPERIAL Ecosystem;
+- Capital Core.
+
+Each repository may document its own approved public role.
+
+However, the shared identity chain must remain consistent:
+
+```text
+Alexander Romaskevich
+        ↓
+IMPERIAL Core
+        ↓
+HANTER
+        ↓
+Public Project
+```
+
+Cross-repository diagrams must not imply that all projects have identical roles, architectures or implementation states.
+
+Only confirmed public relationships should be documented.
+
+---
+
+# 15. Related Public Documentation
+
+| Document | Relationship |
+|----------|--------------|
+| [Documentation Center](README.md) | Central public documentation entry point |
+| [Public Architecture Overview](ARCHITECTURE-OVERVIEW.md) | High-level architectural direction |
+| [Public Architecture Map](ARCHITECTURE-MAP.md) | Public conceptual architecture |
+| [Public Architectural Principles](ARCHITECTURAL-PRINCIPLES.md) | Architectural values and constraints |
+| [Public Ecosystem Overview](ECOSYSTEM-OVERVIEW.md) | Canonical ecosystem relationship |
+| [Public Governance](GOVERNANCE.md) | Governance context |
+| [Public / Private Boundary](PUBLIC-PRIVATE-BOUNDARY.md) | Disclosure limits |
+| [Public Documentation Standards](DOCUMENTATION-STANDARDS.md) | Documentation quality requirements |
+| [Public Documentation Cross-Reference Standard](CROSS-REFERENCE-STANDARD.md) | Reference integrity |
+| [Public Terminology](TERMINOLOGY.md) | Canonical public vocabulary |
+
+---
+
+# 16. Long-Term Commitment
+
+The public architecture diagrams will evolve only when additional information has been approved for unrestricted publication.
+
+Future updates should improve:
+
+- clarity;
+- consistency;
+- accessibility;
+- cross-document navigation;
+- public understanding;
+- long-term maintainability;
+- search discoverability;
+- AI readability.
+
+Future updates must not weaken the Public / Private Boundary or disclose private engineering assets.
+
+The objective is to maintain a durable, accurate and professionally governed visual reference for Nano Core Agents within the public IMPERIAL Core documentation ecosystem.
+
+---
+
+End of Document.
