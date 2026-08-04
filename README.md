@@ -1046,3 +1046,182 @@ Existing canonical terms should evolve only when necessary to preserve clarity, 
 ---
 
 End of Document.
+# Nano Core Agents
+
+# Public / Private Boundary
+
+Version: 1.0.0
+
+Repository Classification
+
+PUBLIC
+
+Disclosure Policy
+
+MINIMAL DISCLOSURE
+
+---
+
+# Purpose
+
+This document defines the official Public / Private Boundary adopted by the Nano Core Agents public repository.
+
+The purpose of this boundary is to maximize transparency regarding the project's public engineering vision while protecting confidential engineering knowledge, implementation assets and operational integrity.
+
+The Public / Private Boundary is considered a permanent architectural principle rather than a temporary documentation policy.
+
+---
+
+# Public Repository
+
+The public repository exists to communicate engineering knowledge that has been intentionally approved for unrestricted publication.
+
+Examples of public information include:
+
+• project purpose;
+
+• engineering philosophy;
+
+• architectural overview;
+
+• governance principles;
+
+• documentation standards;
+
+• terminology;
+
+• public roadmap;
+
+• repository structure;
+
+• engineering values;
+
+• contribution guidelines;
+
+• frequently asked questions;
+
+• public design concepts.
+
+The objective of the public repository is education, transparency and long-term documentation.
+
+---
+
+# Private Engineering Environment
+
+Private engineering repositories remain the authoritative environment for implementation and operational development.
+
+Examples of information intentionally excluded from public publication include:
+
+• implementation source code not approved for release;
+
+• internal architecture specifications;
+
+• operational infrastructure;
+
+• deployment procedures;
+
+• runtime environments;
+
+• internal orchestration logic;
+
+• enterprise engineering documentation;
+
+• confidential research;
+
+• internal design discussions;
+
+• testing environments;
+
+• automation infrastructure;
+
+• security architecture;
+
+• credentials;
+
+• keys;
+
+• tokens;
+
+• access procedures;
+
+• private repositories and their internal contents.
+
+These assets remain confidential to preserve engineering integrity and operational security.
+
+---
+
+# Engineering Responsibility
+
+Public documentation should always provide meaningful technical information without exposing confidential engineering assets.
+
+Transparency should never reduce security.
+
+Documentation should never compromise operational integrity.
+
+Engineering communication should remain honest, technically accurate and professionally maintained.
+
+---
+
+# Public Documentation Principles
+
+Every public document should satisfy the following objectives.
+
+Communicate architectural intent.
+
+Explain engineering philosophy.
+
+Document governance principles.
+
+Preserve consistent terminology.
+
+Support long-term maintainability.
+
+Improve technical transparency.
+
+Protect confidential implementation.
+
+Respect responsible disclosure.
+
+Maintain professional documentation quality.
+
+Strengthen public understanding of the project.
+
+---
+
+# Repository Commitment
+
+Nano Core Agents is committed to maintaining a clear distinction between public knowledge and private engineering.
+
+Public documentation is intended to grow continuously.
+
+Private engineering environments are intended to evolve independently without requiring public disclosure of confidential implementation.
+
+This separation enables sustainable engineering, responsible governance and long-term architectural stability.
+
+---
+
+# Leadership
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+Founder and Chief Executive Officer of IMPERIAL Core.
+
+Responsible for the long-term architectural direction and governance of the public Nano Core Agents documentation.
+
+---
+
+# Long-Term Vision
+
+The Public / Private Boundary is expected to remain one of the fundamental engineering principles of Nano Core Agents throughout the evolution of the project.
+
+As documentation expands, new public knowledge may be published.
+
+However, confidential engineering assets, implementation details and operational environments will continue to remain outside the scope of this public repository.
+
+This approach supports responsible engineering, sustainable documentation and long-term trust.
+
+---
+
+End of Document.
