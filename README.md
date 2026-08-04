@@ -654,3 +654,222 @@ Every future document should strengthen this public knowledge base while respect
 ---
 
 End of Document.
+# Nano Core Agents
+
+# Public Governance
+
+Version: 1.0.0
+
+Repository Classification
+
+PUBLIC
+
+Disclosure Policy
+
+MINIMAL DISCLOSURE
+
+---
+
+# Document Purpose
+
+This document defines the public governance framework for the Nano Core Agents public repository.
+
+Its objective is to describe how public documentation is managed, reviewed and maintained while preserving a clear separation between publicly available information and confidential engineering assets.
+
+This document intentionally avoids implementation details and does not describe private operational procedures.
+
+---
+
+# Governance Philosophy
+
+Strong engineering requires strong governance.
+
+Governance establishes consistency, accountability and long-term stability across all public documentation.
+
+Every public publication should improve the quality of the repository, strengthen architectural consistency and preserve the integrity of previously published materials.
+
+Governance is considered a continuous engineering activity rather than a single administrative process.
+
+---
+
+# Public Governance Objectives
+
+The governance framework is designed to achieve several long-term objectives.
+
+• Maintain consistent engineering documentation.
+
+• Preserve architectural terminology.
+
+• Improve documentation quality.
+
+• Protect the Public / Private Boundary.
+
+• Encourage responsible engineering communication.
+
+• Support long-term maintainability.
+
+• Preserve historical continuity of public documents.
+
+• Ensure that published information remains technically accurate.
+
+---
+
+# Public Documentation Lifecycle
+
+Every public document progresses through a controlled documentation lifecycle.
+
+Concept
+
+↓
+
+Draft
+
+↓
+
+Technical Review
+
+↓
+
+Editorial Review
+
+↓
+
+Public Publication
+
+↓
+
+Continuous Improvement
+
+The purpose of this lifecycle is to improve documentation quality while maintaining long-term consistency.
+
+---
+
+# Documentation Ownership
+
+Nano Core Agents public documentation is maintained under unified architectural leadership.
+
+Project Leadership
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+The Founder and CEO defines the long-term engineering direction, documentation philosophy and governance principles for the public Nano Core Agents repository.
+
+---
+
+# Public Responsibilities
+
+Public documentation is expected to:
+
+communicate engineering concepts clearly;
+
+remain technically accurate;
+
+avoid unsupported claims;
+
+use consistent terminology;
+
+respect repository standards;
+
+preserve architectural continuity;
+
+remain understandable for both people and AI systems.
+
+---
+
+# Public Information Policy
+
+Only information approved for unrestricted publication belongs in this repository.
+
+Examples include:
+
+• engineering principles;
+
+• governance documentation;
+
+• terminology;
+
+• repository structure;
+
+• documentation standards;
+
+• architectural overviews;
+
+• public roadmap information;
+
+• project vision.
+
+---
+
+# Information That Is Not Published
+
+The following categories intentionally remain outside the public repository.
+
+Implementation details.
+
+Private repositories.
+
+Internal architecture.
+
+Operational infrastructure.
+
+Security procedures.
+
+Internal engineering workflows.
+
+Enterprise tooling.
+
+Confidential research.
+
+Credentials.
+
+Access information.
+
+Infrastructure configuration.
+
+Any information whose publication could reduce the security, integrity or sustainability of the project.
+
+---
+
+# Governance Principles
+
+Nano Core Agents public governance follows several permanent principles.
+
+Architecture Before Implementation.
+
+Documentation Before Complexity.
+
+Evidence Before Status.
+
+Long-Term Thinking.
+
+Responsible Engineering.
+
+Consistency.
+
+Professional Communication.
+
+Minimal Disclosure.
+
+Continuous Improvement.
+
+Public Transparency.
+
+---
+
+# Long-Term Commitment
+
+The governance framework is intended to remain stable throughout the long-term evolution of Nano Core Agents.
+
+Individual documents may evolve.
+
+Engineering practices may improve.
+
+Repository structure may expand.
+
+However, the core governance principles are intended to provide a durable public foundation capable of supporting many years of engineering documentation.
+
+---
+
+End of Document.
