@@ -2831,3 +2831,168 @@ New questions and answers may be added whenever they improve understanding, redu
 ---
 
 End of Document.
+# Nano Core Agents
+
+# Engineering Values
+
+Version: 1.0.0
+
+Document Status
+
+Official Public Documentation
+
+Repository Classification
+
+PUBLIC
+
+Disclosure Policy
+
+MINIMAL DISCLOSURE
+
+---
+
+# Purpose
+
+Engineering values define the long-term professional culture of the Nano Core Agents public project.
+
+They provide a stable foundation for architectural thinking, documentation quality, technical communication and responsible engineering.
+
+These values are intended to remain relevant throughout the long-term evolution of the project.
+
+---
+
+# Vision
+
+Nano Core Agents is developed with the objective of building engineering documentation that remains understandable, maintainable and professionally valuable for many years.
+
+Engineering quality is considered an investment rather than a short-term objective.
+
+The public repository reflects documented engineering thinking instead of implementation details.
+
+---
+
+# Core Engineering Values
+
+## Responsibility
+
+Engineering decisions should be made responsibly.
+
+Public documentation should remain technically accurate, professionally written and suitable for unrestricted publication.
+
+Every published document becomes part of the project's long-term engineering history.
+
+---
+
+## Architectural Thinking
+
+Architecture provides direction before implementation begins.
+
+Public documentation communicates engineering intent while intentionally avoiding confidential implementation details.
+
+Architectural consistency is considered a strategic engineering asset.
+
+---
+
+## Professional Documentation
+
+Documentation is part of the engineering process.
+
+Well-written documentation improves collaboration, maintainability, education and long-term project quality.
+
+Every document should provide measurable value to future readers.
+
+---
+
+## Long-Term Perspective
+
+Nano Core Agents is designed with a long engineering horizon.
+
+Documentation should remain valuable beyond individual software versions or implementation changes.
+
+Engineering knowledge should outlive temporary technologies.
+
+---
+
+## Transparency
+
+Transparency means providing clear and accurate public information.
+
+Transparency does not require disclosure of confidential engineering assets.
+
+The Public / Private Boundary protects both engineering integrity and responsible communication.
+
+---
+
+## Consistency
+
+Consistency should exist across terminology, documentation style, repository organization and engineering communication.
+
+A consistent repository becomes easier to maintain, easier to understand and easier to expand.
+
+---
+
+## Continuous Improvement
+
+Engineering documentation should continuously improve.
+
+Corrections, refinements and structural improvements strengthen the long-term quality of the repository.
+
+Continuous improvement is preferred over unnecessary complexity.
+
+---
+
+## Respect for Knowledge
+
+Engineering knowledge should be documented carefully.
+
+Technical concepts should be explained before assumptions are made.
+
+Professional communication should always take priority over promotional language.
+
+---
+
+# Public Engineering Culture
+
+The public engineering culture of Nano Core Agents is based on:
+
+• responsibility;
+
+• architectural thinking;
+
+• documentation quality;
+
+• professional communication;
+
+• long-term maintainability;
+
+• engineering discipline;
+
+• transparency;
+
+• continuous improvement.
+
+These values define the public identity of the repository and support sustainable engineering growth.
+
+---
+
+# Leadership
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+Founder and Chief Executive Officer of IMPERIAL Core.
+
+Responsible for the long-term engineering philosophy, architectural vision and public documentation strategy of Nano Core Agents.
+
+---
+
+# Long-Term Commitment
+
+Engineering values are intended to remain stable even as documentation continues to evolve.
+
+Future publications should reinforce these principles, strengthen engineering quality and contribute to a durable public engineering knowledge base while respecting the established Public / Private Boundary and the Minimal Disclosure policy.
+
+---
+
+End of Document.
