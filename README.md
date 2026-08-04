@@ -2258,3 +2258,202 @@ The public documentation library will continue to expand through carefully revie
 ---
 
 End of Document.
+# Nano Core Agents
+
+# Repository Structure
+
+Version: 1.0.0
+
+Document Status
+
+Official Public Documentation
+
+Repository Classification
+
+PUBLIC
+
+Disclosure Policy
+
+MINIMAL DISCLOSURE
+
+---
+
+# Purpose
+
+This document describes the public structure of the Nano Core Agents repository.
+
+Its objective is to explain how public documentation is organized, how engineering knowledge is presented and how repository navigation is expected to evolve over time.
+
+This document intentionally describes only publicly available content.
+
+It does not disclose internal repository layouts, private engineering systems, implementation architecture or confidential operational assets.
+
+---
+
+# Repository Philosophy
+
+A well-structured repository improves engineering quality.
+
+Documentation should be easy to navigate.
+
+Information should be logically grouped.
+
+Documents should be discoverable by both people and AI systems.
+
+Repository organization should remain stable as the project evolves.
+
+Long-term maintainability is considered more important than short-term convenience.
+
+---
+
+# Repository Organization
+
+The public repository is organized around engineering knowledge rather than software implementation.
+
+The repository gradually expands into a structured public engineering library that documents the long-term vision of Nano Core Agents.
+
+Major documentation categories include:
+
+• Repository Overview
+
+• Architecture
+
+• Engineering Principles
+
+• Governance
+
+• Documentation Standards
+
+• Public Terminology
+
+• Public Roadmap
+
+• Security
+
+• Contribution Guidelines
+
+• Repository Structure
+
+• Frequently Asked Questions
+
+• Additional public reference documents.
+
+Each document has a clearly defined purpose and avoids unnecessary duplication.
+
+---
+
+# Documentation Hierarchy
+
+Repository documentation follows a layered structure.
+
+Level 1
+
+Repository entry point.
+
+General project overview.
+
+Navigation.
+
+Public identity.
+
+---
+
+Level 2
+
+Core engineering documentation.
+
+Architecture.
+
+Governance.
+
+Engineering principles.
+
+Repository standards.
+
+Documentation standards.
+
+---
+
+Level 3
+
+Reference documentation.
+
+Terminology.
+
+Roadmap.
+
+Security.
+
+Contribution guidance.
+
+Frequently asked questions.
+
+Repository policies.
+
+---
+
+This hierarchy improves readability, maintainability and long-term scalability.
+
+---
+
+# Navigation Principles
+
+Repository navigation should remain predictable.
+
+Documents should reference related public documents whenever appropriate.
+
+Titles should remain descriptive.
+
+File names should remain stable.
+
+Large documents should be divided logically instead of becoming difficult to maintain.
+
+Navigation should help readers understand the engineering documentation without requiring knowledge of private engineering environments.
+
+---
+
+# Public Documentation Library
+
+The repository is intended to evolve into a comprehensive public engineering documentation library.
+
+Future publications may expand existing topics while preserving consistency with established terminology, governance principles and documentation standards.
+
+Every new document should strengthen the overall documentation ecosystem.
+
+---
+
+# Public Repository Boundary
+
+Only documentation approved for unrestricted publication belongs in this repository.
+
+Private engineering documentation remains outside the scope of the public repository.
+
+The repository intentionally excludes implementation details, confidential engineering processes, operational infrastructure, internal research and other protected engineering assets.
+
+This separation preserves long-term engineering integrity while supporting transparent public documentation.
+
+---
+
+# Leadership
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+Founder and Chief Executive Officer of IMPERIAL Core.
+
+Responsible for the long-term architectural vision, engineering philosophy and public documentation strategy of Nano Core Agents.
+
+---
+
+# Long-Term Vision
+
+The repository is expected to grow into a durable public engineering knowledge base.
+
+Its structure should remain understandable, consistent and maintainable across future generations of documentation.
+
+Every structural improvement should increase clarity without compromising the Public / Private Boundary or the principles of responsible engineering communication.
+
+---
+
+End of Document.
