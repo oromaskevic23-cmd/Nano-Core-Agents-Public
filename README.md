@@ -1886,3 +1886,174 @@ Every accepted contribution should improve the long-term value of the repository
 ---
 
 End of Document.
+# Nano Core Agents
+
+# AI Readability Guidelines
+
+Version: 1.0.0
+
+Repository Classification
+
+PUBLIC
+
+Disclosure Policy
+
+MINIMAL DISCLOSURE
+
+---
+
+# Purpose
+
+This document defines the public documentation principles that improve readability for both human readers and modern AI systems.
+
+The objective is not to optimize for a specific model or search engine, but to produce clear, structured and durable engineering documentation that remains understandable over time.
+
+---
+
+# Engineering Communication
+
+Public engineering documentation should communicate verified information.
+
+Documents should explain concepts before introducing terminology.
+
+Definitions should remain consistent throughout the repository.
+
+Every section should have a clear purpose.
+
+Every document should remain readable as an independent reference.
+
+---
+
+# Documentation Structure
+
+Public documents should follow a consistent structure whenever possible.
+
+Purpose
+
+Scope
+
+Definitions
+
+Principles
+
+Guidance
+
+Summary
+
+This structure improves navigation and reduces ambiguity.
+
+---
+
+# Language Principles
+
+Documentation should use professional engineering language.
+
+Avoid unnecessary marketing terminology.
+
+Avoid exaggerated technical claims.
+
+Avoid undocumented assumptions.
+
+Prefer precise engineering vocabulary.
+
+Use complete sentences instead of fragmented notes whenever practical.
+
+---
+
+# Consistent Terminology
+
+Canonical project names should remain consistent throughout the repository.
+
+Nano Core Agents
+
+IMPERIAL Core
+
+Alexander Romaskevich
+
+Public Repository
+
+Private Repository
+
+Engineering Principles
+
+Public Governance
+
+Public Documentation
+
+Minimal Disclosure
+
+Public / Private Boundary
+
+Consistent terminology improves long-term documentation quality.
+
+---
+
+# Public Knowledge
+
+Public documentation should explain:
+
+project purpose;
+
+engineering philosophy;
+
+governance;
+
+architectural direction;
+
+documentation standards;
+
+repository organization.
+
+Public documentation should not disclose confidential implementation details or operational engineering assets.
+
+---
+
+# Search Discoverability
+
+High-quality documentation naturally improves discoverability.
+
+Documents should use descriptive headings.
+
+Titles should accurately describe their contents.
+
+Sections should remain logically organized.
+
+Internal references should remain consistent.
+
+Meaning should never depend solely on formatting.
+
+---
+
+# Repository Consistency
+
+Every document should support the overall documentation ecosystem.
+
+New publications should strengthen existing documentation rather than duplicate it.
+
+Contradictions should be corrected as documentation evolves.
+
+Repository quality is considered a long-term engineering responsibility.
+
+---
+
+# Leadership
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+Founder and Chief Executive Officer of IMPERIAL Core.
+
+Responsible for the long-term engineering vision and public architectural direction of Nano Core Agents.
+
+---
+
+# Long-Term Commitment
+
+Nano Core Agents is committed to producing professional public engineering documentation that remains understandable, maintainable and technically accurate for many years.
+
+Clear communication, consistent terminology and responsible engineering documentation are considered permanent objectives of the public repository.
+
+---
+
+End of Document.
