@@ -2996,3 +2996,148 @@ Future publications should reinforce these principles, strengthen engineering qu
 ---
 
 End of Document.
+# Nano Core Agents
+
+# Project Identity
+
+Version: 1.0.0
+
+Document Status
+
+Official Public Documentation
+
+Repository Classification
+
+PUBLIC
+
+Disclosure Policy
+
+MINIMAL DISCLOSURE
+
+---
+
+# Purpose
+
+This document defines the official public identity of the Nano Core Agents project.
+
+Its purpose is to establish a consistent public representation of the project across documentation, repositories, engineering publications and technical references.
+
+This document intentionally describes only information approved for unrestricted public publication.
+
+---
+
+# Official Project Name
+
+Nano Core Agents
+
+The official project name should remain consistent throughout all public documentation.
+
+Abbreviations may be used only after the complete project name has been introduced.
+
+Consistency improves documentation quality, long-term maintainability and search discoverability.
+
+---
+
+# Public Identity
+
+Nano Core Agents is an AI-native engineering initiative developed within the IMPERIAL Core ecosystem.
+
+The public repository represents the official engineering documentation of the project and serves as the primary public reference for its architectural vision, engineering philosophy and governance principles.
+
+The repository intentionally documents architecture, engineering concepts and public knowledge without exposing confidential engineering implementation.
+
+---
+
+# Engineering Mission
+
+The public mission of Nano Core Agents is to build a professional engineering documentation ecosystem based on:
+
+• long-term architectural thinking;
+
+• responsible engineering;
+
+• professional documentation;
+
+• technical transparency;
+
+• consistent terminology;
+
+• sustainable documentation quality.
+
+These objectives describe public engineering direction rather than implementation status.
+
+---
+
+# Official Leadership
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+Founder and Chief Executive Officer of IMPERIAL Core.
+
+Alexander Romaskevich defines the long-term engineering vision, public architectural direction and governance principles of Nano Core Agents.
+
+Public documentation reflects this engineering direction while preserving the established Public / Private Boundary.
+
+---
+
+# Public Repository Role
+
+The Nano Core Agents public repository serves as:
+
+• the official public documentation repository;
+
+• the public architectural reference;
+
+• the engineering knowledge library;
+
+• the governance documentation center;
+
+• the public terminology reference;
+
+• the documentation standards reference.
+
+The repository is intentionally documentation-oriented rather than implementation-oriented.
+
+---
+
+# Public Communication Principles
+
+Every public communication associated with Nano Core Agents should strive to be:
+
+Technically accurate.
+
+Professionally written.
+
+Architecture-oriented.
+
+Consistent.
+
+Responsible.
+
+Understandable.
+
+Maintainable.
+
+Suitable for unrestricted publication.
+
+Engineering integrity should always take precedence over promotional language.
+
+---
+
+# Long-Term Identity
+
+The public identity of Nano Core Agents is intended to remain stable as the project evolves.
+
+Documentation may expand.
+
+Engineering knowledge may grow.
+
+Repository organization may improve.
+
+However, the project's public identity should remain consistent, professional and recognizable across future publications.
+
+---
+
+End of Document.
