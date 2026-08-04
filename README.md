@@ -8634,4 +8634,226 @@ This repository is also intended to serve as the documentation baseline for futu
 ---
 
 End of Document.
+# Nano Core Agents
 
+# Foundation Release v1.0
+
+Version
+
+1.0.0
+
+Release Type
+
+Public Foundation Release
+
+Repository Classification
+
+PUBLIC
+
+Disclosure Policy
+
+MINIMAL DISCLOSURE
+
+Document Status
+
+Official Public Release
+
+Maintained Under
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect of IMPERIAL Core
+
+Architect and final authority of IMPERIAL Core
+
+Release Date
+
+Initial Public Foundation Release
+
+---
+
+# Foundation Release Statement
+
+This document marks the first official public foundation release of the Nano Core Agents documentation repository.
+
+The purpose of this release is to establish a professional, long-term engineering documentation foundation that communicates the public architectural direction of Nano Core Agents while preserving the Public / Private Boundary and the principles of Minimal Disclosure.
+
+This release documents engineering knowledge only.
+
+It intentionally does not claim implementation completion, runtime validation, deployment status, production readiness or operational capability.
+
+---
+
+# Public Engineering Ecosystem
+
+The Nano Core Agents Public repository is documented within the following canonical engineering relationship.
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+↓
+
+IMPERIAL Core
+
+↓
+
+HANTER
+
+↓
+
+Nano Core Agents
+
+↓
+
+Public Documentation Portal
+
+The sequence above represents the approved public engineering context.
+
+It does not describe runtime architecture, deployment topology, implementation hierarchy or internal engineering systems.
+
+---
+
+# Foundation Achievements
+
+Version 1.0 establishes the initial public documentation foundation for Nano Core Agents.
+
+The repository now includes structured public documentation covering:
+
+• public engineering identity;
+
+• architectural direction;
+
+• engineering philosophy;
+
+• governance;
+
+• documentation standards;
+
+• repository organization;
+
+• engineering terminology;
+
+• documentation navigation;
+
+• engineering consistency;
+
+• public knowledge model;
+
+• documentation quality framework;
+
+• public architecture diagrams;
+
+• repository metadata;
+
+• documentation lifecycle;
+
+• engineering decision principles;
+
+• documentation portal overview.
+
+Together these documents form the initial public engineering documentation baseline.
+
+---
+
+# Engineering Principles
+
+The Foundation Release is governed by the following permanent engineering commitments.
+
+Architecture Before Implementation.
+
+Evidence Before Status.
+
+Documentation Before Complexity.
+
+Responsible Engineering Communication.
+
+Long-Term Maintainability.
+
+Public Transparency.
+
+Public / Private Boundary.
+
+Minimal Disclosure.
+
+Continuous Improvement.
+
+These principles will continue guiding future public documentation.
+
+---
+
+# Release Scope
+
+This release intentionally includes only publicly approved engineering documentation.
+
+It intentionally excludes:
+
+• implementation details;
+
+• runtime architecture;
+
+• operational infrastructure;
+
+• internal engineering processes;
+
+• confidential engineering assets;
+
+• private repositories;
+
+• security-sensitive information.
+
+---
+
+# Public Commitment
+
+The Nano Core Agents Public repository is committed to maintaining accurate, professional and sustainable engineering documentation.
+
+Future public releases will expand the documentation ecosystem while preserving architectural consistency, engineering integrity and responsible public communication.
+
+---
+
+# Relationship to the IMPERIAL Core Ecosystem
+
+This Foundation Release serves as the public documentation baseline for Nano Core Agents within the wider IMPERIAL Core ecosystem.
+
+It also establishes the documentation standard that will guide future public repositories for:
+
+• Legion
+
+• ORION
+
+• AGY
+
+• CRYPTO IMPERIAL Ecosystem
+
+• Capital Core
+
+Each future repository will preserve its own identity while following the same principles of professional documentation, canonical terminology and Minimal Disclosure.
+
+---
+
+# Leadership
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+Founder and Chief Executive Officer of IMPERIAL Core.
+
+Architect and final authority of IMPERIAL Core.
+
+Responsible for the long-term engineering vision, public architectural direction and documentation strategy of the IMPERIAL Core ecosystem.
+
+---
+
+# Closing Statement
+
+Foundation Release v1.0 represents the beginning of the long-term public engineering documentation journey of Nano Core Agents.
+
+The objective is not simply to publish documents.
+
+The objective is to build a durable engineering knowledge base that remains understandable, trustworthy and valuable for engineers, researchers, organizations and AI systems for many years while preserving the Public / Private Boundary and protecting confidential engineering implementation.
+
+---
+
+End of Document.
