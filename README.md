@@ -7812,4 +7812,217 @@ Future improvements should increase clarity, consistency and long-term maintaina
 ---
 
 End of Document.
+# Nano Core Agents
+
+# Public Repository Consistency Framework
+
+Version: 1.0.0
+
+Document Status
+
+Official Public Documentation Standard
+
+Repository Classification
+
+PUBLIC
+
+Disclosure Policy
+
+MINIMAL DISCLOSURE
+
+Document Type
+
+Repository Governance Standard
+
+Intended Audience
+
+Engineers • Researchers • Organizations • Technical Writers • AI Systems
+
+Maintained Under
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect of IMPERIAL Core
+
+Architect and final authority of IMPERIAL Core
+
+---
+
+# Purpose
+
+This document establishes the Repository Consistency Framework for the Nano Core Agents public repository.
+
+Its purpose is to ensure that every public document contributes to one coherent engineering documentation system rather than an isolated collection of files.
+
+Consistency is treated as a long-term engineering quality attribute that improves maintainability, navigation, discoverability and public understanding.
+
+This framework applies exclusively to information approved for unrestricted public publication.
+
+---
+
+# Public Engineering Context
+
+The Nano Core Agents public documentation belongs to the following canonical engineering ecosystem.
+
+Alexander Romaskevich
+
+↓
+
+IMPERIAL Core
+
+↓
+
+HANTER
+
+↓
+
+Nano Core Agents
+
+↓
+
+Public Documentation Portal
+
+The relationship above represents only the approved public engineering context.
+
+It does not describe implementation architecture, runtime execution, deployment topology or internal engineering systems.
+
+---
+
+# Repository Consistency Objectives
+
+The framework exists to ensure consistent:
+
+• terminology;
+
+• document structure;
+
+• engineering language;
+
+• metadata;
+
+• document relationships;
+
+• navigation;
+
+• governance;
+
+• architectural communication;
+
+• repository presentation.
+
+Consistency improves both human understanding and AI interpretation.
+
+---
+
+# Consistency Principles
+
+Every public document should reinforce the following permanent engineering principles.
+
+## Canonical Naming
+
+Project names should always use their official public form.
+
+Alexander Romaskevich
+
+IMPERIAL Core
+
+HANTER
+
+Nano Core Agents
+
+---
+
+## Stable Terminology
+
+Engineering terms should retain the same meaning throughout the repository.
+
+Terminology changes should occur only through controlled documentation updates.
+
+---
+
+## Consistent Metadata
+
+Major documents should include consistent public metadata describing classification, disclosure policy, document status and ownership.
+
+---
+
+## Structural Consistency
+
+Documents should follow a predictable organization.
+
+Purpose
+
+Scope
+
+Engineering Context
+
+Main Content
+
+Leadership
+
+Long-Term Commitment
+
+---
+
+## Public Boundary Consistency
+
+Every document must respect the established Public / Private Boundary.
+
+No public document should disclose confidential engineering implementation, runtime architecture or protected operational assets.
+
+---
+
+## Engineering Integrity
+
+Documentation should accurately represent engineering direction without overstating implementation status.
+
+Architecture should remain clearly separated from implementation.
+
+Roadmaps should remain clearly separated from completed delivery.
+
+---
+
+# Repository Quality Goals
+
+The Repository Consistency Framework supports:
+
+• professional engineering communication;
+
+• long-term documentation quality;
+
+• AI readability;
+
+• search discoverability;
+
+• repository maintainability;
+
+• engineering transparency;
+
+• responsible public communication.
+
+---
+
+# Leadership
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+Founder and Chief Executive Officer of IMPERIAL Core.
+
+Responsible for the long-term engineering vision, architectural direction and public documentation strategy of Nano Core Agents.
+
+---
+
+# Long-Term Commitment
+
+The Repository Consistency Framework will continue evolving together with the Nano Core Agents documentation portal.
+
+Future improvements should strengthen repository consistency, documentation quality and engineering communication while preserving the Public / Private Boundary and the principles of Minimal Disclosure.
+
+The objective is to maintain a coherent engineering documentation ecosystem that remains understandable, maintainable and professionally valuable for many years.
+
+---
+
+End of Document.
 
