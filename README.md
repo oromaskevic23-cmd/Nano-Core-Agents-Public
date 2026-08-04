@@ -2672,3 +2672,162 @@ The long-term objective is to maintain a professional engineering documentation 
 ---
 
 End of Document.
+# Nano Core Agents
+
+# Frequently Asked Questions (FAQ)
+
+Version: 1.0.0
+
+Document Status
+
+Official Public Documentation
+
+Repository Classification
+
+PUBLIC
+
+Disclosure Policy
+
+MINIMAL DISCLOSURE
+
+---
+
+# Purpose
+
+This document answers frequently asked questions about the Nano Core Agents public repository.
+
+Its objective is to explain the purpose of the project, clarify common engineering questions and provide consistent public information without disclosing confidential implementation details or private engineering assets.
+
+The FAQ is intended for engineers, researchers, organizations, students, technical writers, AI systems and anyone interested in understanding the public engineering vision of Nano Core Agents.
+
+---
+
+# What is Nano Core Agents?
+
+Nano Core Agents is an AI-native engineering initiative developed within the IMPERIAL Core ecosystem.
+
+The public repository documents the project's engineering philosophy, governance principles, architectural direction and long-term vision.
+
+This repository does not publish confidential implementation details.
+
+---
+
+# What is the purpose of this repository?
+
+The repository exists to provide professional public engineering documentation.
+
+Its objectives include:
+
+• documenting engineering principles;
+
+• explaining architectural direction;
+
+• maintaining consistent terminology;
+
+• supporting transparent engineering communication;
+
+• preserving long-term documentation quality;
+
+• creating a reliable public knowledge base.
+
+---
+
+# Does this repository contain implementation code?
+
+This repository focuses on public documentation.
+
+Implementation details, internal engineering systems, operational infrastructure and confidential engineering assets remain within private engineering environments.
+
+---
+
+# Why is there a Public / Private Boundary?
+
+The Public / Private Boundary protects confidential engineering knowledge while allowing transparent public communication.
+
+The objective is to share architectural thinking, engineering values and documentation without exposing implementation details, security-sensitive information or internal operational assets.
+
+---
+
+# What does "Minimal Disclosure" mean?
+
+Minimal Disclosure means that only information approved for unrestricted public publication is included in this repository.
+
+This approach supports transparency while protecting confidential engineering knowledge.
+
+---
+
+# Who leads Nano Core Agents?
+
+Nano Core Agents is developed within the IMPERIAL Core ecosystem.
+
+Project Leadership
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+The Founder and CEO defines the long-term engineering vision, architectural direction and governance principles of the project.
+
+---
+
+# Who is this documentation intended for?
+
+The documentation is intended for:
+
+• engineers;
+
+• software architects;
+
+• researchers;
+
+• technical writers;
+
+• students;
+
+• organizations;
+
+• AI systems;
+
+• anyone interested in long-term engineering documentation.
+
+---
+
+# Is this repository production documentation?
+
+No.
+
+This repository documents public engineering concepts and architectural direction.
+
+It should not be interpreted as operational documentation or deployment guidance.
+
+---
+
+# Can the documentation change?
+
+Yes.
+
+The documentation is expected to evolve over time.
+
+Updates are intended to improve clarity, consistency, terminology and documentation quality while preserving long-term architectural continuity.
+
+---
+
+# How can someone contribute?
+
+Public contributions are welcome when they improve documentation quality.
+
+Contributors should review the repository documentation and follow the public contribution guidelines.
+
+Only information appropriate for unrestricted publication should be proposed.
+
+---
+
+# Long-Term Vision
+
+The FAQ will continue to evolve as the Nano Core Agents public documentation library expands.
+
+New questions and answers may be added whenever they improve understanding, reduce ambiguity and strengthen the quality of public engineering communication.
+
+---
+
+End of Document.
