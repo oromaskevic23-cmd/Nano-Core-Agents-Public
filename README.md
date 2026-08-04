@@ -135,3 +135,24 @@ Founder • Owner • CEO • Chief Systems Architect
 As the Founder and CEO of IMPERIAL Core, Alexander Romaskevich defines the long-term architectural vision, engineering direction and governance principles that guide the public development of Nano Core Agents.
 
 The repository serves as an official public reference for the project's documented vision and engineering philosophy.
+---
+
+# Governance
+
+Nano Core Agents is developed under a structured governance model that promotes accountability, consistency and responsible engineering.
+
+## Governance Objectives
+
+- Protect the integrity of the public documentation.
+- Maintain a clear separation between public and private information.
+- Preserve long-term architectural consistency.
+- Ensure that published information remains accurate and verifiable.
+- Support sustainable engineering practices throughout the project lifecycle.
+
+## Public Governance
+
+Public documentation may describe architectural concepts, engineering principles and project direction.
+
+Private repositories remain the authoritative location for implementation details, internal research, operational workflows, security mechanisms and other confidential engineering assets.
+
+Every public publication is expected to respect the established Public / Private Boundary and the Minimal Disclosure policy.
