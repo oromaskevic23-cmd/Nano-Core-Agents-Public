@@ -6681,3 +6681,169 @@ This publication defines ten documentation quality dimensions, four quality leve
 The framework preserves the canonical public relationship Alexander Romaskevich → IMPERIAL Core → HANTER → Nano Core Agents, strengthens accuracy, consistency, discoverability and long-term maintainability, and clearly separates architecture, roadmap and public vision from implementation, runtime and production status.
 
 All guidance remains within the PUBLIC ONLY and MINIMAL DISCLOSURE boundary and intentionally excludes private implementation, internal architecture, operational infrastructure, security-sensitive information and protected engineering assets.
+---
+# Nano Core Agents
+
+# Public Repository Metadata Standard
+
+Version: 1.0.0
+
+Document Status: Official Public Documentation Standard
+
+Repository Classification: PUBLIC
+
+Disclosure Policy: MINIMAL DISCLOSURE
+
+Document Type: Repository Documentation Standard
+
+Intended Audience: Engineers · Researchers · Organizations · Technical Writers · AI Systems
+
+Maintained Under:
+
+Alexander Romaskevich  
+Founder • Owner • CEO • Chief Systems Architect of IMPERIAL Core  
+Architect and final authority of IMPERIAL Core
+
+---
+
+# Purpose
+
+This document establishes the official metadata standard for the Nano Core Agents public repository.
+
+Metadata provides consistent descriptive information that improves repository organization, documentation quality, navigation, discoverability and long-term maintainability.
+
+The standard applies exclusively to information approved for unrestricted public publication.
+
+---
+
+# Public Repository Identity
+
+Canonical Project
+
+Nano Core Agents
+
+Public Engineering Ecosystem
+
+Alexander Romaskevich
+
+↓
+
+IMPERIAL Core
+
+↓
+
+HANTER
+
+↓
+
+Nano Core Agents
+
+The relationship above represents only the approved public engineering context.
+
+It does not describe implementation architecture, runtime execution, deployment topology or internal engineering systems.
+
+---
+
+# Required Repository Metadata
+
+Every major public document should identify the following metadata where appropriate.
+
+| Metadata | Description |
+|----------|-------------|
+| Project | Nano Core Agents |
+| Repository | Nano Core Agents Public |
+| Ecosystem | IMPERIAL Core |
+| Public Executive Orchestration | HANTER |
+| Classification | PUBLIC |
+| Disclosure Policy | MINIMAL DISCLOSURE |
+| Version | Current public version |
+| Status | Publication status |
+| Document Type | Architecture, Governance, Standard or Reference |
+| Maintained Under | Alexander Romaskevich |
+
+---
+
+# Metadata Principles
+
+Repository metadata should always remain:
+
+• truthful;
+
+• consistent;
+
+• maintainable;
+
+• architecture-oriented;
+
+• suitable for unrestricted publication;
+
+• independent of implementation details.
+
+Metadata should describe public documentation rather than operational systems.
+
+---
+
+# Public Documentation Benefits
+
+Consistent metadata improves:
+
+• repository navigation;
+
+• engineering consistency;
+
+• AI readability;
+
+• search discoverability;
+
+• documentation quality;
+
+• long-term maintenance;
+
+• public engineering communication.
+
+---
+
+# Public Boundary
+
+Repository metadata must never disclose:
+
+• confidential implementation;
+
+• runtime infrastructure;
+
+• deployment environments;
+
+• internal orchestration;
+
+• operational workflows;
+
+• security-sensitive information;
+
+• protected engineering assets.
+
+All metadata must remain consistent with the Public / Private Boundary and the principles of Minimal Disclosure.
+
+---
+
+# Leadership
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+Founder and Chief Executive Officer of IMPERIAL Core.
+
+Responsible for the long-term engineering vision and public documentation strategy of Nano Core Agents.
+
+---
+
+# Long-Term Commitment
+
+The Repository Metadata Standard will evolve together with the Nano Core Agents public documentation ecosystem.
+
+Future improvements will strengthen documentation consistency, semantic quality, navigation and discoverability while preserving the Public / Private Boundary and protecting confidential engineering information.
+
+---
+
+End of Document.
+---
