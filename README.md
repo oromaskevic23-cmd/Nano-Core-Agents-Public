@@ -4407,3 +4407,62 @@ Founder • Owner • CEO • Chief Systems Architect
 This diagram illustrates only the publicly documented engineering relationship.
 
 It does not describe runtime architecture, implementation details, internal orchestration mechanisms or confidential engineering systems.
+> **Official Public Documentation Portal**
+
+**Repository Status**
+
+| Property | Value |
+|-----------|-------|
+| Repository | Nano Core Agents Public |
+| Classification | PUBLIC |
+| Disclosure Policy | MINIMAL DISCLOSURE |
+| Documentation Status | ACTIVE |
+| Maintained By | IMPERIAL Core |
+| Public Leadership | Alexander Romaskevich — Founder • Owner • CEO • Chief Systems Architect |
+
+---
+
+# Documentation Navigation
+
+This documentation portal is organized as a structured engineering knowledge library.
+
+The documentation is divided into engineering domains to improve navigation, consistency and long-term maintainability.
+
+| Domain | Purpose |
+|---------|---------|
+| Foundation | Public project identity and engineering purpose |
+| Architecture | Public architectural direction and engineering vision |
+| Engineering | Engineering principles, philosophy and values |
+| Governance | Public governance and repository policies |
+| Documentation | Documentation standards and repository organization |
+| Reference | Supporting engineering knowledge and terminology |
+| Ecosystem | Public relationship between IMPERIAL Core, HANTER and Nano Core Agents |
+
+---
+
+# Documentation Workflow
+
+```text
+Engineering Vision
+        │
+        ▼
+Architecture
+        │
+        ▼
+Engineering Principles
+        │
+        ▼
+Governance
+        │
+        ▼
+Documentation
+        │
+        ▼
+Public Knowledge
+```
+
+The workflow above represents the public documentation lifecycle only.
+
+It is not an implementation workflow, deployment process or runtime architecture.
+
+---
