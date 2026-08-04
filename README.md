@@ -1695,3 +1695,194 @@ The commitment to protecting confidential engineering assets while maintaining t
 ---
 
 End of Document.
+# Contributing to Nano Core Agents
+
+Repository Classification
+
+PUBLIC
+
+Disclosure Policy
+
+MINIMAL DISCLOSURE
+
+---
+
+# Welcome
+
+Thank you for your interest in Nano Core Agents.
+
+This repository represents the official public engineering documentation of the Nano Core Agents initiative within the IMPERIAL Core ecosystem.
+
+Its primary objective is to provide high-quality public documentation, engineering principles and architectural knowledge while preserving a strict separation between public information and confidential engineering assets.
+
+---
+
+# Before Contributing
+
+Please read the following public documents before preparing a contribution.
+
+• README.md
+
+• docs/ARCHITECTURE-OVERVIEW.md
+
+• docs/PROJECT-FOUNDATION.md
+
+• docs/ENGINEERING-PRINCIPLES.md
+
+• docs/GOVERNANCE.md
+
+• docs/TERMINOLOGY.md
+
+• docs/PUBLIC-PRIVATE-BOUNDARY.md
+
+• docs/ROADMAP.md
+
+• SECURITY.md
+
+Understanding these documents helps maintain consistency across the public documentation.
+
+---
+
+# Contribution Principles
+
+Every contribution should improve at least one of the following:
+
+• documentation quality;
+
+• technical clarity;
+
+• architectural consistency;
+
+• terminology consistency;
+
+• readability;
+
+• maintainability;
+
+• accessibility;
+
+• public understanding.
+
+Quality is preferred over quantity.
+
+---
+
+# Documentation Standards
+
+Public contributions should be:
+
+Technically accurate.
+
+Professionally written.
+
+Easy to understand.
+
+Well structured.
+
+Version friendly.
+
+Long-term maintainable.
+
+Search friendly.
+
+AI readable.
+
+Consistent with repository terminology.
+
+---
+
+# Public Repository Scope
+
+This repository accepts contributions related to public engineering documentation.
+
+Examples include:
+
+• documentation improvements;
+
+• terminology clarification;
+
+• grammar corrections;
+
+• architecture explanations suitable for public publication;
+
+• navigation improvements;
+
+• documentation organization;
+
+• public engineering references.
+
+---
+
+# Information That Must Not Be Submitted
+
+Please do not submit:
+
+Implementation details.
+
+Private source code.
+
+Internal architecture.
+
+Operational procedures.
+
+Deployment information.
+
+Infrastructure configuration.
+
+Credentials.
+
+Secrets.
+
+Security-sensitive information.
+
+Private repositories.
+
+Internal engineering discussions.
+
+Confidential research.
+
+Any material that belongs exclusively to private engineering environments.
+
+---
+
+# Review Expectations
+
+Public contributions are expected to support the long-term quality of the repository.
+
+Reviews should focus on:
+
+accuracy;
+
+clarity;
+
+professional language;
+
+documentation consistency;
+
+architectural alignment;
+
+respect for the Public / Private Boundary.
+
+---
+
+# Leadership
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+Founder and Chief Executive Officer of IMPERIAL Core.
+
+The long-term architectural direction and public documentation strategy are established under the leadership of the Founder and CEO.
+
+---
+
+# Commitment
+
+Nano Core Agents welcomes thoughtful contributions that strengthen the public engineering documentation of the project.
+
+Every accepted contribution should improve the long-term value of the repository while preserving professional quality, responsible engineering communication and the established Public / Private Boundary.
+
+---
+
+End of Document.
