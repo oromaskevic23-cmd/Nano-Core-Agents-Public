@@ -206,3 +206,127 @@ Third, transparency without disclosing confidential engineering assets.
 Fourth, continuous improvement through structured documentation.
 
 These commitments define the public character of Nano Core Agents and establish a durable documentation foundation for future development within the IMPERIAL Core ecosystem.
+# Nano Core Agents
+
+# Public Architecture Overview
+
+Version: 1.0
+
+Repository Classification:
+
+PUBLIC
+
+Disclosure Policy:
+
+MINIMAL DISCLOSURE
+
+---
+
+# Introduction
+
+Nano Core Agents is an AI-native engineering initiative developed within the IMPERIAL Core ecosystem.
+
+This document provides a public architectural overview intended for engineers, researchers, organizations and the broader technology community.
+
+Its purpose is to explain the public architectural direction of Nano Core Agents without exposing confidential engineering implementation, operational infrastructure or other non-public assets.
+
+The document follows the principle of Architecture Before Implementation and should be understood as a public architectural reference rather than a technical implementation specification.
+
+---
+
+# Architectural Philosophy
+
+Nano Core Agents is designed with a long-term architectural perspective.
+
+Instead of focusing exclusively on software implementation, the project emphasizes engineering consistency, documentation quality, maintainability and responsible governance.
+
+Public documentation exists to communicate architectural intent, engineering philosophy and project direction while preserving a strict separation between public knowledge and private engineering assets.
+
+Every published document is expected to remain useful over many years, allowing the public architecture to evolve without losing consistency or clarity.
+
+---
+
+# Public Scope
+
+The public repository documents information intended for unrestricted publication.
+
+Examples include:
+
+- project overview;
+- engineering philosophy;
+- governance principles;
+- architectural terminology;
+- documentation standards;
+- public roadmap;
+- repository structure;
+- engineering values;
+- public design concepts.
+
+The public repository intentionally excludes implementation details, internal engineering workflows, confidential research, security-sensitive information and operational infrastructure.
+
+---
+
+# Architectural Objectives
+
+The long-term public objectives of Nano Core Agents include:
+
+- encouraging responsible engineering practices;
+- promoting high-quality technical documentation;
+- maintaining architectural consistency;
+- preserving documentation continuity;
+- supporting transparent engineering communication;
+- documenting public design decisions;
+- establishing stable engineering terminology;
+- improving long-term maintainability.
+
+These objectives represent public architectural goals rather than implementation status.
+
+---
+
+# Public Engineering Values
+
+Nano Core Agents is publicly documented according to several fundamental engineering values.
+
+Architecture Before Implementation.
+
+Documentation Before Complexity.
+
+Evidence Before Status.
+
+Long-Term Thinking.
+
+Responsible Engineering.
+
+Continuous Improvement.
+
+Minimal Disclosure.
+
+Public Transparency.
+
+These values guide the preparation of all public engineering documentation published within this repository.
+
+---
+
+# Leadership
+
+Nano Core Agents is developed within the IMPERIAL Core ecosystem.
+
+Founder • Owner • CEO • Chief Systems Architect
+
+Alexander Romaskevich
+
+The Founder and CEO defines the long-term architectural direction of the public project documentation while ensuring that confidential engineering assets remain protected through the established Public / Private Boundary.
+
+---
+
+# Public Boundary
+
+This document intentionally contains only information approved for public publication.
+
+Private repositories remain the authoritative location for engineering implementation, internal systems, operational processes, security architecture and confidential enterprise assets.
+
+This separation protects long-term engineering integrity while allowing transparent public documentation to evolve independently.
+
+---
+
+End of Public Architecture Overview.
