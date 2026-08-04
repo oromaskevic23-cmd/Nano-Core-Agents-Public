@@ -91,3 +91,26 @@ This repository intentionally publishes only information approved for public rel
 Private engineering documentation, implementation details, internal infrastructure, operational processes, enterprise tooling, confidential research and security-sensitive information are intentionally excluded from this public repository.
 
 The objective of this repository is to provide a transparent public view of Nano Core Agents while protecting private engineering assets of the IMPERIAL Core ecosystem.
+---
+
+# Engineering Philosophy
+
+Nano Core Agents is developed with a long-term engineering mindset.
+
+Every public document is intended to remain consistent, maintainable and understandable as the project evolves.
+
+The repository follows a documentation-first approach, where architectural intent is documented before implementation details.
+
+## Public Engineering Principles
+
+- Architecture Before Implementation
+- Documentation Before Complexity
+- Public Transparency
+- Minimal Disclosure
+- Long-Term Maintainability
+- Consistent Terminology
+- Evidence Before Status
+- Responsible Engineering
+- Continuous Improvement
+
+These principles establish a stable public foundation for documentation while protecting private engineering knowledge and implementation details.
