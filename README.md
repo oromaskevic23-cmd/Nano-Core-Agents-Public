@@ -330,3 +330,150 @@ This separation protects long-term engineering integrity while allowing transpar
 ---
 
 End of Public Architecture Overview.
+# Nano Core Agents
+
+# Project Foundation
+
+Version: 1.0.0
+
+Repository Classification:
+
+PUBLIC
+
+Disclosure Policy:
+
+MINIMAL DISCLOSURE
+
+---
+
+# Purpose
+
+Nano Core Agents is a long-term AI-native engineering initiative developed as part of the IMPERIAL Core ecosystem.
+
+This repository exists to document the public engineering foundation of the project. It provides architectural context, engineering principles, governance concepts and public documentation intended for engineers, researchers, organizations and the wider technology community.
+
+This repository is not intended to disclose confidential implementation details or internal engineering assets.
+
+---
+
+# Mission
+
+The mission of Nano Core Agents is to establish a well-documented public engineering foundation based on responsible architecture, long-term maintainability and transparent technical communication.
+
+The project prioritizes quality over speed, consistency over fragmentation and long-term engineering discipline over short-term experimentation.
+
+Public documentation serves as a stable reference that can evolve together with the project while preserving architectural continuity.
+
+---
+
+# Public Objectives
+
+The long-term objectives of this repository include:
+
+• maintain clear engineering documentation;
+
+• establish stable architectural terminology;
+
+• improve transparency through documentation;
+
+• provide a reliable public knowledge base;
+
+• encourage responsible AI engineering practices;
+
+• document engineering philosophy;
+
+• preserve historical continuity;
+
+• support long-term maintainability;
+
+• publish only information approved for public release.
+
+---
+
+# Engineering Principles
+
+Nano Core Agents follows a documentation-first engineering philosophy.
+
+Public documentation is prepared before implementation is discussed.
+
+Engineering decisions should be understandable, traceable and maintainable over long periods of time.
+
+Public architectural documents should remain stable, readable and valuable regardless of implementation changes occurring in private engineering environments.
+
+---
+
+# Documentation Principles
+
+Every public document should strive to be:
+
+Clear.
+
+Consistent.
+
+Maintainable.
+
+Professional.
+
+Accurate.
+
+Versioned.
+
+Human-readable.
+
+AI-readable.
+
+Search-friendly.
+
+Future-proof.
+
+---
+
+# Repository Scope
+
+This repository intentionally contains only publicly approved information.
+
+Examples include:
+
+• engineering philosophy;
+
+• architecture overview;
+
+• governance principles;
+
+• terminology;
+
+• documentation standards;
+
+• repository navigation;
+
+• public project vision;
+
+• engineering values.
+
+Private repositories remain responsible for implementation, internal engineering workflows, operational infrastructure, security architecture and other confidential engineering assets.
+
+---
+
+# Leadership
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+Founder and Chief Executive Officer of IMPERIAL Core.
+
+Responsible for the long-term architectural direction, engineering philosophy and governance of the public Nano Core Agents documentation.
+
+---
+
+# Public Commitment
+
+Nano Core Agents is committed to publishing professional engineering documentation that reflects responsible software engineering practices while respecting the Public / Private Boundary.
+
+Every public publication should contribute to long-term knowledge rather than short-term promotion.
+
+The objective is to build a sustainable public documentation ecosystem capable of evolving together with the project for many years.
+
+---
+
+End of Document.
