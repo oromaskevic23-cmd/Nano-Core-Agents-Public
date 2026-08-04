@@ -3463,3 +3463,174 @@ Future public publications should strengthen engineering quality, improve reposi
 ---
 
 End of Document.
+# Nano Core Agents
+
+# Public Architecture Map
+
+Version: 1.0.0
+
+Document Status
+
+Official Public Documentation
+
+Repository Classification
+
+PUBLIC
+
+Disclosure Policy
+
+MINIMAL DISCLOSURE
+
+---
+
+# Purpose
+
+The purpose of this document is to provide a high-level public architectural map of the Nano Core Agents project.
+
+This document is intentionally limited to architectural concepts that are approved for unrestricted public publication. It does not describe confidential implementation details, internal engineering systems, operational infrastructure, runtime architecture or private repositories.
+
+The Architecture Map is designed to help engineers, researchers, organizations and AI systems understand the public structure of the project without exposing confidential engineering knowledge.
+
+---
+
+# Public Architectural Perspective
+
+Nano Core Agents is documented as an AI-native engineering initiative within the IMPERIAL Core ecosystem.
+
+The public repository represents the official documentation environment for the project and communicates engineering concepts through architecture, governance, documentation standards and long-term engineering principles.
+
+The repository should be understood as a public engineering knowledge base rather than an implementation repository.
+
+---
+
+# Public Architecture Overview
+
+```text
+Alexander Romaskevich
+Founder • Owner • CEO • Chief Systems Architect
+                    │
+                    ▼
+             IMPERIAL Core
+                    │
+                    ▼
+          Nano Core Agents
+                    │
+ ┌──────────────────┼──────────────────┐
+ │                  │                  │
+ ▼                  ▼                  ▼
+Architecture    Documentation    Governance
+ │                  │                  │
+ ▼                  ▼                  ▼
+Engineering     Public Knowledge  Repository
+Principles      Library           Standards
+```
+
+The diagram above illustrates only the public conceptual relationship between the documented components.
+
+It is not intended to describe software architecture, implementation logic, runtime behaviour or private engineering systems.
+
+---
+
+# Public Documentation Domains
+
+The public documentation currently focuses on several engineering domains.
+
+## Architecture
+
+Documents that explain long-term engineering direction.
+
+---
+
+## Engineering
+
+Documents describing engineering philosophy, design principles and documentation standards.
+
+---
+
+## Governance
+
+Documents explaining public governance, engineering responsibilities and repository policies.
+
+---
+
+## Documentation
+
+Documents that define writing standards, terminology, repository organization and public communication.
+
+---
+
+## Public Knowledge
+
+Reference material intended for engineers, researchers, organizations and AI systems.
+
+---
+
+# Architectural Boundaries
+
+The Architecture Map intentionally excludes:
+
+• implementation architecture;
+
+• internal orchestration;
+
+• deployment architecture;
+
+• runtime infrastructure;
+
+• operational environments;
+
+• confidential engineering assets;
+
+• enterprise implementation details;
+
+• security-sensitive information.
+
+Those subjects remain within private engineering environments.
+
+---
+
+# Engineering Objectives
+
+The public Architecture Map exists to:
+
+• improve engineering understanding;
+
+• strengthen documentation consistency;
+
+• support architectural communication;
+
+• improve repository navigation;
+
+• provide a stable engineering reference;
+
+• improve AI readability;
+
+• improve search discoverability;
+
+• preserve long-term documentation quality.
+
+---
+
+# Leadership
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+Founder and Chief Executive Officer of IMPERIAL Core.
+
+Responsible for the long-term architectural vision, engineering philosophy and public documentation strategy of Nano Core Agents.
+
+---
+
+# Long-Term Commitment
+
+The Architecture Map will evolve together with the public documentation library.
+
+Future updates may improve clarity, documentation quality and navigation while preserving the Public / Private Boundary and the principles of Minimal Disclosure.
+
+The objective is to maintain a professional architectural reference suitable for long-term public engineering documentation.
+
+---
+
+End of Document.
