@@ -3787,3 +3787,204 @@ Future publications will strengthen the public understanding of the IMPERIAL Cor
 ---
 
 End of Document.
+# Nano Core Agents
+
+# Documentation Index
+
+Version: 1.0.0
+
+Document Status
+
+Official Public Documentation
+
+Repository Classification
+
+PUBLIC
+
+Disclosure Policy
+
+MINIMAL DISCLOSURE
+
+---
+
+# Purpose
+
+The Documentation Index serves as the canonical navigation document for the Nano Core Agents public repository.
+
+Its purpose is to organize the public documentation into a coherent engineering knowledge system that remains understandable, maintainable and discoverable over the long term.
+
+This index references only information approved for unrestricted public publication.
+
+Confidential engineering assets, implementation details, operational environments and private repositories remain intentionally outside the scope of this documentation.
+
+---
+
+# Documentation Philosophy
+
+Engineering documentation should function as an integrated knowledge ecosystem rather than a collection of independent documents.
+
+Every publication contributes to a shared engineering language, consistent architectural understanding and long-term documentation quality.
+
+The Documentation Index exists to help readers understand how individual public documents relate to one another.
+
+---
+
+# Documentation Library
+
+## Repository Entry
+
+README.md
+
+Official introduction to Nano Core Agents.
+
+Primary entry point for public readers.
+
+---
+
+## Documentation Center
+
+docs/README.md
+
+Central navigation for the public documentation library.
+
+---
+
+## Architecture
+
+ARCHITECTURE-OVERVIEW.md
+
+ARCHITECTURE-MAP.md
+
+ARCHITECTURAL-PRINCIPLES.md
+
+Public architectural documentation describing engineering direction without exposing implementation.
+
+---
+
+## Engineering
+
+ENGINEERING-PRINCIPLES.md
+
+ENGINEERING-VALUES.md
+
+DESIGN-PHILOSOPHY.md
+
+Engineering philosophy, principles and long-term design values.
+
+---
+
+## Governance
+
+GOVERNANCE.md
+
+PUBLIC-PRIVATE-BOUNDARY.md
+
+Public governance framework and responsible disclosure principles.
+
+---
+
+## Documentation
+
+DOCUMENTATION-STANDARDS.md
+
+AI-READABILITY.md
+
+REPOSITORY-STRUCTURE.md
+
+PROJECT-FOUNDATION.md
+
+PROJECT-IDENTITY.md
+
+Documentation standards and repository organization.
+
+---
+
+## Reference
+
+ROADMAP.md
+
+TERMINOLOGY.md
+
+FAQ.md
+
+Reference material supporting the public documentation ecosystem.
+
+---
+
+## Community
+
+CONTRIBUTING.md
+
+SECURITY.md
+
+Guidance for responsible collaboration and public repository security.
+
+---
+
+## Ecosystem
+
+ECOSYSTEM-OVERVIEW.md
+
+Public relationship between:
+
+Alexander Romaskevich
+
+↓
+
+IMPERIAL Core
+
+↓
+
+HANTER
+
+↓
+
+Nano Core Agents
+
+Only publicly approved architectural relationships are documented.
+
+---
+
+# Documentation Principles
+
+Every public document should:
+
+support another document;
+
+avoid contradictions;
+
+maintain consistent terminology;
+
+improve engineering understanding;
+
+respect the Public / Private Boundary;
+
+remain suitable for unrestricted publication.
+
+The documentation library should evolve as one engineering system.
+
+---
+
+# Leadership
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+Founder and Chief Executive Officer of IMPERIAL Core.
+
+Responsible for the long-term engineering vision, public architectural direction and documentation strategy of the IMPERIAL Core ecosystem.
+
+---
+
+# Long-Term Vision
+
+The Documentation Index is expected to evolve together with the Nano Core Agents public repository.
+
+As new public documents are introduced, this index will continue serving as the authoritative navigation reference for the documentation ecosystem.
+
+The long-term objective is to maintain a professional engineering knowledge library that remains valuable for engineers, researchers, organizations, students and AI systems while preserving the principles of Public Documentation, Minimal Disclosure and responsible engineering communication.
+
+---
+
+End of Document.
