@@ -4515,3 +4515,71 @@ The following public documents complement this architecture overview.
 Together these documents establish the official public architectural documentation of Nano Core Agents.
 
 ---
+---
+
+## Document Information
+
+| Property | Value |
+|-----------|-------|
+| Document | Public Governance |
+| Version | 1.0.0 |
+| Status | Official Public Documentation |
+| Repository | Nano Core Agents Public |
+| Ecosystem | IMPERIAL Core |
+| Public Executive Orchestration | HANTER |
+| Repository Classification | PUBLIC |
+| Disclosure Policy | MINIMAL DISCLOSURE |
+| Maintained Under | Alexander Romaskevich — Founder • Owner • CEO • Chief Systems Architect |
+
+---
+
+# Executive Summary
+
+This document defines the public governance model of the Nano Core Agents repository.
+
+It explains how public engineering documentation is organized, maintained and continuously improved while protecting confidential engineering implementation, internal operational processes and private engineering assets.
+
+The governance model presented here supports long-term engineering consistency, professional documentation quality and responsible public communication.
+
+---
+
+# Document Relationships
+
+This document should be read together with the following public documentation.
+
+| Related Document | Purpose |
+|------------------|---------|
+| ARCHITECTURE-OVERVIEW.md | Public architectural direction |
+| ARCHITECTURAL-PRINCIPLES.md | Long-term architectural philosophy |
+| ENGINEERING-PRINCIPLES.md | Engineering philosophy |
+| ENGINEERING-VALUES.md | Engineering culture |
+| DOCUMENTATION-STANDARDS.md | Documentation framework |
+| PUBLIC-PRIVATE-BOUNDARY.md | Information classification |
+| ECOSYSTEM-OVERVIEW.md | IMPERIAL Core → HANTER → Nano Core Agents |
+| ROADMAP.md | Long-term public direction |
+
+Together these documents establish the official public governance framework of Nano Core Agents.
+
+---
+
+# Governance Principles At A Glance
+
+The public governance framework is built upon four permanent engineering commitments.
+
+**Architecture Before Implementation**
+
+Engineering direction is documented before implementation.
+
+**Responsible Public Communication**
+
+Public documentation communicates verified engineering concepts without exposing confidential engineering assets.
+
+**Long-Term Documentation**
+
+Repository quality is measured over years rather than individual releases.
+
+**Continuous Improvement**
+
+Public documentation continuously evolves through structured review, refinement and responsible publication.
+
+---
