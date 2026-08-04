@@ -1563,3 +1563,135 @@ The roadmap itself is expected to evolve while remaining faithful to the princip
 ---
 
 End of Document.
+# Security Policy
+
+Repository: Nano Core Agents
+
+Classification: PUBLIC
+
+Disclosure Policy: MINIMAL DISCLOSURE
+
+---
+
+# Purpose
+
+Security is considered a fundamental engineering responsibility throughout the Nano Core Agents project.
+
+This repository publishes only information that is approved for unrestricted public release. Confidential engineering assets, implementation details and operational security information remain outside the scope of this repository.
+
+This document describes the public security policy and responsible disclosure expectations.
+
+---
+
+# Security Philosophy
+
+The security philosophy of Nano Core Agents is based on responsible engineering, transparency and long-term sustainability.
+
+Public documentation should improve understanding without increasing operational risk.
+
+Security documentation must never expose confidential implementation details, internal infrastructure or sensitive operational information.
+
+Protecting engineering integrity is considered equally important as documenting engineering knowledge.
+
+---
+
+# Responsible Disclosure
+
+If you believe you have identified a security issue related to information published in this public repository, please do not publish exploit details or sensitive technical information.
+
+Instead, prepare a clear technical description that includes:
+
+- a summary of the observed issue;
+- the affected public documentation or repository location;
+- the potential impact;
+- reproducible public evidence when available;
+- recommendations that may improve documentation quality or reduce ambiguity.
+
+Only publicly available information should be referenced.
+
+---
+
+# Scope
+
+This repository contains public documentation only.
+
+Examples include:
+
+- engineering principles;
+- governance documents;
+- architectural overviews;
+- terminology;
+- roadmap information;
+- documentation standards.
+
+This repository intentionally excludes:
+
+- production infrastructure;
+- deployment procedures;
+- runtime environments;
+- confidential engineering documentation;
+- implementation source code not approved for public release;
+- credentials, secrets or access information;
+- internal security architecture.
+
+---
+
+# Security Principles
+
+Nano Core Agents follows several long-term public security principles.
+
+• Security by Design
+
+• Responsible Disclosure
+
+• Public Transparency
+
+• Minimal Disclosure
+
+• Documentation Integrity
+
+• Long-Term Maintainability
+
+• Architecture Before Implementation
+
+• Evidence Before Status
+
+• Continuous Improvement
+
+These principles guide the preparation and maintenance of public engineering documentation.
+
+---
+
+# Public Repository Commitment
+
+The Nano Core Agents public repository is intended to remain a trustworthy engineering knowledge base.
+
+Security documentation should help readers understand how public information is managed while ensuring that confidential engineering assets remain protected.
+
+Transparency is achieved through accurate documentation rather than disclosure of sensitive implementation details.
+
+---
+
+# Leadership
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+Founder and Chief Executive Officer of IMPERIAL Core.
+
+Responsible for the long-term engineering vision and governance of the Nano Core Agents public documentation.
+
+---
+
+# Long-Term Commitment
+
+Security is an ongoing engineering discipline.
+
+As the public documentation evolves, this policy may be expanded to improve clarity, terminology and documentation quality.
+
+The commitment to protecting confidential engineering assets while maintaining transparent public documentation will remain a permanent principle of the Nano Core Agents public repository.
+
+---
+
+End of Document.
