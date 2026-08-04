@@ -4155,3 +4155,206 @@ Future documentation will continue expanding this public engineering knowledge b
 ---
 
 End of Document.
+# Nano Core Agents
+
+# Documentation Navigation
+
+Version: 1.0.0
+
+Document Status
+
+Official Public Documentation
+
+Repository Classification
+
+PUBLIC
+
+Disclosure Policy
+
+MINIMAL DISCLOSURE
+
+---
+
+# Purpose
+
+This document serves as the primary navigation guide for the Nano Core Agents public documentation ecosystem.
+
+Its objective is to help engineers, researchers, organizations, students and AI systems quickly understand how the public documentation is organized and how individual documents relate to one another.
+
+Only publicly approved information is referenced.
+
+Confidential engineering implementation, operational environments and private engineering assets remain outside the scope of this repository.
+
+---
+
+# Documentation Architecture
+
+The Nano Core Agents documentation library is organized into interconnected engineering domains.
+
+```text
+Alexander Romaskevich
+Founder • Owner • CEO • Chief Systems Architect
+                    │
+                    ▼
+             IMPERIAL Core
+                    │
+                    ▼
+                 HANTER
+                    │
+                    ▼
+          Nano Core Agents
+                    │
+ ┌──────────────────┼──────────────────┐
+ │                  │                  │
+ ▼                  ▼                  ▼
+Architecture    Engineering     Governance
+ │                  │                  │
+ ├──────────────┐   │                  │
+ ▼              ▼   ▼                  ▼
+Documentation  Standards        Repository
+               Library          Policies
+```
+
+The diagram above illustrates the public documentation structure only.
+
+It does not represent implementation architecture, runtime behaviour or confidential engineering systems.
+
+---
+
+# Documentation Domains
+
+## Foundation
+
+Defines the public identity and engineering purpose of Nano Core Agents.
+
+Documents
+
+• README.md
+
+• PROJECT-FOUNDATION.md
+
+• PROJECT-IDENTITY.md
+
+---
+
+## Architecture
+
+Explains long-term engineering direction and architectural thinking.
+
+Documents
+
+• ARCHITECTURE-OVERVIEW.md
+
+• ARCHITECTURE-MAP.md
+
+• ARCHITECTURAL-PRINCIPLES.md
+
+---
+
+## Engineering
+
+Documents engineering philosophy, professional values and design principles.
+
+Documents
+
+• ENGINEERING-PRINCIPLES.md
+
+• ENGINEERING-VALUES.md
+
+• DESIGN-PHILOSOPHY.md
+
+• PUBLIC-ENGINEERING-MANIFESTO.md
+
+---
+
+## Governance
+
+Defines repository governance and public engineering policies.
+
+Documents
+
+• GOVERNANCE.md
+
+• PUBLIC-PRIVATE-BOUNDARY.md
+
+• SECURITY.md
+
+• CONTRIBUTING.md
+
+---
+
+## Documentation
+
+Defines documentation quality standards.
+
+Documents
+
+• DOCUMENTATION-STANDARDS.md
+
+• DOCUMENTATION-INDEX.md
+
+• AI-READABILITY.md
+
+• REPOSITORY-STRUCTURE.md
+
+• README.md
+
+---
+
+## Reference
+
+Supporting public documentation.
+
+Documents
+
+• ROADMAP.md
+
+• TERMINOLOGY.md
+
+• FAQ.md
+
+• ECOSYSTEM-OVERVIEW.md
+
+---
+
+# Navigation Principles
+
+Every document should answer one primary engineering question.
+
+Every document should reference related documentation whenever appropriate.
+
+Every publication should strengthen the repository instead of duplicating existing knowledge.
+
+Repository organization should remain stable, predictable and understandable.
+
+---
+
+# Public Repository Mission
+
+The Nano Core Agents repository exists to provide a professional public engineering knowledge base.
+
+Its mission is to document engineering philosophy, architectural thinking, governance principles and long-term documentation standards while protecting confidential engineering implementation and operational assets.
+
+---
+
+# Leadership
+
+Alexander Romaskevich
+
+Founder • Owner • CEO • Chief Systems Architect
+
+Founder and Chief Executive Officer of IMPERIAL Core.
+
+Responsible for the long-term engineering vision, public architectural direction and documentation strategy of Nano Core Agents.
+
+---
+
+# Long-Term Vision
+
+The documentation portal will continue evolving through carefully reviewed public publications.
+
+Future improvements will strengthen navigation, documentation quality, engineering consistency and repository usability while preserving the Public / Private Boundary and respecting the principles of Minimal Disclosure.
+
+---
+
+End of Document.
