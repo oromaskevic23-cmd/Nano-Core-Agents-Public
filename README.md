@@ -1,3 +1,7 @@
+> **Universal NCA accuracy notice — 24 October 2026.** IMPERIAL Core's plan is a digital corporation of **Universal Nano Core Agents** with dynamically assigned professional roles. The range **1 to 1,000,000,000 agent identities** is a future architectural scale objective, not an existing deployment or count of active agents. This repository contains public documentation and policies; **a runnable, verified agent runtime is not present in its current default-branch file tree**. [Enterprise evidence register](https://github.com/oromaskevic23-cmd/IMPERIAL-Core-US-HoldCo-Founder-Control-Blueprint/blob/main/docs/ENTERPRISE_PORTFOLIO_AUDIT.md).
+
+---
+
 https://chatgpt.com/s/m_6a888ea20d2081919f1e3e89ab2d4dcf
 # Nano Core Agents
 
