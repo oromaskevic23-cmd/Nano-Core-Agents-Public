@@ -1,5 +1,11 @@
 # Nano Core Agents
 
+<p align="center">
+  <img src="assets/nano-core-agents-20261029.jpg" alt="Nano Core Agents professional teams concept">
+</p>
+
+*Concept illustration: the teams, integrations and capabilities shown are architectural ambitions; their operation requires separate evidence.*
+
 Governed professional AI-agent architecture with dynamically assigned roles, bounded capabilities and multiple organizational structures.
 
 **Status: SPECIFIED — public agent architecture; no public runtime CI observed here.**  
@@ -19,6 +25,12 @@ Founder • Owner • CEO of IMPERIAL Core
 Architect / Final Architectural Decision Authority
 
 **HANTER — AI Command Center / Chief Systems** operates under the founder's architectural decisions. This role does not imply a single unrestricted global orchestrator.
+
+## Professional domains under consideration
+
+The planned federated teams span architecture, software and AI engineering, research, security, infrastructure, quality assurance, data, product, operations, finance and other professional domains. Team assignments and sizes are dynamic; the illustration is not a count of active teams.
+
+Related projects: [HANTER](https://github.com/oromaskevic23-cmd/HANTER-Public) · [LEGION](https://github.com/oromaskevic23-cmd/Legion-Public) · [NDB](https://github.com/oromaskevic23-cmd/N.D.B-) · [IMPERIUM](https://github.com/oromaskevic23-cmd/IMPERIUM-) · [Capital Core](https://github.com/oromaskevic23-cmd/Capital--Core-Public).
 
 ## Public technical evidence
 
