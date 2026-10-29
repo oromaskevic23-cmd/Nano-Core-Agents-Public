@@ -13,7 +13,7 @@ Evidence checkpoint: **25 October 2026**.
 
 ## Official IMPERIAL Core web identity
 
-**[Alexander Romaskevich — official founder site](https://oromaskevic23-cmd.github.io/oromaskevic23-cmd/)** · **[IMPERIAL Core — official ecosystem site](https://oromaskevic23-cmd.github.io/IMPERIAL-Core-Public/)**
+**[Alexander Romaskevich — official founder site](https://oromaskevic23-cmd.github.io/oromaskevic23-cmd/)** · **[IMPERIAL Core — official ecosystem site](https://oromaskevic23-cmd.github.io/Capital--Core-Public/)**
 
 Alexander Romaskevich · RomaskevicH — founder-declared Architect, Owner and CEO of IMPERIAL Core. Both owner-maintained GitHub Pages sites provide 10 language versions. Their visibility on the public web is established; Google Search Console verification and indexing are separate, not claimed by these links.
 
@@ -42,15 +42,15 @@ Preserve the Federated Multi-Orchestrator Architecture, multiple organizational 
 
 ## Documentation and continuity
 
-- [Current ecosystem architecture](https://github.com/oromaskevic23-cmd/IMPERIAL-Core-Public/blob/main/ARCHITECTURE.md).
-- [Founder identity — EN / UK / RU](https://github.com/oromaskevic23-cmd/IMPERIAL-Core-Public/blob/main/docs/FOUNDER_IDENTITY.md).
-- [Public portfolio and status definitions](https://github.com/oromaskevic23-cmd/IMPERIAL-Core-Public/blob/main/docs/PORTFOLIO.md).
-- [Verified milestones](https://github.com/oromaskevic23-cmd/IMPERIAL-Core-Public/blob/main/docs/EVIDENCE.md) and [engineering roadmap](https://github.com/oromaskevic23-cmd/IMPERIAL-Core-Public/blob/main/ROADMAP.md).
+- [Current ecosystem architecture](https://github.com/oromaskevic23-cmd/Capital--Core-Public/blob/main/ARCHITECTURE.md).
+- [Founder identity — EN / UK / RU](https://github.com/oromaskevic23-cmd/Capital--Core-Public/blob/main/docs/FOUNDER_IDENTITY.md).
+- [Public portfolio and status definitions](https://github.com/oromaskevic23-cmd/Capital--Core-Public/blob/main/docs/PORTFOLIO.md).
+- [Verified milestones](https://github.com/oromaskevic23-cmd/Capital--Core-Public/blob/main/docs/EVIDENCE.md) and [engineering roadmap](https://github.com/oromaskevic23-cmd/Capital--Core-Public/blob/main/ROADMAP.md).
 - [Historical public specification notes](https://github.com/oromaskevic23-cmd/Nano-Core-Agents-Public/blob/64c9708423ad178e6ebe192741b4924e3b312025/README.md) — retained in Git history; earlier role wording is superseded and design narratives do not establish runtime operation.
 
 ## Collaboration, security and attribution
 
-Start non-confidential collaboration through the [founder profile](https://github.com/oromaskevic23-cmd). Follow the [responsible-disclosure guidance](https://github.com/oromaskevic23-cmd/IMPERIAL-Core-Public/blob/main/SECURITY.md) before sharing sensitive security information. Contributions should cite revisions, meaningful tests and limitations.
+Start non-confidential collaboration through the [founder profile](https://github.com/oromaskevic23-cmd). Follow the [responsible-disclosure guidance](https://github.com/oromaskevic23-cmd/Capital--Core-Public/blob/main/SECURITY.md) before sharing sensitive security information. Contributions should cite revisions, meaningful tests and limitations.
 
 **Authorship: Alexander Romaskevich — RomaskevicH.** Third-party rights, existing notices and licenses remain unchanged. Public visibility does not grant an additional license. No private source or private test logs are imported here.
 
