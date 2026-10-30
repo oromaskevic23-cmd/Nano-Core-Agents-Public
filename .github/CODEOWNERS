@@ -1,0 +1,13 @@
+# Critical IP and source-provenance review routing only.
+# NOT enforcement without an active GitHub branch ruleset requiring CODEOWNERS review.
+# No contributor or upstream rights are transferred by these rules.
+/AUTHORS.md @oromaskevic23-cmd
+/README.md @oromaskevic23-cmd
+/governance/ @oromaskevic23-cmd
+/LICENSE* @oromaskevic23-cmd
+/LICENCE* @oromaskevic23-cmd
+/COPYING* @oromaskevic23-cmd
+/NOTICE* @oromaskevic23-cmd
+/PROVENANCE* @oromaskevic23-cmd
+/.github/CODEOWNERS @oromaskevic23-cmd
+/.github/workflows/enterprise-founder-authorship.yml @oromaskevic23-cmd
