@@ -1,5 +1,7 @@
 # Nano Core Agents
 
+**Project creator & founding architect:** **Alexander Nikolaevich Romaskevich** (Alexander Nikolaevich Romaskevich · RomaskevicH). [Authorship & contribution provenance](AUTHORS.md).
+
 <p align="center">
   <img src="assets/nano-core-agents-20261029.jpg" alt="Nano Core Agents professional teams concept">
 </p>
