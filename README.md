@@ -60,3 +60,24 @@ Start non-confidential collaboration through the [founder profile](https://githu
 **Authorship: Alexander Romaskevich — RomaskevicH.** Third-party rights, existing notices and licenses remain unchanged. Public visibility does not grant an additional license. No private source or private test logs are imported here.
 
 **Build software. Verify everything.**
+
+
+## Long-term scaling target — 1,000,000,000+ NCA identities
+
+**Future architecture only — not a deployed fleet or measured capacity.** The
+[enterprise-scale federation blueprint](docs/BILLION_PLUS_NCA_ARCHITECTURE.md)
+separates **registered identities**, **enabled agents**, **active worker leases**
+and **concurrent executions**. This preserves multiple tenant/workspace
+boundaries and the Federated Multi-Orchestrator Architecture.
+
+Run the offline arithmetic reference model without credentials, services or agents:
+
+    python3 -m unittest discover -s tests -p 'test_capacity_model.py' -v
+    python3 -m nca_lab.capacity_model --registered 1000000000 --active 1000000
+
+The model is deterministic arithmetic, **not** a load test, production deployment,
+training run, proof of security or assurance of billion-agent performance.
+Its GitHub Actions workflow is manual-only to avoid any scheduled execution.
+All live pilot, infrastructure spend, key provisioning and external effects remain
+subject to separately verified Guardian Core, AI Passport, Enterprise Skills,
+Approval Gateway, Audit Ledger and explicit Owner Approval.
