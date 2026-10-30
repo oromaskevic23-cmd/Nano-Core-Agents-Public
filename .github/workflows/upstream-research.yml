@@ -1,0 +1,111 @@
+name: Third-party pinned research evaluation
+on:
+  pull_request:
+    paths:
+      - 'third_party/evaluation/**'
+      - 'tests/test_upstream_catalog.py'
+      - '.github/workflows/upstream-research.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'third_party/evaluation/**'
+      - 'tests/test_upstream_catalog.py'
+      - '.github/workflows/upstream-research.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+
+jobs:
+  harness2-offline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout exact public research revision (no saved credentials)
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          repository: google-research/harness2
+          ref: 1cfe254e8d25b15f37048c3730134686abe60335
+          persist-credentials: false
+          path: vendor/harness2
+      - name: Verify immutable revision
+        run: test "$(git -C vendor/harness2 rev-parse HEAD)" = "1cfe254e8d25b15f37048c3730134686abe60335"
+      - name: Python compile check
+        run: python3 -m compileall -q vendor/harness2/harness2
+      - name: Run upstream deterministic unit tests without model credentials
+        env:
+          PYTHONPATH: vendor/harness2
+        run: timeout 180s python3 -m unittest discover -s vendor/harness2/tests -p 'test_workflow.py' -v
+      - name: Run offline recursion demo (no paid models)
+        env:
+          PYTHONPATH: vendor/harness2
+        run: timeout 90s python3 -m harness2.cli.demo --output /tmp/harness2-offline-demo --k 1 --mode both
+      - name: Confirm reproducible artifacts, not production deployment
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('/tmp/harness2-offline-demo/demo.json').read_text())
+          assert data['failed']==0, data
+          assert data['done']>=1, data
+          print({'status':'OFFLINE_RESEARCH_PASS','tasks':data['done'],'failed':data['failed'],
+                 'production_execution':False,'paid_model_calls':False})
+          PY
+
+  artemis-no-device-preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout exact public Android tool revision (no saved credentials)
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          repository: google/artemis
+          ref: 351ca8422f7b5b54e80a9c1ce03a222e02415b6b
+          persist-credentials: false
+          path: vendor/artemis
+      - name: Verify source revision and license metadata
+        run: |
+          test "$(git -C vendor/artemis rev-parse HEAD)" = "351ca8422f7b5b54e80a9c1ce03a222e02415b6b"
+          python3 - <<'PY'
+          import tomllib
+          from pathlib import Path
+          root=Path("vendor/artemis")
+          metadata=tomllib.loads((root/"pyproject.toml").read_text())
+          assert metadata["project"]["name"]=="artemis"
+          assert (root/"LICENSE").read_text().find("Apache License")>=0
+          print("ARTEMIS source and license metadata verified; Android E2E NOT RUN")
+          PY
+      - name: Check Python syntax (does not install software or touch devices)
+        run: python3 -m compileall -q vendor/artemis/artemis vendor/artemis/mcp_server
+      - name: Confirm actual phone testing remains blocked
+        run: echo "SKIPPED_ANDROID_DEVICE_E2E_NO_AUTHORIZED_TEST_DEVICE"
+
+  understand-anything-isolated:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout exact public graph tool revision (no saved credentials)
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          repository: Egonex-AI/Understand-Anything
+          ref: 4e6d3299017a7432da15957874992837a315c5b4
+          persist-credentials: false
+          path: vendor/understand-anything
+      - name: Verify source provenance
+        run: |
+          test "$(git -C vendor/understand-anything rev-parse HEAD)" = "4e6d3299017a7432da15957874992837a315c5b4"
+          node -e "const p=require('./vendor/understand-anything/package.json'); if(p.license!=='MIT') process.exit(1)"
+      - name: Configure temporary Node 22 (no project credentials)
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+      - name: Install pinned workspace dependencies only in ephemeral runner
+        working-directory: vendor/understand-anything
+        run: |
+          corepack enable
+          timeout 300s corepack pnpm install --frozen-lockfile
+      - name: Run upstream unit tests
+        working-directory: vendor/understand-anything
+        run: timeout 180s corepack pnpm test
+      - name: Compile knowledge graph core
+        working-directory: vendor/understand-anything
+        run: timeout 120s corepack pnpm --filter @understand-anything/core build
