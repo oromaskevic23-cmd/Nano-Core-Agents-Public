@@ -10,7 +10,7 @@ Governed professional AI-agent architecture with dynamically assigned roles, bou
 
 **Status: architecture plus an offline synthetic policy exercise.** This
 exercise does not train or deploy autonomous agents or implement the live
-Guardian Core / Approval Gateway. See [NCA simulation lab](nca_lab/README.md).
+Guardian Core / Approval Gateway. See [NCA simulation lab](nca_lab/README.md) and the [offline governed team handoff guard](nca_lab/HANDOFF_GUARD.md).
 
 ## Official IMPERIAL Core web identity
 
