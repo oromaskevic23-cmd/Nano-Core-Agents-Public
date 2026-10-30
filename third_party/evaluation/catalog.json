@@ -1,0 +1,41 @@
+{
+  "schema": "imperial.third_party_evaluation.v1",
+  "policy": "DENY_BY_DEFAULT",
+  "owner": "IMPERIAL Core",
+  "environment": "EPHEMERAL_GITHUB_ACTIONS_ONLY",
+  "production_installation": false,
+  "production_execution": false,
+  "secrets_access": false,
+  "paid_model_calls": false,
+  "external_device_access": false,
+  "dependencies_may_download_from_public_registries": true,
+  "sources": [
+    {
+      "id": "harness2",
+      "repository": "google-research/harness2",
+      "commit": "1cfe254e8d25b15f37048c3730134686abe60335",
+      "license": "Apache-2.0",
+      "integration_target": "NCA/VELION research harness",
+      "test_level": "deterministic_offline_demo_and_python_unittest",
+      "status": "EXPERIMENTAL_NO_RUNTIME_AUTHORITY"
+    },
+    {
+      "id": "artemis",
+      "repository": "google/artemis",
+      "commit": "351ca8422f7b5b54e80a9c1ce03a222e02415b6b",
+      "license": "Apache-2.0",
+      "integration_target": "CONSTRUCTOR AI Android QA",
+      "test_level": "syntax_and_metadata_only_no_android",
+      "status": "BLOCKED_ANDROID_DEVICE_REQUIRED"
+    },
+    {
+      "id": "understand-anything",
+      "repository": "Egonex-AI/Understand-Anything",
+      "commit": "4e6d3299017a7432da15957874992837a315c5b4",
+      "license": "MIT",
+      "integration_target": "CONSTRUCTOR AI/ORION architecture knowledge graph",
+      "test_level": "frozen_dependency_install_build_and_tests",
+      "status": "EXPERIMENTAL_NO_RUNTIME_AUTHORITY"
+    }
+  ]
+}
