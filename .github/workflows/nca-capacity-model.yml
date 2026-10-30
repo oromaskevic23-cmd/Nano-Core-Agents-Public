@@ -1,0 +1,22 @@
+name: NCA future-capacity model (manual, offline)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  capacity-arithmetic:
+    name: Offline arithmetic / no deployment
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Python version
+        run: python3 --version
+      - name: Test capacity-model arithmetic
+        run: python3 -m unittest discover -s tests -p 'test_capacity_model.py' -v
+      - name: Evaluate hypothetical billion-registration scenario
+        run: python3 -m nca_lab.capacity_model --registered 1000000000 --active 1000000
