@@ -8,8 +8,9 @@
 
 Governed professional AI-agent architecture with dynamically assigned roles, bounded capabilities and multiple organizational structures.
 
-**Status: SPECIFIED â€” public agent architecture; no public runtime CI observed here.**  
-Evidence checkpoint: **25 October 2026**.
+**Status: architecture plus an offline synthetic policy exercise.** This
+exercise does not train or deploy autonomous agents or implement the live
+Guardian Core / Approval Gateway. See [NCA simulation lab](nca_lab/README.md).
 
 ## Official IMPERIAL Core web identity
 
@@ -34,7 +35,9 @@ Related projects: [HANTER](https://github.com/oromaskevic23-cmd/HANTER-Public) Â
 
 ## Public technical evidence
 
-The public default-branch tree contains documentation. Source embedded in a README is not a separately runnable, verified implementation. No public runtime CI result is asserted.
+The simulation lab is executable offline; its results only verify the modeled
+rules under the stated test conditions. It does not demonstrate production
+agents, a fleet, customer work, live payment handling or 24-hour operation.
 
 ## Architecture and governance
 
