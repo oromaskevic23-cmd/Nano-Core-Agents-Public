@@ -1,5 +1,9 @@
 """Fail-closed, offline NCA team handoff exercise; NOT a production authorization gateway.
 
+Project author / founding architect: Ромаскевич Александр Николаевич
+International: Alexander Nikolaevich Romaskevich (RomaskevicH)
+Individual code contributions: see AUTHORS.md and the Git commit history.
+
 The registry, approval references and receipts are synthetic inputs, not authenticated
 identities or independent attestations. No agent, browser, model, network or payment runs.
 """
