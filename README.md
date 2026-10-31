@@ -16,7 +16,7 @@ Guardian Core / Approval Gateway. See [NCA simulation lab](nca_lab/README.md) an
 
 ## Official IMPERIAL Core web identity
 
-**[Alexander Romaskevich — official founder site](https://oromaskevic23-cmd.github.io/oromaskevic23-cmd/)** · **[IMPERIAL Core — official ecosystem site](https://oromaskevic23-cmd.github.io/Capital--Core-Public/)**
+**[Alexander Romaskevich — official founder site](https://oromaskevic23-cmd.github.io/oromaskevic23-cmd/)** · **[IMPERIAL Core — official ecosystem site](https://oromaskevic23-cmd.github.io/Capital-Core-Public/)**
 
 Alexander Romaskevich · RomaskevicH — founder-declared Architect, Owner and CEO of IMPERIAL Core. Both owner-maintained GitHub Pages sites provide 10 language versions. Their visibility on the public web is established; Google Search Console verification and indexing are separate, not claimed by these links.
 
@@ -81,3 +81,10 @@ Its GitHub Actions workflow is manual-only to avoid any scheduled execution.
 All live pilot, infrastructure spend, key provisioning and external effects remain
 subject to separately verified Guardian Core, AI Passport, Enterprise Skills,
 Approval Gateway, Audit Ledger and explicit Owner Approval.
+
+
+---
+
+### Canonical founder and public project identity
+
+This public repository is part of the [IMPERIAL Core source portfolio maintained by Alexander Nikolaevich Romaskevich (RomaskevicH)](https://oromaskevic23-cmd.github.io/oromaskevic23-cmd/projects/), Founder, Owner and CEO of IMPERIAL Core and its final architectural decision authority. See the [canonical public project registry](https://oromaskevic23-cmd.github.io/Capital-Core-Public/reference/projects/) and original commit/contributor history for evidence and provenance. This reference does **not** imply exclusive rights in third-party models, libraries, trademarks or other contributors' work, or certify live production status. Project-specific licensing and security restrictions remain unchanged.
