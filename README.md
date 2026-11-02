@@ -43,7 +43,9 @@ A single bounded candidate runs against **locally authored synthetic HTML** in a
 
 **Distinguish results:** default CI uses injected model fixtures, not real inference. The dedicated opt-in local inference run is separately evidenced in its own GitHub Action; a failure is not hidden or converted to PASS. This is **not** a live HANTER or VELION proprietary model deployment, authenticated AI Passport, professional LEGION qualification, real independent human QA, remote stop service, customer integration, cloud provisioning or autonomous commercial work.
 
-No paid external API or server subscription is used. [Technical milestone register in Notion](https://app.notion.com/p/40c5a8b72fe98129812afe4dd58502bd?pvs=204).
+**Verified new checkpoint (2 November 2026):** [one genuine Ollama + Chromium synthetic pilot PASS](https://github.com/oromaskevic23-cmd/Nano-Core-Agents-Public/actions/runs/41527019563) with locally grounded deterministic QA; [preserved evidence hashes](nca_runtime/evidence/sprint_015_first_real_inference_2026-11-02.json). This is ONE local model call in an ephemeral GitHub runner, not a persistent worker or professional certification. After hardening the loopback HTTP transport against redirects, [15 protocol/lifecycle tests passed on both Python 3.11 and 3.12](https://github.com/oromaskevic23-cmd/Nano-Core-Agents-Public/actions/runs/41527642221). The hardened revision has not separately repeated real model inference.
+
+No paid external API or server subscription is used. Real-model workflow is now manual-only. [Technical milestone register in Notion](https://app.notion.com/p/40c5a8b72fe98129812afe4dd58502bd?pvs=204).
 
 ## NCA Browser + Voice + Avatar + Cloud (design and local pilots)
 
