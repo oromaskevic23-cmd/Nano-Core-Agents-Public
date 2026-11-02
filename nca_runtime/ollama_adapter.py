@@ -11,8 +11,7 @@ from dataclasses import dataclass
 import hashlib
 import json
 import re
-from urllib.error import HTTPError, URLError
-from urllib.request import Request, urlopen
+from http.client import HTTPConnection, HTTPException
 
 
 ENDPOINT = "http://127.0.0.1:11434/api/chat"
@@ -61,18 +60,23 @@ class LocalOllamaAdapter:
             "options": {"temperature": 0, "seed": 42, "num_predict": 220}
         }
         request_body = json.dumps(payload, sort_keys=True, ensure_ascii=True).encode("utf8")
-        # This adapter has a single hardcoded loopback-only destination.
-        request = Request(
-            ENDPOINT, data=request_body, method="POST",
-            headers={"Content-Type": "application/json", "Accept": "application/json"}
-        )
+        # Direct HTTPConnection never follows redirects to off-loopback
+        # hosts. Neither model outputs nor local server responses can modify
+        # the connection target, path, port or authorization scope.
+        connection = HTTPConnection("127.0.0.1", 11434, timeout=self.timeout_seconds)
         try:
-            with urlopen(request, timeout=self.timeout_seconds) as response:
-                if response.status != 200:
-                    raise InferenceDenied("OLLAMA_BAD_HTTP_STATUS")
-                body = response.read(256 * 1024 + 1)
-        except (HTTPError, URLError, TimeoutError, OSError) as exc:
+            connection.request(
+                "POST", "/api/chat", body=request_body,
+                headers={"Content-Type": "application/json", "Accept": "application/json"}
+            )
+            response = connection.getresponse()
+            if response.status != 200:
+                raise InferenceDenied("OLLAMA_BAD_HTTP_STATUS")
+            body = response.read(256 * 1024 + 1)
+        except (HTTPException, TimeoutError, OSError) as exc:
             raise InferenceDenied("LOCAL_OLLAMA_UNAVAILABLE") from exc
+        finally:
+            connection.close()
         if len(body) > 256 * 1024:
             raise InferenceDenied("OLLAMA_RESPONSE_TOO_LARGE")
         try:
