@@ -35,6 +35,16 @@ The planned federated teams span architecture, software and AI engineering, rese
 
 Related projects: [HANTER](https://github.com/oromaskevic23-cmd/HANTER-Public) · [LEGION](https://github.com/oromaskevic23-cmd/Legion-Public) · [NDB](https://github.com/oromaskevic23-cmd/N.D.B-) · [IMPERIUM](https://github.com/oromaskevic23-cmd/IMPERIUM-) · [Capital Core](https://github.com/oromaskevic23-cmd/Capital-Core-Public).
 
+## Sprint 015 — Single NCA local Chromium × VELION provider port × QA
+
+[Architectural and acceptance specification](docs/NCA_SPRINT_015_SINGLE_WORKER_PILOT.md) · [local runtime source](nca_runtime/) · [unit/integration CI](.github/workflows/nca-runtime.yml) · [opt-in first real local LLM evidence workflow](.github/workflows/nca-runtime-real-once.yml).
+
+A single bounded candidate runs against **locally authored synthetic HTML** in actual Chromium, extracts a heading/screenshot proof, and optionally sends a **real local** JSON request through an Ollama adapter to an independently installed third-party model. A separate deterministic QA rubric checks factual grounding of the model's reply; a stop, expired lease or reprogrammed NCA invalidates the result. The resulting manifest includes hashes and explicit `production_authorized: false` / `professional_qualified: false` fields.
+
+**Distinguish results:** default CI uses injected model fixtures, not real inference. The dedicated opt-in local inference run is separately evidenced in its own GitHub Action; a failure is not hidden or converted to PASS. This is **not** a live HANTER or VELION proprietary model deployment, authenticated AI Passport, professional LEGION qualification, real independent human QA, remote stop service, customer integration, cloud provisioning or autonomous commercial work.
+
+No paid external API or server subscription is used. [Technical milestone register in Notion](https://app.notion.com/p/40c5a8b72fe98129812afe4dd58502bd?pvs=204).
+
 ## NCA Browser + Voice + Avatar + Cloud (design and local pilots)
 
 [Enterprise architecture and trust boundaries](docs/NCA_BROWSER_VOICE_CLOUD_V1.md) · [NCA Browser policy code](nca_browser/policy.py) · [real Chromium offline smoke prototype](nca_browser/offline_chromium.py) · [voice/avatar preview UI](nca_browser/web/index.html) · [CI](.github/workflows/nca-browser.yml).
