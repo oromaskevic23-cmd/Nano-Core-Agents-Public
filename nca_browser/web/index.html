@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071020">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="description" content="IMPERIAL NCA Presence — isolated offline voice and avatar interface prototype.">
+  <title>IMPERIAL NCA — Agent Presence</title>
+  <link rel="stylesheet" href="assets/agent.css">
+  <script src="assets/agent.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="header"><div class="brand"><span class="symbol">I</span><span><strong>IMPERIAL <span class="accent">NCA</span></strong><small>AGENT PRESENCE / CONCEPT PILOT</small></span></div><div class="status-mark"><i></i> OFFLINE DEMO</div></header>
+    <section class="hero">
+      <div class="lead"><div class="eyebrow">FEDERATED · ZERO TRUST · FREE ONLY</div><h1>A presence for<br><span>every agent.</span></h1><p>Original voice, recognizable avatar, scoped browser identity and private cloud boundaries. A visible professional workforce, governed by evidence.</p><div class="subline">This is a local front-end demo. No agent, account, browser network or cloud service is connected.</div></div>
+      <div class="face-wrap"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div id="avatar" role="img" aria-label="Original IMPERIAL virtual agent avatar" class="avatar"><div class="avatar-core"><span>IC</span></div><div class="pulse one"></div><div class="pulse two"></div></div><div id="avatar-state" class="avatar-state">IDLE / LOCAL DEMO</div></div>
+    </section>
+    <div class="grid">
+      <section class="panel voice">
+        <div class="label">01 / PERSONALITY & VOICE</div><h2>Professional dialogue</h2>
+        <label for="agent-select">Agent profile</label>
+        <select id="agent-select"><option value="architect">NCA-001 · Engineering Architect</option><option value="researcher">NCA-002 · Market Researcher</option><option value="guardian">NCA-003 · Quality Guardian</option></select>
+        <div class="personality"><div><span class="field-label">PERSONA</span><strong id="persona">Calm · professional</strong></div><div><span class="field-label">LANGUAGE</span><strong id="language">English</strong></div></div>
+        <label for="utterance">Voice preview text</label><textarea id="utterance" rows="3" maxlength="500">Good evening. I am ready to present the verified mission status and its next safe action.</textarea>
+        <label for="voice-select">Voice on this device</label><select id="voice-select" aria-label="Available system voices"><option>Checking available voices…</option></select>
+        <div class="buttons"><button id="speak" type="button">▶ Speak</button><button id="stop" type="button" class="secondary">■ Stop</button></div>
+        <p id="speech-status" class="helper" role="status" aria-live="polite">Audio plays only when you press Speak. The device selects the voice.</p>
+      </section>
+      <section class="panel">
+        <div class="label">02 / PRIVILEGE BOUNDARY</div><h2>Agent connectivity</h2>
+        <div class="connector"><span class="connector-icon">◎</span><div><strong>NCA Browser</strong><small>Isolated Chromium context per active mission</small></div><span class="unconnected">OFFLINE</span></div>
+        <div class="connector"><span class="connector-icon">◈</span><div><strong>Service accounts</strong><small>Vault-backed scopes, tenant separation</small></div><span class="unconnected">NO LOGIN</span></div>
+        <div class="connector"><span class="connector-icon">☷</span><div><strong>Cloud adapters</strong><small>GitHub · Supabase · Netlify · Render</small></div><span class="unconnected">NO ACCESS</span></div>
+        <div class="connector"><span class="connector-icon">▦</span><div><strong>Guardian & Approval</strong><small>Protected server-side authorization required</small></div><span class="unconnected">NOT LINKED</span></div>
+        <div class="footnote"><strong>Trust rule</strong><p>One identity is not one always-on browser process. Each mission gets a finite lease, an isolated browser context and revocable permission. This page does not hold keys, cookies or passwords.</p></div>
+      </section>
+    </div>
+    <section class="bottom"><strong>Build software. Verify everything.</strong><span>Founder · Alexander Nikolaevich Romaskevich · RomaskevicH</span></section>
+  </main>
+</body>
+</html>
