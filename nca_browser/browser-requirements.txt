@@ -1,0 +1,2 @@
+# Optional real Chromium offline smoke test; no paid API.
+playwright==1.64.1
