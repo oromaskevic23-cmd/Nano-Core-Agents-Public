@@ -5,12 +5,12 @@ on:
     branches: [main]
     paths:
       - 'nca_browser/**'
-      - 'tests/test_nca_browser.py'
+      - 'tests/test_nca_browser*.py'
       - '.github/workflows/nca-browser.yml'
   pull_request:
     paths:
       - 'nca_browser/**'
-      - 'tests/test_nca_browser.py'
+      - 'tests/test_nca_browser*.py'
       - '.github/workflows/nca-browser.yml'
   workflow_dispatch:
 
@@ -27,7 +27,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Verify policy and lifecycle boundaries
-        run: python3 -m unittest discover -s tests -p 'test_nca_browser.py' -v
+        run: python3 -m unittest discover -s tests -p 'test_nca_browser*.py' -v
       - name: Check browser voice UI JavaScript
         run: node --check nca_browser/web/assets/agent.js
       - name: Check syntax of offline Chromium module
