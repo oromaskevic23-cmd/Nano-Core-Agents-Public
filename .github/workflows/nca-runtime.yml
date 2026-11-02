@@ -1,0 +1,40 @@
+name: NCA Sprint 015 | Unit and Integration Gate
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'nca_runtime/**'
+      - 'tests/test_nca_runtime.py'
+      - '.github/workflows/nca-runtime.yml'
+  pull_request:
+    paths:
+      - 'nca_runtime/**'
+      - 'tests/test_nca_runtime.py'
+      - '.github/workflows/nca-runtime.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  local-integration-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.12']
+    steps:
+      - name: Checkout without token persistence
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Configure Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Validate bounded contracts and synthetic stubs
+        run: python -m unittest discover -s tests -p 'test_nca_runtime.py' -v
+      - name: Compile modules
+        run: python -m compileall -q nca_runtime
