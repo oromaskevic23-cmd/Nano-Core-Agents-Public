@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-02",
+  "sprint": "017",
+  "result": "VERIFIED_PUBLIC_READ_ONLY_GITHUB_API",
+  "run_id": 41532245607,
+  "url": "https://github.com/oromaskevic23-cmd/Nano-Core-Agents-Public/actions/runs/41532245607",
+  "original_commit": "1ee36920f504b1d4d4f03cc47674db4b56487815",
+  "workflow_conclusion": "success",
+  "tests": {
+    "passed": 8,
+    "failed": 0,
+    "language": "Python"
+  },
+  "provider": "github_public",
+  "resource": "oromaskevic23-cmd/Nano-Core-Agents-Public",
+  "response_sha256": "bfea96f89dcda8df77e9f33a010855ef0d17ee619d204546798954996c45723a",
+  "observed_public_metadata": {
+    "default_branch": "main",
+    "stars": 0
+  },
+  "authenticated": false,
+  "credentials_present": false,
+  "read_only": true,
+  "public_only": true,
+  "cloud_write_authorized": false,
+  "limitations": [
+    "Public unauthenticated GitHub metadata read is not access to private GitHub organizations or cloud server administration",
+    "No NCA AI Passport, server-side auth or network sandbox for arbitrary destinations",
+    "One verified API response does not establish 24/7 availability",
+    "No customer data, tokens, paid services or privileged provider operations were used"
+  ]
+}
