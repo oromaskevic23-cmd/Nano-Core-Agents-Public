@@ -105,8 +105,8 @@ class LocalQueue:
                 raise Rejected("JOB_NOT_CLAIMED")
             if self._blocked(db,row["agent"]) or now>=row["expires"]:
                 raise Rejected("STOPPED_OR_EXPIRED")
-            if row["worker"]!=worker_id or not isinstance(token,str) or
-                not secrets.compare_digest(row["claim_digest"],digest(token)):
+            if (row["worker"]!=worker_id or not isinstance(token,str) or
+                not secrets.compare_digest(row["claim_digest"],digest(token))):
                 raise Rejected("CLAIM_PROOF_REQUIRED")
             state = "LOCAL_QA_PASS" if qa_pass else "LOCAL_QA_FAIL"
             db.execute("UPDATE jobs SET state=?,result_digest=? WHERE job_id=?",
