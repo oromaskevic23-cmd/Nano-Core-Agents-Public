@@ -35,6 +35,19 @@ The planned federated teams span architecture, software and AI engineering, rese
 
 Related projects: [HANTER](https://github.com/oromaskevic23-cmd/HANTER-Public) · [LEGION](https://github.com/oromaskevic23-cmd/Legion-Public) · [NDB](https://github.com/oromaskevic23-cmd/N.D.B-) · [IMPERIUM](https://github.com/oromaskevic23-cmd/IMPERIUM-) · [Capital Core](https://github.com/oromaskevic23-cmd/Capital-Core-Public).
 
+## NCA Factory v1.0 — Universal Agent Manufacturing (offline reference)
+
+**New:** [full Enterprise architecture](docs/UNIVERSAL_NCA_FACTORY_V1.md) · [offline factory lifecycle source](nca_factory/factory.py) · [adversarial and lifecycle tests](tests/test_nca_factory.py) · [factory CI](.github/workflows/nca-factory.yml).
+
+The factory can register a **versioned NCA blueprint**, record explicitly simulated examination cases, enforce a minimum local mock-exam threshold before a **noncommercial candidate** state, open a finite **mock** mission lease, reject expired or duplicate steps, persist agent/global stops, and reprogram by issuing a new revision that invalidates previous assessments and leases. Historical defects remain visible. **Reputation is UNRATED** until authenticated real client outcome evidence is integrated.
+
+Reproduce with **Python 3.11+**, offline, standard library only:
+
+    python3 -m unittest discover -s tests -p 'test_nca_factory.py' -v
+    python3 -m nca_factory
+
+**Not implemented:** real model execution, genuine professional qualification, verified human QA, authenticated AI Passport, commercial permissions, a global deployed stop service, live NCA employees or real customer reputation. Stop/reprogram functions here are local demonstrators and do not authenticate the Owner. Always keep a distinction between simulated quality metrics and verified real-world performance.
+
 ## Public technical evidence
 
 The simulation lab is executable offline; its results only verify the modeled
