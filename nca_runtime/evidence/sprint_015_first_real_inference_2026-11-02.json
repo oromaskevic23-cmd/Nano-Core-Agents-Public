@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "classification": "VERIFIED_GITHUB_ACTIONS_LOCAL_SYNTHETIC_EXPERIMENT",
+  "run_id": 41527019563,
+  "run_url": "https://github.com/oromaskevic23-cmd/Nano-Core-Agents-Public/actions/runs/41527019563",
+  "source_commit": "d6bda507b929b23d06c1d9262ee2154cc9f58c31",
+  "observed_date": "2026-11-02",
+  "workflow_conclusion": "success",
+  "lab_agent_id": "NCA-LOCAL-001",
+  "model": "smollm2:1.7b-instruct-q4_K_M",
+  "model_provider": "ollama_local",
+  "genuine_local_inference": true,
+  "real_chromium_used": true,
+  "local_qa": {
+    "passed": true,
+    "method": "deterministic_local_qa_not_independent_human"
+  },
+  "unit_tests": {
+    "passed": 14,
+    "framework": "Python unittest",
+    "runtime": "GitHub Actions ephemeral runner"
+  },
+  "evidence_hashes": {
+    "blueprint_sha256": "ff9fad298b63f9e2bdf3d0648719df662879548f4dafefeffd20ce618633ed70",
+    "page_sha256": "0455787254d5a00300cb28e90bff87e69552fd8845861b57d9e6d151a81176b7",
+    "screenshot_sha256": "e67d3ca6ca8a3fa15be99a548c50ee52e23b3e4eb65ac924da1d5ecd36a3e1ef",
+    "model_request_sha256": "f54b35fbadaedf49f8b44ae5dc68e114f5a31bd421490fbd9dd9e0c3179608f8",
+    "model_response_sha256": "2b242aa552e51514cc0f67333b38363451eb54957dc0531f27e617d57279032b"
+  },
+  "production_guards": {
+    "signed_ai_passport_verified": false,
+    "guardian_core_verified": false,
+    "approval_gateway_verified": false,
+    "independent_human_qa_verified": false,
+    "owner_identity_verified": false,
+    "professional_qualified": false,
+    "real_customers_served": 0,
+    "real_world_actions": 0,
+    "cloud_accounts_connected": false,
+    "commercial_revenue": null,
+    "production_authorized": false
+  },
+  "limitations": [
+    "Real model weights digest not independently verified",
+    "Five preceding mock exam fixtures were synthetic and not professional qualification",
+    "Browser all-requests-abort policy does not establish hardened production network sandbox",
+    "Local SQLite audit hash chain is not a signed enterprise Audit Ledger",
+    "Browser/LLM integration did not create a persistent managed worker or 24/7 operations"
+  ],
+  "authorship": "Alexander Nikolaevich Romaskevich (RomaskevicH)"
+}
