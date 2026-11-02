@@ -1,0 +1,83 @@
+name: NCA Sprint 016 | Signed Permit + Real Local Browser/LLM
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/nca-control-real-once.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: imperial-nca-signed-one-time-local-inference
+  cancel-in-progress: false
+
+jobs:
+  single-real-model-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 27
+    env:
+      OLLAMA_HOST: "127.0.0.1:11434"
+      OLLAMA_NO_CLOUD: "1"
+      OLLAMA_MODELS: "/tmp/imperial-nca-private-ollama-models"
+      IMPERIAL_SIGNED_NCA_LAB: "APPROVE_LOCAL_SYNTHETIC_ONLY"
+    steps:
+      - name: Checkout without persistent credentials
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Verify runtime source and contracts first
+        run: python3 -m pip install -r nca_control/requirements.txt
+          python3 -m unittest discover -s tests -p 'test_nca_control*.py' -v
+      - name: Install pinned open-source Chromium adapter
+        run: |
+          python3 -m pip install -r nca_browser/browser-requirements.txt
+          python3 -m playwright install --with-deps chromium
+      - name: Install independently checksum-verified Ollama release
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v zstd >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq zstd
+          fi
+          curl --proto '=https' --tlsv1.2 -fL --retry 2 --connect-timeout 15 --max-time 480 \
+            'https://github.com/ollama/ollama/releases/download/v0.40.11/ollama-linux-amd64.tar.zst' \
+            --output "$RUNNER_TEMP/ollama-v0.40.11.tar.zst"
+          echo "7bedab90dd122661be78798e9f0edf37fccf0cccf2699d2c58ea1a3afdc04b6d  $RUNNER_TEMP/ollama-v0.40.11.tar.zst" | sha256sum --check
+          mkdir -p "$RUNNER_TEMP/ollama-install"
+          tar --zstd -xf "$RUNNER_TEMP/ollama-v0.40.11.tar.zst" -C "$RUNNER_TEMP/ollama-install"
+          test -x "$RUNNER_TEMP/ollama-install/bin/ollama"
+      - name: Start loopback-only service and fetch one open model
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OLLAMA_MODELS"
+          "$RUNNER_TEMP/ollama-install/bin/ollama" serve > "$RUNNER_TEMP/ollama-local.log" 2>&1 &
+          for i in $(seq 1 60); do
+            if curl --noproxy '*' -fsS 'http://127.0.0.1:11434/api/tags' >/dev/null; then
+              break
+            fi
+            sleep 1
+          done
+          curl --noproxy '*' -fsS 'http://127.0.0.1:11434/api/tags' >/dev/null
+          timeout 300 "$RUNNER_TEMP/ollama-install/bin/ollama" pull smollm2:1.7b-instruct-q4_K_M
+      - name: Perform one actual synthetic NCA browser/model/QA cycle
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m nca_control --live --model smollm2:1.7b-instruct-q4_K_M \
+            | tee "$RUNNER_TEMP/nca-signed-real-evidence.json"
+      - name: Publish evidence status in GitHub job summary
+        if: always()
+        shell: bash
+        run: |
+          python3 - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          print("## IMPERIAL NCA · first signed local inference")
+          print("- This job uses one third-party local Ollama model and a locally authored synthetic HTML fixture.")
+          print("- No production AI Passport, cloud account, customer mandate or paid service is granted.")
+          print("- Check the previous step and its JSON for the real inference, independent deterministic QA and failure reasons.")
+          print("- Unit tests alone are not evidence of actual model inference.")
+          PY
