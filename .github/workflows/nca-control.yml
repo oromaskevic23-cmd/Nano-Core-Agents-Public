@@ -5,12 +5,12 @@ on:
     branches: [main]
     paths:
       - 'nca_control/**'
-      - 'tests/test_nca_control.py'
+      - 'tests/test_nca_control*.py'
       - '.github/workflows/nca-control.yml'
   pull_request:
     paths:
       - 'nca_control/**'
-      - 'tests/test_nca_control.py'
+      - 'tests/test_nca_control*.py'
       - '.github/workflows/nca-control.yml'
   workflow_dispatch:
 
