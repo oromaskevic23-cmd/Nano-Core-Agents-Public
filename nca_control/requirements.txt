@@ -1,0 +1,2 @@
+# Demo Ed25519 implementation; matches LEGION signed pilot pin.
+cryptography==50.0.2
