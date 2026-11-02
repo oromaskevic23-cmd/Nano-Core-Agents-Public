@@ -35,6 +35,14 @@ The planned federated teams span architecture, software and AI engineering, rese
 
 Related projects: [HANTER](https://github.com/oromaskevic23-cmd/HANTER-Public) · [LEGION](https://github.com/oromaskevic23-cmd/Legion-Public) · [NDB](https://github.com/oromaskevic23-cmd/N.D.B-) · [IMPERIUM](https://github.com/oromaskevic23-cmd/IMPERIUM-) · [Capital Core](https://github.com/oromaskevic23-cmd/Capital-Core-Public).
 
+## Sprint 016 + Sprint 017 — Verified signed local agent and first cloud read
+
+**Sprint 016:** [actual signed Chromium + local LLM experimental run](https://github.com/oromaskevic23-cmd/Nano-Core-Agents-Public/actions/runs/41531715236) **PASS**. A real Ed25519-signed **ephemeral LAB permit** was verified, queued durably in local SQLite, claimed by one worker, processed with a real isolated Chromium and a locally hosted third-party SmolLM2 model, then recorded **LOCAL_QA_PASS**. [20/20 signed control tests](https://github.com/oromaskevic23-cmd/Nano-Core-Agents-Public/actions/runs/41531406372) passed on Python 3.11 and 3.12; [immutable experiment manifest](nca_control/evidence/sprint_016_signed_browser_llm_2026-11-02.json); [architecture](docs/NCA_SPRINT_016_SIGNED_EXECUTION.md); [Notion control register](https://app.notion.com/p/40c5a8b72fe981bdba50d6a715ccff92?pvs=204).
+
+**Sprint 017:** [first actual public GitHub cloud read](https://github.com/oromaskevic23-cmd/Nano-Core-Agents-Public/actions/runs/41532245607) **PASS**, with **8/8 local connector tests** and a successful credential-free, TLS read of this repository's public metadata. [Connector source](nca_cloud/github_public.py) · [evidence](nca_cloud/evidence/sprint_017_public_github_read_2026-11-02.json) · [Notion verification register](https://app.notion.com/p/40c5a8b72fe9816fab67dceff7c72915?pvs=204).
+
+**Truth boundary:** real cryptographic verification is **not** Owner identity authentication; the lab signer was generated in ephemeral memory. This is neither an authenticated production AI Passport nor a remote Owner Kill Switch. Deterministic QA is **not** independent expert certification. The cloud connector accesses only an openly visible repository, not private servers or customer accounts. No deployed 24/7 worker, paid service, external job, revenue or commercial permission has been proven. Heavy inference and cloud-probe workflows are manual-only after first evidence.
+
 ## Sprint 015 — Single NCA local Chromium × VELION provider port × QA
 
 [Architectural and acceptance specification](docs/NCA_SPRINT_015_SINGLE_WORKER_PILOT.md) · [local runtime source](nca_runtime/) · [unit/integration CI](.github/workflows/nca-runtime.yml) · [opt-in first real local LLM evidence workflow](.github/workflows/nca-runtime-real-once.yml).
