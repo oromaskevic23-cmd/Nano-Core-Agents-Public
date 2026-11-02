@@ -56,7 +56,7 @@ def main() -> None:
             mission_id="local-website-qa", action_id="single-local-step",
             html=OWNED_HTML,
             browser_probe=snapshot_owned_html,
-            model_call=LocalOllamaAdapter(args.model, timeout_seconds=45).generate
+            model_call=LocalOllamaAdapter(args.model, timeout_seconds=90).generate
         )
         report["local_mock_fixtures_used"] = 5
         report["authorship"] = "Alexander Nikolaevich Romaskevich (RomaskevicH)"
