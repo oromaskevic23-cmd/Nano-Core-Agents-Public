@@ -1,0 +1,27 @@
+name: NCA Sprint 017 | First Public Read-only Cloud Connector
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/nca-cloud.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-public-connector:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Compile read-only provider module
+        run: python3 -m compileall -q nca_cloud
+      - name: Run local negative security tests
+        run: python3 -m unittest discover -s tests -p 'test_nca_cloud.py' -v
+      - name: One genuine public GitHub API read
+        run: python3 -m nca_cloud --live
