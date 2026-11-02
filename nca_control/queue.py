@@ -71,8 +71,8 @@ class LocalQueue:
         return p["job_id"]
 
     def claim(self, worker_id, now):
-        if type(worker_id) is not str or not 1 <= len(worker_id) <= 80 or
-            not all(c.isalnum() or c in "._-" for c in worker_id):
+        if (type(worker_id) is not str or not 1 <= len(worker_id) <= 80 or
+            not all(c.isalnum() or c in "._-" for c in worker_id)):
             raise Rejected("INVALID_WORKER")
         if type(now) is not int or now < 0:
             raise Rejected("INVALID_TIME")
@@ -117,8 +117,8 @@ class LocalQueue:
                     "independent_human_qa":False,"real_world_actions":0}
 
     def stop(self, scope, subject, reason, now):
-        if scope not in ("global","agent") or type(reason) is not str or
-            not 1 <= len(reason) <= 150:
+        if (scope not in ("global","agent") or type(reason) is not str or
+            not 1 <= len(reason) <= 150):
             raise Rejected("INVALID_STOP")
         if scope=="global" and subject!="*":
             raise Rejected("INVALID_TARGET")
