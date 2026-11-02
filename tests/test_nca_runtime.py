@@ -153,34 +153,60 @@ class RunnerTests(unittest.TestCase):
         request_record = []
         class FakeResponse:
             status = 200
-            def __enter__(self): return self
-            def __exit__(self,*args): pass
             def read(self, n):
                 return json.dumps({"model":"demo-model", "done":True,
                                    "message":{"role":"assistant", "content":'{"heading":"test"}'}}).encode()
-        def stub(req, timeout):
-            request_record.append(req)
-            return FakeResponse()
-        with patch("nca_runtime.ollama_adapter.urlopen", side_effect=stub):
+        class FakeConnection:
+            def __init__(self, host, port, *, timeout):
+                request_record.append(("endpoint", host, port, timeout))
+            def request(self, method, path, *, body, headers):
+                request_record.append(("request", method, path, body, headers))
+            def getresponse(self):
+                return FakeResponse()
+            def close(self): pass
+        with patch("nca_runtime.ollama_adapter.HTTPConnection", FakeConnection):
             result = LocalOllamaAdapter("demo-model").generate("system", "task")
         self.assertTrue(result.actual_inference)  # simulated HTTP in mocked test!
-        self.assertEqual(request_record[0].full_url, ENDPOINT)
-        body = json.loads(request_record[0].data)
+        self.assertEqual(request_record[0][:3], ("endpoint", "127.0.0.1", 11434))
+        self.assertEqual(request_record[1][:3], ("request", "POST", "/api/chat"))
+        body = json.loads(request_record[1][3])
         self.assertFalse(body["stream"])
         self.assertNotIn("tools", body)
         self.assertEqual(body["keep_alive"], 0)
 
     def test_adapter_rejects_response_with_tool_calls(self):
-        class FakeResponse:
-            status = 200
-            def __enter__(self): return self
-            def __exit__(self,*args): pass
-            def read(self, n):
-                return json.dumps({"model":"demo-model", "done":True,
-                                   "message":{"role":"assistant", "content":"{}", "tool_calls":[{}]}}).encode()
-        with patch("nca_runtime.ollama_adapter.urlopen", return_value=FakeResponse()):
+        class FakeConnection:
+            def __init__(self, host, port, *, timeout): pass
+            def request(self, *args, **kwargs): pass
+            def getresponse(self):
+                class Response:
+                    status = 200
+                    def read(self, n):
+                        return json.dumps({"model":"demo-model", "done":True,
+                                           "message":{"role":"assistant", "content":"{}", "tool_calls":[{}]}}).encode()
+                return Response()
+            def close(self): pass
+        with patch("nca_runtime.ollama_adapter.HTTPConnection", FakeConnection):
             with self.assertRaisesRegex(InferenceDenied, "UNSAFE_OR_EMPTY_MODEL_OUTPUT"):
                 LocalOllamaAdapter("demo-model").generate("system", "task")
+
+    def test_adapter_never_follows_redirect_to_remote_host(self):
+        endpoints = []
+        class FakeConnection:
+            def __init__(self, host, port, *, timeout):
+                endpoints.append((host, port))
+            def request(self, *args, **kwargs): pass
+            def getresponse(self):
+                class Response:
+                    status = 302
+                    def getheader(self, name):
+                        return "https://attacker.example/new"
+                return Response()
+            def close(self): pass
+        with patch("nca_runtime.ollama_adapter.HTTPConnection", FakeConnection):
+            with self.assertRaisesRegex(InferenceDenied, "OLLAMA_BAD_HTTP_STATUS"):
+                LocalOllamaAdapter("demo-model").generate("system", "task")
+        self.assertEqual(endpoints, [("127.0.0.1", 11434)])
 
 
 if __name__ == "__main__":
