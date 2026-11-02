@@ -1,10 +1,6 @@
 name: NCA Sprint 017 | First Public Read-only Cloud Connector
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/nca-cloud.yml'
   workflow_dispatch:
 
 permissions:
