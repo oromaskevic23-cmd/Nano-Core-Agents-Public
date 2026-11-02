@@ -35,6 +35,30 @@ The planned federated teams span architecture, software and AI engineering, rese
 
 Related projects: [HANTER](https://github.com/oromaskevic23-cmd/HANTER-Public) · [LEGION](https://github.com/oromaskevic23-cmd/Legion-Public) · [NDB](https://github.com/oromaskevic23-cmd/N.D.B-) · [IMPERIUM](https://github.com/oromaskevic23-cmd/IMPERIUM-) · [Capital Core](https://github.com/oromaskevic23-cmd/Capital-Core-Public).
 
+## NCA Browser + Voice + Avatar + Cloud (design and local pilots)
+
+[Enterprise architecture and trust boundaries](docs/NCA_BROWSER_VOICE_CLOUD_V1.md) · [NCA Browser policy code](nca_browser/policy.py) · [real Chromium offline smoke prototype](nca_browser/offline_chromium.py) · [voice/avatar preview UI](nca_browser/web/index.html) · [CI](.github/workflows/nca-browser.yml).
+
+Every registered NCA should have a logical browser capability and a versioned voice/avatar profile. **Actual Chromium contexts are provisioned only for a bounded, authorized active mission** rather than running a browser for every dormant logical identity. Future account and cloud connectors are per-tenant/per-agent and must use protected vault-issued scoped credentials. The current public account/cloud descriptors explicitly remain **NOT_CONNECTED**.
+
+The optional Chromium demonstration uses an actual Playwright-controlled Chromium engine on locally authored HTML; it checks separate browser contexts, screenshots and blocked network requests. It does not navigate external websites, open real accounts or implement hardened production network security. Its CI verification is [NCA Browser workflow](.github/workflows/nca-browser.yml).
+
+Local policy and static UI verification (no dependencies):
+
+    python3 -m unittest discover -s tests -p 'test_nca_browser.py' -v
+    node --check nca_browser/web/assets/agent.js
+    python3 -m http.server 8000 --directory nca_browser/web
+
+Visit http://localhost:8000 to use the **original** speaking avatar preview. Press Speak to use the device's available speech synthesis; it is not a real VELION voice model. Audio availability depends on the browser/device. No third-party voice cloning or copyrighted character audio is used.
+
+Optional local real Chromium test (requires the optional open-source dependency and browser download):
+
+    python3 -m pip install -r nca_browser/browser-requirements.txt
+    python3 -m playwright install chromium
+    python3 -m nca_browser.offline_chromium
+
+**No paid providers or subscriptions are commissioned. No current real agent, broker account, cloud resource, login, model-backed speech or production web browser is asserted.**
+
 ## NCA Factory v1.0 — Universal Agent Manufacturing (offline reference)
 
 **New:** [full Enterprise architecture](docs/UNIVERSAL_NCA_FACTORY_V1.md) · [offline factory lifecycle source](nca_factory/factory.py) · [adversarial and lifecycle tests](tests/test_nca_factory.py) · [factory CI](.github/workflows/nca-factory.yml).
