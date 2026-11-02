@@ -1,0 +1,50 @@
+name: NCA Browser | Policy Voice and Chromium Smoke
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'nca_browser/**'
+      - 'tests/test_nca_browser.py'
+      - '.github/workflows/nca-browser.yml'
+  pull_request:
+    paths:
+      - 'nca_browser/**'
+      - 'tests/test_nca_browser.py'
+      - '.github/workflows/nca-browser.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  policy-and-ui:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Verify policy and lifecycle boundaries
+        run: python3 -m unittest discover -s tests -p 'test_nca_browser.py' -v
+      - name: Check browser voice UI JavaScript
+        run: node --check nca_browser/web/assets/agent.js
+      - name: Check syntax of offline Chromium module
+        run: python3 -m compileall -q nca_browser
+
+  chromium-offline-smoke:
+    needs: policy-and-ui
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Install pinned browser dependency
+        run: python3 -m pip install -r nca_browser/browser-requirements.txt
+      - name: Install Chromium and open-source runtime dependencies
+        run: python3 -m playwright install --with-deps chromium
+      - name: Prove local rendering, screenshot, isolation and denied network
+        run: python3 -m nca_browser.offline_chromium
