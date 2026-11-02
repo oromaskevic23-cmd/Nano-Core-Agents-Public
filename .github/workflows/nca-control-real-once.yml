@@ -1,10 +1,6 @@
 name: NCA Sprint 016 | Signed Permit + Real Local Browser/LLM
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/nca-control-real-once.yml'
   workflow_dispatch:
 
 permissions:
