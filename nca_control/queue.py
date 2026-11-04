@@ -5,6 +5,7 @@ Stop is a local operator call, NOT authenticated Owner Kill Switch.
 """
 import hashlib
 import json
+import re
 import secrets
 import sqlite3
 from pathlib import Path
@@ -21,6 +22,8 @@ def digest(data):
 class LocalQueue:
     def __init__(self, path):
         self.path = Path(path)
+        if self.path.is_symlink() or (self.path.exists() and not self.path.is_file()):
+            raise Rejected("QUEUE_PATH_DENIED")
         self.path.parent.mkdir(parents=True,exist_ok=True)
         with self._db() as db:
             db.executescript("""
@@ -34,6 +37,8 @@ class LocalQueue:
             CREATE TABLE IF NOT EXISTS stops(
                 scope TEXT NOT NULL, subject TEXT NOT NULL,
                 reason TEXT NOT NULL, PRIMARY KEY(scope,subject));
+            CREATE TABLE IF NOT EXISTS worker_health(
+                worker TEXT PRIMARY KEY, state TEXT NOT NULL, last_seen INTEGER NOT NULL);
             CREATE TABLE IF NOT EXISTS audit(
                 seq INTEGER PRIMARY KEY AUTOINCREMENT,
                 event TEXT NOT NULL, previous TEXT NOT NULL, checksum TEXT NOT NULL);
@@ -64,6 +69,45 @@ class LocalQueue:
         return db.execute("""SELECT 1 FROM stops WHERE
                  (scope='global' AND subject='*') OR
                  (scope='agent' AND subject=?) LIMIT 1""",(agent,)).fetchone() is not None
+
+    @staticmethod
+    def _worker_id(worker_id):
+        if (type(worker_id) is not str or not 1 <= len(worker_id) <= 80 or
+            not all(c.isalnum() or c in "._-" for c in worker_id)):
+            raise Rejected("INVALID_WORKER")
+
+    def report_worker(self, worker_id, state, now):
+        """Local operational heartbeat only; it does not authenticate a worker."""
+        self._worker_id(worker_id)
+        if (type(state) is not str or state not in {"IDLE", "WAITING_DEPENDENCIES", "EXECUTING_LAB", "LOCAL_STOP_ENGAGED", "STOPPED"}
+                or type(now) is not int or now < 0):
+            raise Rejected("INVALID_WORKER_HEALTH")
+        with self._db() as db:
+            db.execute("""INSERT INTO worker_health(worker,state,last_seen) VALUES(?,?,?)
+                       ON CONFLICT(worker) DO UPDATE SET state=excluded.state,
+                       last_seen=excluded.last_seen""",(worker_id,state,now))
+
+    def inspect_worker(self, worker_id, now, *, stale_after=60):
+        self._worker_id(worker_id)
+        if type(now) is not int or now < 0 or type(stale_after) is not int or not 1 <= stale_after <= 3600:
+            raise Rejected("INVALID_WORKER_HEALTH")
+        with self._db() as db:
+            row = db.execute("SELECT state,last_seen FROM worker_health WHERE worker=?",(worker_id,)).fetchone()
+        if row is None:
+            return {"status":"UNKNOWN","last_seen":None,"authenticated":False}
+        status = "STALE" if now < row["last_seen"] or now-row["last_seen"] >= stale_after else row["state"]
+        return {"status":status,"last_seen":row["last_seen"],"authenticated":False}
+
+    def global_stop_active(self):
+        with self._db() as db:
+            return db.execute("SELECT 1 FROM stops WHERE scope='global' AND subject='*'").fetchone() is not None
+
+    @staticmethod
+    def _claim_matches(row, worker_id, token):
+        return (row["worker"] == worker_id and type(token) is str
+                and re.fullmatch(r"[0-9a-f]{48}",token) is not None
+                and type(row["claim_digest"]) is str
+                and secrets.compare_digest(row["claim_digest"],digest(token)))
 
     def submit(self, envelope, trust, now):
         p = validate(envelope, trust, now)
@@ -109,9 +153,7 @@ class LocalQueue:
         return value
 
     def claim(self, worker_id, now, *, lease_seconds=DEFAULT_LEASE_SECONDS):
-        if (type(worker_id) is not str or not 1 <= len(worker_id) <= 80 or
-            not all(c.isalnum() or c in "._-" for c in worker_id)):
-            raise Rejected("INVALID_WORKER")
+        self._worker_id(worker_id)
         if type(now) is not int or now < 0:
             raise Rejected("INVALID_TIME")
         self._lease_seconds(lease_seconds)
@@ -145,8 +187,7 @@ class LocalQueue:
                 raise Rejected("JOB_NOT_CLAIMED")
             if self._blocked(db,row["agent"]) or now >= row["expires"]:
                 raise Rejected("STOPPED_OR_EXPIRED")
-            if (row["worker"] != worker_id or not isinstance(token,str) or
-                not secrets.compare_digest(row["claim_digest"],digest(token))):
+            if not self._claim_matches(row,worker_id,token):
                 raise Rejected("CLAIM_PROOF_REQUIRED")
             if row["claimed_at"] is None or row["lease_until"] is None:
                 raise Rejected("LEGACY_CLAIM_REVIEW_REQUIRED")
@@ -158,6 +199,24 @@ class LocalQueue:
                 self._event(db,{"kind":"RENEW","job":job_id,"worker":worker_id,
                                 "lease_until":until,"at":now})
             return {"lease_until":max(until,row["lease_until"]),"production_authorized":False}
+
+    def check_claim(self, job_id, worker_id, token, now):
+        """Recheck local stop, permit, lease and exact claim before a lab step."""
+        if type(now) is not int or now < 0:
+            raise Rejected("INVALID_TIME")
+        with self._db() as db:
+            row = db.execute("SELECT * FROM jobs WHERE job_id=?",(job_id,)).fetchone()
+            if row is None or row["state"] != "CLAIMED":
+                raise Rejected("JOB_NOT_CLAIMED")
+            if self._blocked(db,row["agent"]) or now >= row["expires"]:
+                raise Rejected("STOPPED_OR_EXPIRED")
+            if not self._claim_matches(row,worker_id,token):
+                raise Rejected("CLAIM_PROOF_REQUIRED")
+            if row["claimed_at"] is None or row["lease_until"] is None:
+                raise Rejected("LEGACY_CLAIM_REVIEW_REQUIRED")
+            if now < row["claimed_at"] or now >= row["lease_until"]:
+                raise Rejected("LEASE_EXPIRED_OR_CLOCK_INVALID")
+            return True
 
     def finish(self, job_id, worker_id, token, result_sha256, qa_pass, now):
         if (type(qa_pass) is not bool or type(now) is not int or now < 0 or
@@ -171,8 +230,7 @@ class LocalQueue:
                 raise Rejected("JOB_NOT_CLAIMED")
             if self._blocked(db,row["agent"]) or now>=row["expires"]:
                 raise Rejected("STOPPED_OR_EXPIRED")
-            if (row["worker"]!=worker_id or not isinstance(token,str) or
-                not secrets.compare_digest(row["claim_digest"],digest(token))):
+            if not self._claim_matches(row,worker_id,token):
                 raise Rejected("CLAIM_PROOF_REQUIRED")
             if row["claimed_at"] is None or row["lease_until"] is None:
                 raise Rejected("LEGACY_CLAIM_REVIEW_REQUIRED")
@@ -201,6 +259,19 @@ class LocalQueue:
                 db.execute("""UPDATE jobs SET state='STOPPED' WHERE agent=?
                               AND state IN ('PENDING','CLAIMED')""",(subject,))
             self._event(db,{"kind":"STOP","scope":scope,"subject":subject,"at":now})
+
+    def clear_stop(self, scope, subject, now):
+        """Clear a local stop without reviving stopped jobs or granting authority."""
+        if (scope not in ("global","agent") or type(subject) is not str or not subject
+                or (scope == "global" and subject != "*") or type(now) is not int or now < 0):
+            raise Rejected("INVALID_STOP")
+        with self._db() as db:
+            db.execute("BEGIN IMMEDIATE")
+            row = db.execute("DELETE FROM stops WHERE scope=? AND subject=?",(scope,subject))
+            if row.rowcount:
+                self._event(db,{"kind":"LOCAL_RESUME","scope":scope,"subject":subject,"at":now})
+            return {"cleared":bool(row.rowcount),"stopped_jobs_revived":False,
+                    "production_authorized":False}
 
     def inspect(self,job_id):
         with self._db() as db:
