@@ -37,6 +37,10 @@ Related projects: [HANTER](https://github.com/oromaskevic23-cmd/HANTER-Public) �
 
 ## Sprint 016 + Sprint 017 — Verified signed local agent and first cloud read
 
+### Supervised always-on lab worker
+
+The [local worker loop and operator controls](nca_control/ALWAYS_ON_LAB.md) extend the signed synthetic queue with bounded claim leases, restart recovery, local heartbeat, process supervision and local stop/resume. These are single-host lab controls; a valid Owner AI Passport, live federated dispatch, independently verified production runtime and 24/7 hosting are not established. The Linux service file is a review-only example, not a deployed service.
+
 **Sprint 016:** [actual signed Chromium + local LLM experimental run](https://github.com/oromaskevic23-cmd/Nano-Core-Agents-Public/actions/runs/41531715236) **PASS**. A real Ed25519-signed **ephemeral LAB permit** was verified, queued durably in local SQLite, claimed by one worker, processed with a real isolated Chromium and a locally hosted third-party SmolLM2 model, then recorded **LOCAL_QA_PASS**. [20/20 signed control tests](https://github.com/oromaskevic23-cmd/Nano-Core-Agents-Public/actions/runs/41531406372) passed on Python 3.11 and 3.12; [immutable experiment manifest](nca_control/evidence/sprint_016_signed_browser_llm_2026-11-02.json); [architecture](docs/NCA_SPRINT_016_SIGNED_EXECUTION.md); [Notion control register](https://app.notion.com/p/40c5a8b72fe981bdba50d6a715ccff92?pvs=204).
 
 **Sprint 017:** [first actual public GitHub cloud read](https://github.com/oromaskevic23-cmd/Nano-Core-Agents-Public/actions/runs/41532245607) **PASS**, with **8/8 local connector tests** and a successful credential-free, TLS read of this repository's public metadata. [Connector source](nca_cloud/github_public.py) · [evidence](nca_cloud/evidence/sprint_017_public_github_read_2026-11-02.json) · [Notion verification register](https://app.notion.com/p/40c5a8b72fe9816fab67dceff7c72915?pvs=204).
