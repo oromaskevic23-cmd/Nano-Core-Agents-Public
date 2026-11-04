@@ -1,5 +1,6 @@
 """Real Ed25519, persistent local queue, no production rights."""
 import hashlib
+from concurrent.futures import ThreadPoolExecutor
 import sqlite3
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -137,6 +138,76 @@ class LocalControlTests(unittest.TestCase):
         with sqlite3.connect(self.path) as db:
             db.execute("UPDATE audit SET event='{}' WHERE seq=1")
         self.assertFalse(self.store.audit_valid())
+
+    def test_expired_lease_is_recovered_once_and_stale_owner_is_fenced(self):
+        self.store.submit(self.signed(),self.trust,now=110)
+        old=self.store.claim("worker-A",now=111,lease_seconds=10)
+        self.assertEqual(old["lease_until"],121)
+        self.assertIsNone(LocalQueue(self.path).claim("worker-B",now=120,lease_seconds=10))
+        new=LocalQueue(self.path).claim("worker-B",now=121,lease_seconds=10)
+        self.assertEqual(new["attempt"],2)
+        with self.assertRaisesRegex(Rejected,"CLAIM_PROOF_REQUIRED"):
+            self.store.finish("job-001","worker-A",old["claim_token"],digest("r"),True,now=122)
+        result=self.store.finish("job-001","worker-B",new["claim_token"],digest("r"),True,now=122)
+        self.assertEqual(result["state"],"LOCAL_QA_PASS")
+        self.assertTrue(self.store.audit_valid())
+
+    def test_lease_renewal_requires_owner_and_cannot_outlive_permit(self):
+        self.store.submit(self.signed(),self.trust,now=110)
+        claim=self.store.claim("worker-A",now=111,lease_seconds=10)
+        with self.assertRaisesRegex(Rejected,"CLAIM_PROOF_REQUIRED"):
+            self.store.renew("job-001","worker-B",claim["claim_token"],now=115)
+        renewed=self.store.renew("job-001","worker-A",claim["claim_token"],now=115,lease_seconds=300)
+        self.assertEqual(renewed["lease_until"],300)
+        with self.assertRaisesRegex(Rejected,"STOPPED_OR_EXPIRED"):
+            self.store.renew("job-001","worker-A",claim["claim_token"],now=300)
+
+    def test_expired_lease_cannot_be_renewed_or_finished(self):
+        self.store.submit(self.signed(),self.trust,now=110)
+        claim=self.store.claim("worker-A",now=111,lease_seconds=10)
+        with self.assertRaisesRegex(Rejected,"LEASE_EXPIRED"):
+            self.store.renew("job-001","worker-A",claim["claim_token"],now=121)
+        with self.assertRaisesRegex(Rejected,"LEASE_EXPIRED"):
+            self.store.finish("job-001","worker-A",claim["claim_token"],digest("r"),True,now=121)
+
+    def test_lease_recovery_is_bounded_and_never_extends_signed_permit(self):
+        self.store.submit(self.signed(),self.trust,now=110)
+        for now in (111,121,131):
+            self.assertIsNotNone(self.store.claim("worker-A",now=now,lease_seconds=10))
+        self.assertIsNone(self.store.claim("worker-B",now=141,lease_seconds=10))
+        self.assertEqual(self.store.inspect("job-001")["state"],"RECOVERY_EXHAUSTED")
+        self.assertTrue(self.store.audit_valid())
+
+    def test_stop_and_expiry_never_recover_a_claim(self):
+        self.store.submit(self.signed(),self.trust,now=110)
+        self.store.claim("worker-A",now=111,lease_seconds=10)
+        self.store.stop("agent","NCA-test","stop",now=112)
+        self.assertIsNone(self.store.claim("worker-B",now=121))
+        self.assertEqual(self.store.inspect("job-001")["state"],"STOPPED")
+
+    def test_concurrent_workers_cannot_claim_the_same_job(self):
+        self.store.submit(self.signed(),self.trust,now=110)
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            claims=list(pool.map(lambda w: LocalQueue(self.path).claim(w,now=111),["one","two"]))
+        self.assertEqual(sum(c is not None for c in claims),1)
+
+    def test_legacy_claim_without_lease_requires_review(self):
+        self.store.submit(self.signed(),self.trust,now=110)
+        claim=self.store.claim("worker-A",now=111)
+        with sqlite3.connect(self.path) as db:
+            db.execute("UPDATE jobs SET claimed_at=NULL,lease_until=NULL WHERE job_id='job-001'")
+        self.assertIsNone(LocalQueue(self.path).claim("worker-B",now=150))
+        with self.assertRaisesRegex(Rejected,"LEGACY_CLAIM_REVIEW_REQUIRED"):
+            self.store.finish("job-001","worker-A",claim["claim_token"],digest("r"),True,now=151)
+
+    def test_invalid_lease_and_backwards_clock_are_denied(self):
+        self.store.submit(self.signed(),self.trust,now=110)
+        for value in (0,301,True,1.5):
+            with self.subTest(value=value), self.assertRaisesRegex(Rejected,"INVALID_LEASE"):
+                self.store.claim("worker-A",now=111,lease_seconds=value)
+        claim=self.store.claim("worker-A",now=111,lease_seconds=10)
+        with self.assertRaisesRegex(Rejected,"CLOCK_INVALID"):
+            self.store.finish("job-001","worker-A",claim["claim_token"],digest("r"),True,now=110)
 
 
 if __name__=="__main__":
