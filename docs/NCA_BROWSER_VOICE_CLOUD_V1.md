@@ -1,7 +1,7 @@
 # IMPERIAL NCA Browser, Voice & Avatar — Enterprise v1.0
 
 **Date:** 2026-11-02  
-**Architect:** Alexander Nikolaevich Romaskevich (RomaskevicH), Founder • Owner • CEO • Chief Systems Architect.  
+**Architect:** Alexander Nikolaevich Romaskevich (RomaskevicH), Founder • Owner • CEO.  
 **Funding rule:** FREE_ONLY. No paid providers, cloud provisioning, domain purchase or paid trial activation.  
 **State:** architecture plus separately marked local prototypes; NOT a production browser, full speech assistant, cloud account network or deployed worker fleet.
 

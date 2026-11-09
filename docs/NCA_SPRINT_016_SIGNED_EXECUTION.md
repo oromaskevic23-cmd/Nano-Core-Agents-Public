@@ -1,7 +1,7 @@
 # NCA Sprint 016 — Signed Local Execution, Durable Queue and Stop Controls
 
 **2026-11-02 | Architecture → Implementation → Evidence | FREE_ONLY**  
-**Founder • Owner • CEO • Chief Systems Architect:** Alexander Nikolaevich Romaskevich (RomaskevicH).
+**Founder • Owner • CEO:** Alexander Nikolaevich Romaskevich (RomaskevicH).
 
 ## Delivered implementation
 - [nca_control/protocol.py](../nca_control/protocol.py): validates **real Ed25519 signatures** from caller-provided public-key trust configuration, issuer `HANTER-LAB-ONLY`, audience `LOCAL_SYNTHETIC_ONLY`, 300-second maximum permit, immutable document/blueprint hashes and identifiers. Real cryptography, **demo authority only**.

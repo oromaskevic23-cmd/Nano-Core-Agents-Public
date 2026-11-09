@@ -1,7 +1,7 @@
 # IMPERIAL NCA FACTORY — Universal Agent Manufacturing System v1.0
 
 **Architecture decision — 2026-11-02**  
-**Founder, Owner, CEO and Chief Systems Architect:** Alexander Nikolaevich Romaskevich (RomaskevicH).  
+**Founder, Owner, CEO:** Alexander Nikolaevich Romaskevich (RomaskevicH).  
 **Funding:** FREE_ONLY; no paid providers, subscriptions or background deployments authorized.  
 **Implementation maturity:** public design plus explicitly limited offline prototype. NOT real agent production, model fine-tuning, certification, client service or a verified million-agent runtime.
 
