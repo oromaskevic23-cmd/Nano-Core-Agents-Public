@@ -8,7 +8,7 @@ import json
 import secrets
 import sqlite3
 from pathlib import Path
-from .protocol import Rejected, validate
+from .protocol import NAME, Rejected, validate
 
 
 def digest(data):
@@ -118,9 +118,12 @@ class LocalQueue:
 
     def stop(self, scope, subject, reason, now):
         if (scope not in ("global","agent") or type(reason) is not str or
-            not 1 <= len(reason) <= 150):
+            not reason.strip() or len(reason) > 150):
             raise Rejected("INVALID_STOP")
-        if scope=="global" and subject!="*":
+        if type(now) is not int or now < 0:
+            raise Rejected("INVALID_TIME")
+        if ((scope=="global" and subject!="*") or
+            (scope=="agent" and (type(subject) is not str or NAME.fullmatch(subject) is None))):
             raise Rejected("INVALID_TARGET")
         with self._db() as db:
             db.execute("BEGIN IMMEDIATE")
