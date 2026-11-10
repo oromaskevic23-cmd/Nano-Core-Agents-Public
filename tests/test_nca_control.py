@@ -119,6 +119,25 @@ class LocalControlTests(unittest.TestCase):
                               digest("result"),True,now=113)
         self.assertTrue(LocalQueue(self.path).audit_valid())
 
+    def test_invalid_stop_requests_do_not_change_queue_or_audit(self):
+        self.store.submit(self.signed(),self.trust,now=110)
+        invalid = [
+            ("agent", "", "manual stop", 112),
+            ("agent", "NCA/invalid", "manual stop", 112),
+            ("agent", None, "manual stop", 112),
+            ("global", "*", "   ", 112),
+            ("global", "*", "manual stop", -1),
+            ("global", "*", "manual stop", True),
+        ]
+        for scope, subject, reason, now in invalid:
+            with self.subTest(scope=scope, subject=subject, reason=reason, now=now):
+                with self.assertRaises(Rejected):
+                    self.store.stop(scope, subject, reason, now=now)
+        self.assertEqual(self.store.inspect("job-001")["state"],"PENDING")
+        with sqlite3.connect(self.path) as db:
+            self.assertEqual(db.execute("SELECT count(*) FROM stops").fetchone()[0],0)
+            self.assertEqual(db.execute("SELECT count(*) FROM audit").fetchone()[0],1)
+
     def test_global_stop_prevents_new_signed_jobs(self):
         self.store.stop("global","*","local operator stop",now=105)
         with self.assertRaisesRegex(Rejected,"STOPPED"):
