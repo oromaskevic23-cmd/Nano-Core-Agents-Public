@@ -1,16 +1,16 @@
 # Nano Core Agents
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/oromaskevic23-cmd/oromaskevic23-cmd/main/assets/alexander-romaskevich-portrait-20261110.jpg" alt="Alexander Nikolaevich Romaskevich, Founder, Owner and CEO of IMPERIAL Core" width="160" />
-</p>
-
-**Project creator & founding architect:** **Alexander Nikolaevich Romaskevich** (Alexander Nikolaevich Romaskevich · RomaskevicH). [Authorship & contribution provenance](AUTHORS.md).
-
-<p align="center">
   <img src="assets/nano-core-agents-20261029.jpg" alt="Nano Core Agents professional teams concept">
 </p>
 
 *Concept illustration: the teams, integrations and capabilities shown are architectural ambitions; their operation requires separate evidence.*
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/oromaskevic23-cmd/oromaskevic23-cmd/main/assets/alexander-romaskevich-portrait-20261110.jpg" alt="Alexander Nikolaevich Romaskevich, Founder, Owner and CEO of IMPERIAL Core" width="160" />
+</p>
+
+**Project creator & founding architect:** **Alexander Nikolaevich Romaskevich** (Alexander Nikolaevich Romaskevich · RomaskevicH). [Authorship & contribution provenance](AUTHORS.md).
 
 Governed professional AI-agent architecture with dynamically assigned roles, bounded capabilities and multiple organizational structures.
 
