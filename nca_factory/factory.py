@@ -126,10 +126,54 @@ class Factory:
         db.execute("INSERT INTO audit(entry,previous_sha,entry_sha) VALUES(?,?,?)",
                    (entry, previous, digest))
 
+    @staticmethod
+    def _exam_stats(db, row):
+        """Recompute the offline-only scoring gate from persisted case records."""
+        return db.execute(
+            "SELECT COUNT(*) n, AVG(score) avg_score, MIN(score) min_score,"
+            " COALESCE(SUM(critical),0) critical_count FROM assessments"
+            " WHERE agent_id=? AND version=?",
+            (row["agent_id"], row["version"])).fetchone()
+
+    @staticmethod
+    def _mock_exam_passes(aggregate) -> bool:
+        return (aggregate["n"] >= 5 and aggregate["avg_score"] is not None
+                and aggregate["avg_score"] >= 90 and aggregate["min_score"] >= 80
+                and aggregate["critical_count"] == 0)
+
     def _row(self, db, agent_id: str):
+        """Fail closed if a current agent or its immutable revision diverges.
+
+        A local hash/DB consistency gate, NOT an externally anchored signature
+        or independent enterprise Audit Ledger.
+        """
         row = db.execute("SELECT * FROM agents WHERE agent_id=?", (_id(agent_id),)).fetchone()
         if row is None:
             raise Denied("UNKNOWN_AGENT")
+        try:
+            source, expected_digest = self._blueprint(json.loads(row["blueprint"]))
+        except (Denied, TypeError, ValueError):
+            raise Denied("REGISTRY_INTEGRITY_FAILED") from None
+        if (type(row["version"]) is not int or row["version"] < 1
+                or source != row["blueprint"] or expected_digest != row["digest"]
+                or row["state"] not in {
+                    "DRAFT", "EXAMINING", "OFFLINE_CANDIDATE",
+                    "MOCK_ACTIVE", "STOPPED"
+                }):
+            raise Denied("REGISTRY_INTEGRITY_FAILED")
+        revision = db.execute(
+            "SELECT blueprint,digest FROM revisions WHERE agent_id=? AND version=?",
+            (row["agent_id"], row["version"])).fetchone()
+        count = db.execute(
+            "SELECT COUNT(*) FROM revisions WHERE agent_id=?",
+            (row["agent_id"],)).fetchone()[0]
+        if (revision is None or revision["blueprint"] != source
+                or revision["digest"] != expected_digest
+                or count != row["version"]):
+            raise Denied("REGISTRY_INTEGRITY_FAILED")
+        if row["state"] in ("OFFLINE_CANDIDATE", "MOCK_ACTIVE"):
+            if not self._mock_exam_passes(self._exam_stats(db, row)):
+                raise Denied("REGISTRY_INTEGRITY_FAILED")
         return row
 
     @staticmethod
@@ -215,12 +259,8 @@ class Factory:
             self._allow_controls(db, agent_id)
             if row["state"] != "EXAMINING":
                 raise Denied("NOT_EXAMINING")
-            aggregate = db.execute(
-                "SELECT COUNT(*) n, AVG(score) avg_score, MIN(score) min_score,"
-                " SUM(critical) critical_count FROM assessments WHERE agent_id=? AND version=?",
-                (agent_id, row["version"])).fetchone()
-            if (aggregate["n"] < 5 or aggregate["avg_score"] < 90
-                    or aggregate["min_score"] < 80 or aggregate["critical_count"] != 0):
+            aggregate = self._exam_stats(db, row)
+            if not self._mock_exam_passes(aggregate):
                 raise Denied("EXAM_GATE_FAILED")
             db.execute("UPDATE agents SET state='OFFLINE_CANDIDATE' WHERE agent_id=?",
                        (agent_id,))
@@ -385,4 +425,11 @@ class Factory:
                 if row["previous_sha"] != previous or row["entry_sha"] != actual:
                     return False
                 previous = actual
+            # The hash chain alone does not bind mutable registry rows.
+            # Cross-check every live agent before reporting local integrity.
+            for row in db.execute("SELECT agent_id FROM agents").fetchall():
+                try:
+                    self._row(db, row["agent_id"])
+                except Denied:
+                    return False
             return True
