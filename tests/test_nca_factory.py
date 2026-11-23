@@ -1,5 +1,6 @@
 """Offline-only acceptance and adversarial tests for the NCA Factory MVP."""
 import hashlib
+import json
 from pathlib import Path
 import sqlite3
 import tempfile
@@ -155,13 +156,66 @@ class FactoryTests(unittest.TestCase):
         with self.assertRaisesRegex(Denied, "NOT_MOCK_ACTIVE"):
             self.factory.mock_step("nca-001", "action-2", sha("payload"), now=203)
 
-    def test_reprogram_after_stop_requires_new_exam(self):
+    def test_reprogram_after_stop_retains_emergency_stop(self):
         self.factory.stop_agent("nca-001", "Manual change request", now=102)
         updated = self.factory.reprogram("nca-001", spec(role="support"), now=103)
         self.assertEqual(updated["version"], 2)
-        self.assertEqual(updated["state"], "DRAFT")
+        self.assertEqual(updated["state"], "STOPPED")
+        self.assertFalse(updated["production_permitted"])
+        # A DRAFT revision is recorded, but cannot restart local exam,
+        # unlock the agent, or inherit the prior version's mock authority.
+        with sqlite3.connect(self.db) as cx:
+            self.assertEqual(cx.execute(
+                "SELECT state FROM agents WHERE agent_id='nca-001'"
+            ).fetchone()[0], "DRAFT")
+            self.assertEqual(cx.execute(
+                "SELECT count(*) FROM controls WHERE scope='agent' AND subject='nca-001'"
+            ).fetchone()[0], 1)
+        self.assertEqual(Factory(self.db).inspect("nca-001", now=104)["state"], "STOPPED")
+        with self.assertRaisesRegex(Denied, "AGENT_STOPPED"):
+            self.factory.start_exam("nca-001", now=104)
         with self.assertRaises(Denied):
             self.factory.open_mock_lease("nca-001", "mission-b", 60, 1, now=104)
+
+    def test_tenant_boundary_immutable_across_reprogram(self):
+        before = self.factory.inspect("nca-001", now=101)
+        with sqlite3.connect(self.db) as cx:
+            revision_count = cx.execute("SELECT count(*) FROM revisions").fetchone()[0]
+            audit_count = cx.execute("SELECT count(*) FROM audit").fetchone()[0]
+        with self.assertRaisesRegex(Denied, "TENANT_BOUNDARY_CHANGE_FORBIDDEN"):
+            self.factory.reprogram("nca-001", spec(tenant="different-tenant", role="support"), now=102)
+        after = Factory(self.db).inspect("nca-001", now=103)
+        self.assertEqual(after["version"], before["version"])
+        self.assertEqual(after["blueprint_sha256"], before["blueprint_sha256"])
+        with sqlite3.connect(self.db) as cx:
+            self.assertEqual(cx.execute("SELECT count(*) FROM revisions").fetchone()[0], revision_count)
+            self.assertEqual(cx.execute("SELECT count(*) FROM audit").fetchone()[0], audit_count)
+        self.assertTrue(self.factory.audit_valid())
+
+    def test_unchanged_blueprint_cannot_mint_new_version(self):
+        original = self.factory.inspect("nca-001", now=100)
+        with self.assertRaisesRegex(Denied, "UNCHANGED_BLUEPRINT"):
+            self.factory.reprogram("nca-001", spec(), now=102)
+        latest = Factory(self.db).inspect("nca-001", now=103)
+        self.assertEqual(latest["version"], 1)
+        self.assertEqual(latest["blueprint_sha256"], original["blueprint_sha256"])
+        self.assertTrue(self.factory.audit_valid())
+
+    def test_revision_audit_links_previous_and_new_blueprint(self):
+        old = self.factory.inspect("nca-001", now=100)
+        updated = self.factory.reprogram("nca-001", spec(role="reviewer"), now=102)
+        self.assertEqual(updated["version"], 2)
+        self.assertEqual(updated["state"], "DRAFT")
+        self.assertNotEqual(updated["blueprint_sha256"], old["blueprint_sha256"])
+        with sqlite3.connect(self.db) as cx:
+            event = json.loads(cx.execute("SELECT entry FROM audit ORDER BY seq DESC LIMIT 1").fetchone()[0])
+        self.assertEqual(event["type"], "REPROGRAM")
+        self.assertEqual(event["tenant"], "imperial-lab")
+        self.assertEqual(event["previous_digest"], old["blueprint_sha256"])
+        self.assertEqual(event["digest"], updated["blueprint_sha256"])
+        self.assertEqual(event["from_version"], 1)
+        self.assertEqual(event["to_version"], 2)
+        self.assertTrue(self.factory.audit_valid())
 
     def test_global_stop_persists_and_blocks_reprogram(self):
         self.factory.stop_all("Owner shutdown", now=105)
