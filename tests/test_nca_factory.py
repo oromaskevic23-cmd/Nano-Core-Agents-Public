@@ -240,5 +240,64 @@ class FactoryTests(unittest.TestCase):
         self.assertFalse(self.factory.audit_valid())
 
 
+    def test_registry_rejects_live_blueprint_tampering(self):
+        before = self.factory.inspect("nca-001", now=100)
+        with sqlite3.connect(self.db) as cx:
+            cx.execute("UPDATE agents SET blueprint=? WHERE agent_id='nca-001'",
+                       (json.dumps(spec(role="forged_role")),))
+        with self.assertRaisesRegex(Denied, "REGISTRY_INTEGRITY_FAILED"):
+            self.factory.inspect("nca-001", now=102)
+        with self.assertRaisesRegex(Denied, "REGISTRY_INTEGRITY_FAILED"):
+            self.factory.reprogram("nca-001", spec(role="reviewer"), now=103)
+        self.assertFalse(self.factory.audit_valid())
+        with sqlite3.connect(self.db) as cx:
+            self.assertEqual(cx.execute("SELECT version FROM agents").fetchone()[0], before["version"])
+
+    def test_registry_rejects_revision_digest_tampering(self):
+        with sqlite3.connect(self.db) as cx:
+            cx.execute("UPDATE revisions SET digest=? WHERE agent_id='nca-001'",
+                       ("0" * 64,))
+        with self.assertRaisesRegex(Denied, "REGISTRY_INTEGRITY_FAILED"):
+            self.factory.start_exam("nca-001", now=101)
+        self.assertFalse(Factory(self.db).audit_valid())
+
+    def test_registry_rejects_missing_revision_history(self):
+        self.factory.reprogram("nca-001", spec(role="researcher"), now=102)
+        with sqlite3.connect(self.db) as cx:
+            cx.execute("DELETE FROM revisions WHERE agent_id='nca-001' AND version=1")
+        with self.assertRaisesRegex(Denied, "REGISTRY_INTEGRITY_FAILED"):
+            Factory(self.db).inspect("nca-001", now=103)
+        self.assertFalse(self.factory.audit_valid())
+
+    def test_registry_rejects_forged_qualification_without_exams(self):
+        with sqlite3.connect(self.db) as cx:
+            cx.execute("UPDATE agents SET state='OFFLINE_CANDIDATE' WHERE agent_id='nca-001'")
+        with self.assertRaisesRegex(Denied, "REGISTRY_INTEGRITY_FAILED"):
+            self.factory.open_mock_lease("nca-001", "forged", 30, 1, now=102)
+        self.assertFalse(self.factory.audit_valid())
+        with sqlite3.connect(self.db) as cx:
+            self.assertEqual(cx.execute("SELECT count(*) FROM leases").fetchone()[0], 0)
+
+    def test_registry_rechecks_assessments_after_promotion(self):
+        self.ready()
+        self.factory.open_mock_lease("nca-001", "mission-verified", 60, 2, now=200)
+        with sqlite3.connect(self.db) as cx:
+            cx.execute("UPDATE assessments SET score=0 WHERE agent_id='nca-001' AND case_id='case-2'")
+        with self.assertRaisesRegex(Denied, "REGISTRY_INTEGRITY_FAILED"):
+            self.factory.mock_step("nca-001", "action-late", sha("payload"), now=201)
+        self.assertFalse(self.factory.audit_valid())
+        with sqlite3.connect(self.db) as cx:
+            self.assertEqual(cx.execute("SELECT count(*) FROM simulated_steps").fetchone()[0], 0)
+
+    def test_registry_valid_revisions_and_stopped_state(self):
+        self.ready()
+        self.assertTrue(self.factory.audit_valid())
+        self.factory.reprogram("nca-001", spec(role="security_reviewer"), now=120)
+        self.assertTrue(self.factory.audit_valid())
+        self.factory.stop_agent("nca-001", "operator stop", now=121)
+        self.assertEqual(Factory(self.db).inspect("nca-001", now=122)["state"], "STOPPED")
+        self.assertTrue(self.factory.audit_valid())
+
+
 if __name__ == "__main__":
     unittest.main()
