@@ -79,3 +79,19 @@ The command prints JSON with a fingerprint, per-domain metrics and explicit flag
 The leading design objective is not a fictional count of autonomous agents or a raw simulation PASS score. The goal is **verified value per safe, accepted mission** under the same task distribution: reliability, first-pass success, fault tolerance, independent adjudication, resource discipline and controlled authorization. Any claim to beat a competitor must identify the competitor, tested version, evidence, test distribution and evaluation date.
 
 The IMPERIUM concept, where relevant, remains the long-term architectural digital currency envisioned for AI agents worldwide, not an assertion of current worldwide use, listing or market status.
+
+
+## Adaptive practice scheduler (additional v0.1 component)
+
+The Factory now includes [nca_factory/curriculum.py](../nca_factory/curriculum.py). It gives a future autonomous learning system a deterministic *practice-selection loop*: diagnose the candidate's unsafe simulated actions, missed valid work and unnecessary synthetic costs; group gaps by profession and risk type; rank critical policy failures first; and generate new practice exercise identifiers from a separate practice seed. It never reads or emits holdout labels or private customer data.
+
+The scheduler returns a SHA-256 practice manifest, a list of risk/skill gaps and the next practice assignments. **It does not update the model, change its weights, certify an agent, or produce a learning gain by itself.** The next agent/model training iteration must consume these assignments in a sandbox and produce before/after evidence on separately administered holdouts.
+
+To reproduce:
+
+\`\`\`bash
+python3 -m unittest discover -s tests -p 'test_nca_curriculum.py' -v
+python3 -m nca_factory.curriculum
+\`\`\`
+
+The reference policy has no missing completions relative to itself, so the default output has zero remedial lessons. Tests with intentionally unsafe and passive policies prove that the curriculum generator detects defects and offers bounded additional practice instead of inventing an improvement. The target is learning-to-correct, not maximizing a self-written benchmark score.
