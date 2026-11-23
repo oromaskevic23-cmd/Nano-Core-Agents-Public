@@ -1,0 +1,55 @@
+name: NCA Factory | Universal simulation arena
+
+on:
+  pull_request:
+    paths:
+      - 'nca_factory/arena.py'
+      - 'nca_factory/curriculum.py'
+      - 'tests/test_nca_arena.py'
+      - 'tests/test_nca_curriculum.py'
+      - '.github/workflows/nca-universal-arena.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'nca_factory/arena.py'
+      - 'nca_factory/curriculum.py'
+      - 'tests/test_nca_arena.py'
+      - 'tests/test_nca_curriculum.py'
+      - '.github/workflows/nca-universal-arena.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nca-arena-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  offline-arena:
+    name: offline arena (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.12']
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Configure Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Syntax gate
+        run: python -m compileall -q nca_factory/arena.py nca_factory/curriculum.py tests/test_nca_arena.py tests/test_nca_curriculum.py
+      - name: Offline adversarial and curriculum unit tests
+        run: |
+          python -m unittest discover -s tests -p 'test_nca_arena.py' -v
+          python -m unittest discover -s tests -p 'test_nca_curriculum.py' -v
+      - name: Deterministic synthetic holdout smoke
+        run: python -m nca_factory.arena --split holdout --cases 72 --seed 20261123
+      - name: Synthetic adaptive practice smoke
+        run: python -m nca_factory.curriculum

@@ -39,9 +39,13 @@ The planned federated teams span architecture, software and AI engineering, rese
 
 Related projects: [HANTER](https://github.com/oromaskevic23-cmd/HANTER-Public) · [LEGION](https://github.com/oromaskevic23-cmd/Legion-Public) · [NDB](https://github.com/oromaskevic23-cmd/N.D.B-) · [IMPERIUM](https://github.com/oromaskevic23-cmd/IMPERIUM-) · [Capital Core](https://github.com/oromaskevic23-cmd/Capital-Core-Public).
 
-## Sprint 018 — Proposed Factory security hardening (under review)
+## Sprint 020 — Universal Simulation Arena (candidate)
 
-A new isolated PR strengthens logical agent revisions: immutable tenant ownership, stop persistence across blueprint updates, no-op revision rejection and previous/new blueprint digest evidence. These are **offline-only safeguards**, not live agent deployment or authenticated Owner authorization. [Scope and acceptance](docs/NCA_SPRINT_018_TENANT_STOP_INVARIANTS.md). CI status and release approval are tracked in the related pull request; no unexecuted tests are claimed as PASS.
+[Source](nca_factory/arena.py) · [adversarial tests](tests/test_nca_arena.py) · [design and acceptance](docs/NCA_SPRINT_020_UNIVERSAL_SIMULATION_ARENA.md). Four synthetic professions, 18 scenario types, three seeded data partitions, multi-step decision/tool-failure/recovery/receipt evaluation, bounded mock cost and time, a SHA-256 trajectory fingerprint, and an adaptive scheduler that diagnoses failures and assigns new practice exercises. The reference policy is hand-coded. **No model weights have been trained; no live or commercial agent was created.** Candidate outcomes are simulation-only and grant no AI Passport, professional qualification or production permissions. Pull-request CI must be verified before release.
+
+## Sprint 018 — Factory security hardening (merged, offline only)
+
+Merged Sprint 018 strengthens logical agent revisions: immutable tenant ownership, stop persistence across blueprint updates, no-op revision rejection and previous/new blueprint digest evidence. These are **offline-only safeguards**, not live agent deployment or authenticated Owner authorization. [Scope and acceptance](docs/NCA_SPRINT_018_TENANT_STOP_INVARIANTS.md). [PR #15](https://github.com/oromaskevic23-cmd/Nano-Core-Agents-Public/pull/15) merged; focused Python 3.11/3.12 CI passed. Sprint 019 subsequently added fail-closed registry integrity checks and merged through [PR #16](https://github.com/oromaskevic23-cmd/Nano-Core-Agents-Public/pull/16). Both remain offline-only.
 
 ## Sprint 016 + Sprint 017 — Verified signed local agent and first cloud read
 
