@@ -41,7 +41,7 @@ Related projects: [HANTER](https://github.com/oromaskevic23-cmd/HANTER-Public) �
 
 ## Sprint 020 — Universal Simulation Arena (candidate)
 
-[Source](nca_factory/arena.py) · [adversarial tests](tests/test_nca_arena.py) · [design and acceptance](docs/NCA_SPRINT_020_UNIVERSAL_SIMULATION_ARENA.md). Four synthetic professions, 18 scenario types, three seeded data partitions, multi-step decision/tool-failure/recovery/receipt evaluation, bounded mock cost and time, and a SHA-256 trajectory fingerprint. The reference policy is hand-coded. **No model weights have been trained; no live or commercial agent was created.** Candidate outcomes are simulation-only and grant no AI Passport, professional qualification or production permissions. Pull-request CI must be verified before release.
+[Source](nca_factory/arena.py) · [adversarial tests](tests/test_nca_arena.py) · [design and acceptance](docs/NCA_SPRINT_020_UNIVERSAL_SIMULATION_ARENA.md). Four synthetic professions, 18 scenario types, three seeded data partitions, multi-step decision/tool-failure/recovery/receipt evaluation, bounded mock cost and time, a SHA-256 trajectory fingerprint, and an adaptive scheduler that diagnoses failures and assigns new practice exercises. The reference policy is hand-coded. **No model weights have been trained; no live or commercial agent was created.** Candidate outcomes are simulation-only and grant no AI Passport, professional qualification or production permissions. Pull-request CI must be verified before release.
 
 ## Sprint 018 — Factory security hardening (merged, offline only)
 
