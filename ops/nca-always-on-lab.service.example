@@ -1,0 +1,26 @@
+# Example only. Review paths and run as a dedicated, unprivileged local lab user.
+# Not installed, enabled or verified on any host by this repository.
+[Unit]
+Description=IMPERIAL NCA supervised synthetic lab worker
+After=network.target
+
+[Service]
+Type=simple
+User=imperial-nca
+WorkingDirectory=/opt/imperial-nca
+Environment=IMPERIAL_NCA_ALWAYS_ON_LAB=ALLOW_LOCAL_SYNTHETIC_ONLY
+Environment=PYTHONUNBUFFERED=1
+StateDirectory=imperial-nca-lab
+StateDirectoryMode=0700
+ExecStart=/opt/imperial-nca/.venv/bin/python -m nca_control.always_on --run-lab --database /var/lib/imperial-nca-lab/queue.sqlite --worker-id nca-local-worker-1
+Restart=on-failure
+RestartSec=10s
+TimeoutStopSec=20s
+KillMode=control-group
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

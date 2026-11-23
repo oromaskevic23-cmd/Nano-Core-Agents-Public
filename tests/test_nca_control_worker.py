@@ -46,7 +46,7 @@ class WorkerTests(unittest.TestCase):
         p={"version":1,"issuer":"HANTER-LAB-ONLY",
            "audience":"LOCAL_SYNTHETIC_ONLY","agent_id":"nca-001",
            "job_id":"one-job","tenant_id":"test-tenant",
-           "document_sha256":sha(HTML),"blueprint_sha256":sha("blueprint"),
+           "document_sha256":sha(HTML),"blueprint_sha256":sha("demo-blueprint-v1"),
            "nonce":"b"*32,"issued_at":100,"expires_at":300}
         env={"payload":p,"key_id":"DEMO-worker",
              "signature":key.sign(encode(p,"DEMO-worker")).hex()}
@@ -78,7 +78,7 @@ class WorkerTests(unittest.TestCase):
         self.assertEqual(self.queue.inspect("one-job")["state"],"STOPPED")
 
     def test_delayed_response_after_expiry_is_blocked(self):
-        sequence=iter([111,300])
+        sequence=iter([111,111,111,300])
         with self.assertRaisesRegex(Rejected,"STOPPED_OR_EXPIRED"):
             self.run_case(clock=lambda:next(sequence))
 
@@ -97,6 +97,28 @@ class WorkerTests(unittest.TestCase):
                                    good.screenshot_sha256,good.network_block_rule,False)
         with self.assertRaisesRegex(Rejected,"UNTRUSTED_BROWSER_EVIDENCE"):
             self.run_case(browser_probe=spoof)
+
+    def test_stop_after_browser_prevents_model_call(self):
+        calls=[]
+        def browser_then_stop(html):
+            result=browser(html)
+            self.queue.stop("agent","nca-001","local stop",now=112)
+            return result
+        def forbidden_model(_system,_question):
+            calls.append(True)
+            return model(_system,_question)
+        with self.assertRaises(Rejected):
+            self.run_case(browser_probe=browser_then_stop,model_call=forbidden_model)
+        self.assertEqual(calls,[])
+
+    def test_wrong_blueprint_cannot_execute_browser(self):
+        import sqlite3
+        with sqlite3.connect(self.queue.path) as db:
+            db.execute("UPDATE jobs SET blueprint=? WHERE job_id='one-job'",(sha("other"),))
+        calls=[]
+        with self.assertRaisesRegex(Rejected,"PERMIT_BLUEPRINT_MISMATCH"):
+            self.run_case(browser_probe=lambda html:calls.append(html))
+        self.assertEqual(calls,[])
 
 
 if __name__=="__main__":
