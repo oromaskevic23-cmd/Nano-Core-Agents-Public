@@ -306,23 +306,35 @@ class Factory:
             self._event(db, {"type": "GLOBAL_STOP", "reason": reason, "at": timestamp})
 
     def reprogram(self, agent_id: str, blueprint: dict, *, now: int | None = None) -> dict:
-        """Explicit local repair: new revision, old lease revoked, all QA reset."""
+        """New offline version: preserve tenant identity, safety stops and history.
+
+        A local revision is NOT an approval to release an emergency stop or a
+        production AI Passport. Only a future authenticated Owner-controlled
+        recovery workflow may lift an agent-level stop.
+        """
         timestamp = _time(now)
         source, digest = self._blueprint(blueprint)
         with self._tx() as db:
             row = self._row(db, agent_id)
-            # Global stop never auto-clears; agent stop may be superseded by
-            # an explicit LOCAL revision, which still has zero real authority.
-            self._allow_controls(db)
+            self._allow_controls(db)  # A global stop forbids even local revisions.
+            previous = json.loads(row["blueprint"])
+            if blueprint["tenant"] != previous["tenant"]:
+                raise Denied("TENANT_BOUNDARY_CHANGE_FORBIDDEN")
+            if digest == row["digest"]:
+                raise Denied("UNCHANGED_BLUEPRINT")
             version = row["version"] + 1
+            # An active mock lease cannot survive a blueprint revision.
             db.execute("DELETE FROM leases WHERE agent_id=?", (agent_id,))
-            db.execute("DELETE FROM controls WHERE scope='agent' AND subject=?", (agent_id,))
+            # Agent stop is deliberately retained, even after a new DRAFT
+            # revision. A version bump must never become an implicit resume.
             db.execute("UPDATE agents SET version=?, blueprint=?, digest=?, state='DRAFT'"
                        " WHERE agent_id=?", (version, source, digest, agent_id))
             db.execute("INSERT INTO revisions VALUES(?,?,?,?,?)",
                        (agent_id, version, source, digest, timestamp))
             self._event(db, {"type": "REPROGRAM", "agent_id": agent_id,
+                             "tenant": previous["tenant"],
                              "from_version": row["version"], "to_version": version,
+                             "previous_digest": row["digest"],
                              "digest": digest, "at": timestamp})
         return self.inspect(agent_id)
 
