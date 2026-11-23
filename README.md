@@ -39,6 +39,10 @@ The planned federated teams span architecture, software and AI engineering, rese
 
 Related projects: [HANTER](https://github.com/oromaskevic23-cmd/HANTER-Public) · [LEGION](https://github.com/oromaskevic23-cmd/Legion-Public) · [NDB](https://github.com/oromaskevic23-cmd/N.D.B-) · [IMPERIUM](https://github.com/oromaskevic23-cmd/IMPERIUM-) · [Capital Core](https://github.com/oromaskevic23-cmd/Capital-Core-Public).
 
+## Sprint 018 — Proposed Factory security hardening (under review)
+
+A new isolated PR strengthens logical agent revisions: immutable tenant ownership, stop persistence across blueprint updates, no-op revision rejection and previous/new blueprint digest evidence. These are **offline-only safeguards**, not live agent deployment or authenticated Owner authorization. [Scope and acceptance](docs/NCA_SPRINT_018_TENANT_STOP_INVARIANTS.md). CI status and release approval are tracked in the related pull request; no unexecuted tests are claimed as PASS.
+
 ## Sprint 016 + Sprint 017 — Verified signed local agent and first cloud read
 
 **Sprint 016:** [actual signed Chromium + local LLM experimental run](https://github.com/oromaskevic23-cmd/Nano-Core-Agents-Public/actions/runs/41531715236) **PASS**. A real Ed25519-signed **ephemeral LAB permit** was verified, queued durably in local SQLite, claimed by one worker, processed with a real isolated Chromium and a locally hosted third-party SmolLM2 model, then recorded **LOCAL_QA_PASS**. [20/20 signed control tests](https://github.com/oromaskevic23-cmd/Nano-Core-Agents-Public/actions/runs/41531406372) passed on Python 3.11 and 3.12; [immutable experiment manifest](nca_control/evidence/sprint_016_signed_browser_llm_2026-11-02.json); [architecture](docs/NCA_SPRINT_016_SIGNED_EXECUTION.md); [Notion control register](https://app.notion.com/p/40c5a8b72fe981bdba50d6a715ccff92?pvs=204).
