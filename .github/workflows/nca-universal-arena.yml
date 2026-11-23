@@ -4,13 +4,17 @@ on:
   pull_request:
     paths:
       - 'nca_factory/arena.py'
+      - 'nca_factory/curriculum.py'
       - 'tests/test_nca_arena.py'
+      - 'tests/test_nca_curriculum.py'
       - '.github/workflows/nca-universal-arena.yml'
   push:
     branches: [main]
     paths:
       - 'nca_factory/arena.py'
+      - 'nca_factory/curriculum.py'
       - 'tests/test_nca_arena.py'
+      - 'tests/test_nca_curriculum.py'
       - '.github/workflows/nca-universal-arena.yml'
   workflow_dispatch:
 
@@ -40,8 +44,12 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Syntax gate
-        run: python -m compileall -q nca_factory/arena.py tests/test_nca_arena.py
+        run: python -m compileall -q nca_factory/arena.py nca_factory/curriculum.py tests/test_nca_arena.py tests/test_nca_curriculum.py
       - name: Offline adversarial and curriculum unit tests
-        run: python -m unittest discover -s tests -p 'test_nca_arena.py' -v
+        run: |
+          python -m unittest discover -s tests -p 'test_nca_arena.py' -v
+          python -m unittest discover -s tests -p 'test_nca_curriculum.py' -v
       - name: Deterministic synthetic holdout smoke
         run: python -m nca_factory.arena --split holdout --cases 72 --seed 20261123
+      - name: Synthetic adaptive practice smoke
+        run: python -m nca_factory.curriculum
